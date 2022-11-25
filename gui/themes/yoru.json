@@ -1,0 +1,28 @@
+{
+    "theme_name" : "yoru",
+    "app_color" : {
+        "dark_one" : "#313134",
+        "dark_two" : "#1e2229",
+        "dark_three" : "#2C3839",
+        "dark_four" : "#272c36",
+        "bg_one" : "#202023",
+        "bg_two" : "#313134",
+        "bg_three" : "#313134",
+        "icon_color" : "#f5f6f9",
+        "icon_hover" : "#2C3839",
+        "icon_pressed" : "#6c99f4",
+        "icon_active" : "#f5f6f9",
+        "context_color" : "#81E6D9",
+        "context_hover" : "#2C3839",
+        "context_pressed" : "#3f6fd1",
+        "text_title" : "#dce1ec",
+        "text_foreground" : "#8a95aa",
+        "text_description" : "#4f5b6e",
+        "text_active" : "#dce1ec",
+        "white" : "#f5f6f9",
+        "pink" : "#ff007f",
+        "green" : "#00ff7f",
+        "red" : "#ff5555",
+        "yellow" : "#f1fa8c"
+    }
+}

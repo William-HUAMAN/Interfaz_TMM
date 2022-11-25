@@ -1,9 +1,9 @@
 {
-    "app_name": "Análisis PLUS",
-    "version" : "alpha",
-    "copyright" : "By: Huamán Huamán",
+    "app_name": "Análisis de Posición de Mecanismos de 4 Barras",
+    "version" : "v1.0.0",
+    "copyright" : "By: William Huamán",
     "year" : 2022,
-    "theme_name" : "default",
+    "theme_name" : "yoru",
     "custom_title_bar": true,
     "startup_size": [
         1400,
