@@ -1,7 +1,8 @@
 # Importamos los paquetes y modulos de project_core
 from project_core import *
 
-# Importamos los widgets
+# Importamos archivos específicos
+from src.ui.windows.main_window.functions_main_window import *
 from src.widgets import *
 
 class MainWindow(QMainWindow):
