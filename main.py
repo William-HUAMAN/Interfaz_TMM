@@ -133,7 +133,7 @@ class MainWindow(QMainWindow):
                 MainFunctions.set_left_column_menu(
                     self, 
                     menu = self.ui.left_column.menus.menu_2,
-                    title = "Info tab",
+                    title = "Información",
                     icon_path = Functions.set_svg_icon("icon_info.svg")
                 )
 
@@ -156,7 +156,7 @@ class MainWindow(QMainWindow):
                 MainFunctions.set_left_column_menu(
                     self, 
                     menu = self.ui.left_column.menus.menu_1,
-                    title = "Settings Left Column",
+                    title = "Ajustes",
                     icon_path = Functions.set_svg_icon("icon_settings.svg")
                 )
         

@@ -248,6 +248,18 @@ class SetupMainWindow:
 
         # LEFT COLUMN
         # ///////////////////////////////////////////////////////////////
+        # BTN Documentation
+        # BTN 1
+        self.left_btn_doc = PyPushButton(
+            text="Documentación",
+            radius=8,
+            color=self.themes["app_color"]["text_foreground"],
+            bg_color=self.themes["app_color"]["dark_two"],
+            bg_color_hover=self.themes["app_color"]["dark_three"],
+            bg_color_pressed=self.themes["app_color"]["dark_four"]
+        )
+        self.left_btn_doc.setMaximumHeight(40)
+        self.ui.left_column.menus.btn_4_layout.addWidget(self.left_btn_doc)
 
         # BTN 1
         self.left_btn_1 = PyPushButton(
@@ -286,6 +298,10 @@ class SetupMainWindow:
         # PAGE 1 - ADD LOGO TO MAIN PAGE
         self.logo_svg = QSvgWidget(Functions.set_svg_image("logo_home.svg"))
         self.ui.load_pages.logo_layout.addWidget(self.logo_svg, Qt.AlignCenter, Qt.AlignCenter)
+
+
+
+
 
         # PAGE 2
         # CIRCULAR PROGRESS 1
