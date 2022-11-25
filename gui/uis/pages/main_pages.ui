@@ -32,7 +32,7 @@
    <item>
     <widget class="QStackedWidget" name="pages">
      <property name="currentIndex">
-      <number>1</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="page_1">
       <property name="styleSheet">
@@ -91,48 +91,9 @@
            <number>0</number>
           </property>
           <item>
-           <widget class="QFrame" name="logo">
-            <property name="minimumSize">
-             <size>
-              <width>300</width>
-              <height>120</height>
-             </size>
-            </property>
-            <property name="maximumSize">
-             <size>
-              <width>300</width>
-              <height>120</height>
-             </size>
-            </property>
-            <property name="frameShape">
-             <enum>QFrame::NoFrame</enum>
-            </property>
-            <property name="frameShadow">
-             <enum>QFrame::Raised</enum>
-            </property>
-            <layout class="QVBoxLayout" name="logo_layout">
-             <property name="spacing">
-              <number>0</number>
-             </property>
-             <property name="leftMargin">
-              <number>0</number>
-             </property>
-             <property name="topMargin">
-              <number>0</number>
-             </property>
-             <property name="rightMargin">
-              <number>0</number>
-             </property>
-             <property name="bottomMargin">
-              <number>0</number>
-             </property>
-            </layout>
-           </widget>
-          </item>
-          <item>
            <widget class="QLabel" name="label">
             <property name="text">
-             <string>Welcome To PyOneDark GUI</string>
+             <string>Bienvenido a Análisis PLUS</string>
             </property>
             <property name="alignment">
              <set>Qt::AlignCenter</set>
@@ -183,8 +144,8 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>840</width>
-            <height>580</height>
+            <width>214</width>
+            <height>266</height>
            </rect>
           </property>
           <property name="styleSheet">

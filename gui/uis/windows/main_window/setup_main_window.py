@@ -1,19 +1,3 @@
-# ///////////////////////////////////////////////////////////////
-#
-# BY: WANDERSON M.PIMENTA
-# PROJECT MADE WITH: Qt Designer and PySide6
-# V: 1.0.0
-#
-# This project can be used freely for all uses, as long as they maintain the
-# respective credits only in the Python scripts, any information in the visual
-# interface (GUI) can be modified without any implication.
-#
-# There are limitations on Qt licenses if you want to use your products
-# commercially, I recommend reading them on the official website:
-# https://doc.qt.io/qtforpython/licenses.html
-#
-# ///////////////////////////////////////////////////////////////
-
 # IMPORT PACKAGES AND MODULES
 # ///////////////////////////////////////////////////////////////
 from gui.widgets.py_table_widget.py_table_widget import PyTableWidget
@@ -62,8 +46,8 @@ class SetupMainWindow:
         {
             "btn_icon" : "icon_home.svg",
             "btn_id" : "btn_home",
-            "btn_text" : "Home",
-            "btn_tooltip" : "Home page",
+            "btn_text" : "Inicio",
+            "btn_tooltip" : "Página de Inicio",
             "show_top" : True,
             "is_active" : True
         },
@@ -110,16 +94,16 @@ class SetupMainWindow:
         {
             "btn_icon" : "icon_info.svg",
             "btn_id" : "btn_info",
-            "btn_text" : "Information",
-            "btn_tooltip" : "Open informations",
+            "btn_text" : "Información",
+            "btn_tooltip" : "Panel de Información",
             "show_top" : False,
             "is_active" : False
         },
         {
             "btn_icon" : "icon_settings.svg",
             "btn_id" : "btn_settings",
-            "btn_text" : "Settings",
-            "btn_tooltip" : "Open settings",
+            "btn_text" : "Ajustes",
+            "btn_tooltip" : "Abrir ajustes",
             "show_top" : False,
             "is_active" : False
         }
@@ -249,7 +233,7 @@ class SetupMainWindow:
         # LEFT COLUMN
         # ///////////////////////////////////////////////////////////////
         # BTN Documentation
-        # BTN 1
+
         self.left_btn_doc = PyPushButton(
             text="Documentación",
             radius=8,
@@ -297,7 +281,6 @@ class SetupMainWindow:
 
         # PAGE 1 - ADD LOGO TO MAIN PAGE
         self.logo_svg = QSvgWidget(Functions.set_svg_image("logo_home.svg"))
-        self.ui.load_pages.logo_layout.addWidget(self.logo_svg, Qt.AlignCenter, Qt.AlignCenter)
 
 
 
