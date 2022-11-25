@@ -1,11 +1,25 @@
+# Importamos los paquetes y modulos de project_core
+from project_core import *
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+# Importamos los widgets
+from src.widgets import *
+
+class MainWindow(QMainWindow):
+    def __init__(self):
+        super().__init__()
+        self.interfaz = UI_MainWindow()
+        self.interfaz.setup_ui(self)
+
+        settings = Settings()
+        self.settings = settings.items
+
+        self.hide_grips = True
+        SetupMainWindow.setup_gui(self)
+
+        # Mostrar la pantalla principal
+        self.show()
 
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    app
