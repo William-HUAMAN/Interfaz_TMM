@@ -1,30 +1,17 @@
-# IMPORT PACKAGES AND MODULES
-# ///////////////////////////////////////////////////////////////
-from gui.uis.windows.main_window.functions_main_window import *
-import sys
-import os
+# Importando paquetes y módulos
+from src.core.libraries import *
 
-# IMPORT QT CORE
-# ///////////////////////////////////////////////////////////////
-from qt_core import *
+# Importando las configuraciones
+from src.core.json_settings import Settings
 
-# IMPORT SETTINGS
-# ///////////////////////////////////////////////////////////////
-from gui.core.json_settings import Settings
+# Importando recursos funcionales
+from src.interfaces.windows.main_window.functions_main_window import *
 
-# IMPORT PY ONE DARK WINDOWS
-# ///////////////////////////////////////////////////////////////
-# MAIN WINDOW
-from gui.uis.windows.main_window import *
+# Importando recursos gráficos
+from src.interfaces.windows.main_window import * # Importando la ventana principal
+from src.widgets import *
 
-# IMPORT PY ONE DARK WIDGETS
-# ///////////////////////////////////////////////////////////////
-from gui.widgets import *
-
-# ADJUST QT FONT DPI FOR HIGHT SCALE AN 4K MONITOR
-# ///////////////////////////////////////////////////////////////
-os.environ["QT_FONT_DPI"] = "96"
-# IF IS 4K MONITOR ENABLE 'os.environ["QT_SCALE_FACTOR"] = "2"'
+os.environ["QT_FONT_DPI"]="96" # Configuración de DPI
 
 # MAIN WINDOW
 # ///////////////////////////////////////////////////////////////
@@ -65,7 +52,7 @@ class MainWindow(QMainWindow):
             self.ui.left_menu.deselect_all_tab()
 
         # Get Title Bar Btn And Reset Active         
-        top_settings = MainFunctions.get_title_bar_btn(self, "btn_top_settings")
+        top_settings = MainFunctions.get_title_bar_btn(self, "btn_top_export")
         top_settings.set_active(False)
 
         # LEFT MENU
@@ -79,8 +66,8 @@ class MainWindow(QMainWindow):
             # Load Page 1
             MainFunctions.set_page(self, self.ui.load_pages.page_1)
 
-        # WIDGETS BTN
-        if btn.objectName() == "btn_widgets":
+        # Teory BTN
+        if btn.objectName() == "btn_teory":
             # Select Menu
             self.ui.left_menu.select_only_one(btn.objectName())
 
@@ -88,7 +75,7 @@ class MainWindow(QMainWindow):
             MainFunctions.set_page(self, self.ui.load_pages.page_2)
 
         # LOAD USER PAGE
-        if btn.objectName() == "btn_add_user":
+        if btn.objectName() == "btn_calculus":
             # Select Menu
             self.ui.left_menu.select_only_one(btn.objectName())
 
@@ -148,7 +135,7 @@ class MainWindow(QMainWindow):
         # ///////////////////////////////////////////////////////////////
         
         # SETTINGS TITLE BAR
-        if btn.objectName() == "btn_top_settings":
+        if btn.objectName() == "btn_top_export":
             # Toogle Active
             if not MainFunctions.right_column_is_visible(self):
                 btn.set_active(True)
@@ -188,8 +175,7 @@ class MainWindow(QMainWindow):
     # ///////////////////////////////////////////////////////////////
     def mousePressEvent(self, event):
         # SET DRAG POS WINDOW
-        self.dragPos = event.globalPos()
-
+        self.dragPos = event.globalPosition().toPoint()
 
 # SETTINGS WHEN TO START
 # Set the initial class and also additional parameters of the "QApplication" class
@@ -201,6 +187,5 @@ if __name__ == "__main__":
     app.setWindowIcon(QIcon("icon.ico"))
     window = MainWindow()
 
-    # EXEC APP
-    # ///////////////////////////////////////////////////////////////
-    sys.exit(app.exec_())
+    # Excepción de la App
+    sys.exit(app.exec())
