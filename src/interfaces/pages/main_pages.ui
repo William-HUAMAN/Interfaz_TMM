@@ -32,7 +32,7 @@
    <item>
     <widget class="QStackedWidget" name="pages">
      <property name="currentIndex">
-      <number>1</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="page_1">
       <property name="styleSheet">
@@ -54,7 +54,7 @@
        <property name="bottomMargin">
         <number>20</number>
        </property>
-       <item>
+       <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
         <widget class="QLabel" name="name_app">
          <property name="minimumSize">
           <size>
@@ -164,7 +164,7 @@
              <property name="frameShadow">
               <enum>QFrame::Raised</enum>
              </property>
-             <widget class="QWidget" name="">
+             <widget class="QWidget" name="layoutWidget">
               <property name="geometry">
                <rect>
                 <x>0</x>
@@ -199,7 +199,7 @@
            <property name="frameShadow">
             <enum>QFrame::Raised</enum>
            </property>
-           <widget class="QWidget" name="">
+           <widget class="QWidget" name="layoutWidget">
             <property name="geometry">
              <rect>
               <x>5</x>
@@ -289,8 +289,8 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>214</width>
-            <height>266</height>
+            <width>840</width>
+            <height>580</height>
            </rect>
           </property>
           <property name="styleSheet">
