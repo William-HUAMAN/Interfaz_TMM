@@ -326,8 +326,6 @@ class SetupMainWindow:
         # PAGE 2
 
 
-
-
         # PAGE 3
         # CIRCULAR PROGRESS 1
         self.circular_progress_1 = PyCircularProgress(
