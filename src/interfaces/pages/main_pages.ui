@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>864</width>
-    <height>620</height>
+    <height>709</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -238,7 +238,7 @@
      <widget class="QWidget" name="page_2">
       <layout class="QHBoxLayout" name="horizontalLayout_2">
        <property name="spacing">
-        <number>5</number>
+        <number>18</number>
        </property>
        <property name="leftMargin">
         <number>5</number>
@@ -284,196 +284,504 @@
           </widget>
          </item>
          <item>
-          <widget class="QLabel" name="L_line1">
-           <property name="minimumSize">
-            <size>
-             <width>276</width>
-             <height>2</height>
-            </size>
-           </property>
-           <property name="maximumSize">
-            <size>
-             <width>16777215</width>
-             <height>2</height>
-            </size>
-           </property>
-           <property name="text">
-            <string/>
-           </property>
-          </widget>
-         </item>
-         <item alignment="Qt::AlignHCenter">
-          <widget class="QLabel" name="label_4">
-           <property name="minimumSize">
-            <size>
-             <width>0</width>
-             <height>40</height>
-            </size>
-           </property>
-           <property name="maximumSize">
-            <size>
-             <width>16777215</width>
-             <height>40</height>
-            </size>
-           </property>
+          <widget class="QScrollArea" name="scroll_area_gen">
            <property name="styleSheet">
-            <string notr="true">font: 14pt &quot;Segoe UI&quot;;</string>
+            <string notr="true">background: transparent;</string>
            </property>
-           <property name="text">
-            <string>Mecanismo de 4 barras</string>
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
            </property>
+           <property name="verticalScrollBarPolicy">
+            <enum>Qt::ScrollBarAlwaysOff</enum>
+           </property>
+           <property name="horizontalScrollBarPolicy">
+            <enum>Qt::ScrollBarAlwaysOff</enum>
+           </property>
+           <property name="widgetResizable">
+            <bool>true</bool>
+           </property>
+           <widget class="QWidget" name="contents_2">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>0</y>
+              <width>277</width>
+              <height>726</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background: transparent;</string>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_5">
+             <property name="spacing">
+              <number>15</number>
+             </property>
+             <property name="leftMargin">
+              <number>5</number>
+             </property>
+             <property name="topMargin">
+              <number>5</number>
+             </property>
+             <property name="rightMargin">
+              <number>5</number>
+             </property>
+             <property name="bottomMargin">
+              <number>5</number>
+             </property>
+             <item alignment="Qt::AlignHCenter">
+              <widget class="QLabel" name="t_eslabon">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>35</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>35</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">font-size: 12pt</string>
+               </property>
+               <property name="text">
+                <string>Eslabones y Juntas</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="description_eslabon">
+               <property name="text">
+                <string>Un eslabón es un cuerpo rígido que posee por lo menos 2 nodos por los cuales se une a otros eslabones.
+Una junta es una conexión entre dos o más eslabones, la cual permite algún movimiento</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignJustify|Qt::AlignTop</set>
+               </property>
+               <property name="wordWrap">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="eslabon_layout"/>
+             </item>
+             <item>
+              <widget class="QLabel" name="t_grashof">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>35</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>35</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">font-size: 12pt</string>
+               </property>
+               <property name="text">
+                <string>Condición de Grashof</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="description_grashof">
+               <property name="text">
+                <string>Es una relación que predice el comportamiento de rotación o rotabilidad de las inversiones de un mecanismo de cuatro barras basado sólo en las longitudes de los eslabones.</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignJustify|Qt::AlignTop</set>
+               </property>
+               <property name="wordWrap">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="grashof_layout"/>
+             </item>
+             <item>
+              <widget class="QLabel" name="description_label_2">
+               <property name="text">
+                <string>De cumplirse la condición, el eslabonamiento es de Grashof y por lo menos un eslabón será capaz de realizar una revolución completa con respecto al plano de bancada.</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignJustify|Qt::AlignTop</set>
+               </property>
+               <property name="wordWrap">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="t_4bar">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>35</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>35</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">font-size: 12pt</string>
+               </property>
+               <property name="text">
+                <string>Mecanismo de cuatro barras</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="description_4bar">
+               <property name="text">
+                <string>Es un mecanismo plano compuesto por 4 sólidos rígidos conectados entre sí mediante 4 pares cinemáticos de revolución. Usualmente uno de los sólidos está fijo durante su movimiento.</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignJustify|Qt::AlignTop</set>
+               </property>
+               <property name="wordWrap">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item alignment="Qt::AlignHCenter|Qt::AlignTop">
+              <widget class="QLabel" name="img_mecanismo">
+               <property name="enabled">
+                <bool>true</bool>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>267</width>
+                 <height>200</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>267</width>
+                 <height>200</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>16</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">font-size: 16pt</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="pixmap">
+                <pixmap>../../img/teory/4bar.png</pixmap>
+               </property>
+               <property name="scaledContents">
+                <bool>true</bool>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignHCenter|Qt::AlignTop</set>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
           </widget>
-         </item>
-         <item>
-          <layout class="QHBoxLayout" name="mechanism_layout"/>
-         </item>
-         <item alignment="Qt::AlignHCenter|Qt::AlignTop">
-          <widget class="QLabel" name="grashof_condition">
-           <property name="maximumSize">
-            <size>
-             <width>16777215</width>
-             <height>40</height>
-            </size>
-           </property>
-           <property name="font">
-            <font>
-             <pointsize>14</pointsize>
-             <italic>false</italic>
-             <bold>false</bold>
-            </font>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">font: 14pt &quot;Segoe UI&quot;;</string>
-           </property>
-           <property name="text">
-            <string>Condición de Grashof</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <layout class="QHBoxLayout" name="ec1_layout"/>
-         </item>
-         <item alignment="Qt::AlignHCenter|Qt::AlignTop">
-          <widget class="QLabel" name="label_2">
-           <property name="maximumSize">
-            <size>
-             <width>16777215</width>
-             <height>40</height>
-            </size>
-           </property>
-           <property name="font">
-            <font>
-             <pointsize>14</pointsize>
-             <italic>false</italic>
-             <bold>false</bold>
-            </font>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">font: 14pt &quot;Segoe UI&quot;;</string>
-           </property>
-           <property name="text">
-            <string>TextLabel</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <layout class="QHBoxLayout" name="ec2_layout"/>
          </item>
         </layout>
        </item>
        <item>
         <layout class="QVBoxLayout" name="teory_col2">
-         <item alignment="Qt::AlignHCenter|Qt::AlignTop">
-          <widget class="QLabel" name="title_section2">
-           <property name="minimumSize">
-            <size>
-             <width>0</width>
-             <height>60</height>
-            </size>
-           </property>
-           <property name="maximumSize">
-            <size>
-             <width>16777215</width>
-             <height>60</height>
-            </size>
-           </property>
+         <item>
+          <widget class="QScrollArea" name="scroll_area_vel">
            <property name="styleSheet">
-            <string notr="true">font: 18pt &quot;Segoe UI&quot;;</string>
+            <string notr="true">background: transparent;</string>
            </property>
-           <property name="text">
-            <string>Análisis de Posición</string>
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
            </property>
+           <property name="verticalScrollBarPolicy">
+            <enum>Qt::ScrollBarAlwaysOff</enum>
+           </property>
+           <property name="horizontalScrollBarPolicy">
+            <enum>Qt::ScrollBarAlwaysOff</enum>
+           </property>
+           <property name="widgetResizable">
+            <bool>true</bool>
+           </property>
+           <widget class="QWidget" name="contents_pos">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>0</y>
+              <width>268</width>
+              <height>687</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background: transparent;</string>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_4">
+             <property name="spacing">
+              <number>15</number>
+             </property>
+             <property name="leftMargin">
+              <number>5</number>
+             </property>
+             <property name="topMargin">
+              <number>5</number>
+             </property>
+             <property name="rightMargin">
+              <number>5</number>
+             </property>
+             <property name="bottomMargin">
+              <number>5</number>
+             </property>
+             <item alignment="Qt::AlignHCenter">
+              <widget class="QLabel" name="title_section2">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>60</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>60</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">font: 18pt &quot;Segoe UI&quot;;</string>
+               </property>
+               <property name="text">
+                <string>Análisis de Posición</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="title_label_2">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>35</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>35</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">font-size: 12pt</string>
+               </property>
+               <property name="text">
+                <string>Custom Widgets Page</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="description_label_3">
+               <property name="text">
+                <string>Here will be all the custom widgets, they will be added over time on this page.
+I will try to always record a new tutorial when adding a new Widget and updating the project on Patreon before launching on GitHub and GitHub after the public release.</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignJustify|Qt::AlignTop</set>
+               </property>
+               <property name="wordWrap">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="row_1_layout_2"/>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="row_2_layout_2"/>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="row_3_layout_2"/>
+             </item>
+             <item>
+              <layout class="QVBoxLayout" name="row_4_layout_2"/>
+             </item>
+             <item>
+              <layout class="QVBoxLayout" name="row_5_layout_2"/>
+             </item>
+            </layout>
+           </widget>
           </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="L_line2">
-           <property name="minimumSize">
-            <size>
-             <width>276</width>
-             <height>0</height>
-            </size>
-           </property>
-           <property name="maximumSize">
-            <size>
-             <width>16777215</width>
-             <height>2</height>
-            </size>
-           </property>
-           <property name="text">
-            <string/>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <layout class="QHBoxLayout" name="ec4_layout"/>
          </item>
         </layout>
        </item>
        <item>
         <layout class="QVBoxLayout" name="teory_col3">
-         <item alignment="Qt::AlignHCenter|Qt::AlignTop">
-          <widget class="QLabel" name="title_section3">
-           <property name="minimumSize">
-            <size>
-             <width>0</width>
-             <height>60</height>
-            </size>
-           </property>
-           <property name="maximumSize">
-            <size>
-             <width>16777215</width>
-             <height>60</height>
-            </size>
-           </property>
+         <item>
+          <widget class="QScrollArea" name="scroll_area_vel_2">
            <property name="styleSheet">
-            <string notr="true">font: 18pt &quot;Segoe UI&quot;;</string>
+            <string notr="true">background: transparent;</string>
            </property>
-           <property name="text">
-            <string>Análisis de Velocidad</string>
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
            </property>
+           <property name="verticalScrollBarPolicy">
+            <enum>Qt::ScrollBarAlwaysOff</enum>
+           </property>
+           <property name="horizontalScrollBarPolicy">
+            <enum>Qt::ScrollBarAlwaysOff</enum>
+           </property>
+           <property name="widgetResizable">
+            <bool>true</bool>
+           </property>
+           <widget class="QWidget" name="contents_3">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>0</y>
+              <width>267</width>
+              <height>687</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background: transparent;</string>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_6">
+             <property name="spacing">
+              <number>15</number>
+             </property>
+             <property name="leftMargin">
+              <number>5</number>
+             </property>
+             <property name="topMargin">
+              <number>5</number>
+             </property>
+             <property name="rightMargin">
+              <number>5</number>
+             </property>
+             <property name="bottomMargin">
+              <number>5</number>
+             </property>
+             <item alignment="Qt::AlignHCenter">
+              <widget class="QLabel" name="title_section3">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>60</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>60</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">font: 18pt &quot;Segoe UI&quot;;</string>
+               </property>
+               <property name="text">
+                <string>Análisis de Velocidad</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="title_label_3">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>35</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>35</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">font-size: 12pt</string>
+               </property>
+               <property name="text">
+                <string>Custom Widgets Page</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="description_label_4">
+               <property name="text">
+                <string>Here will be all the custom widgets, they will be added over time on this page.
+I will try to always record a new tutorial when adding a new Widget and updating the project on Patreon before launching on GitHub and GitHub after the public release.</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignJustify|Qt::AlignTop</set>
+               </property>
+               <property name="wordWrap">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="row_1_layout_4"/>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="row_3_layout_3"/>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="row_2_layout_4"/>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="row_3_layout_4"/>
+             </item>
+             <item>
+              <layout class="QVBoxLayout" name="row_4_layout_4"/>
+             </item>
+             <item>
+              <layout class="QVBoxLayout" name="row_5_layout_4"/>
+             </item>
+            </layout>
+           </widget>
           </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="L_line3">
-           <property name="minimumSize">
-            <size>
-             <width>276</width>
-             <height>0</height>
-            </size>
-           </property>
-           <property name="maximumSize">
-            <size>
-             <width>16777215</width>
-             <height>2</height>
-            </size>
-           </property>
-           <property name="text">
-            <string/>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <layout class="QHBoxLayout" name="horizontalLayout"/>
          </item>
         </layout>
        </item>
@@ -518,8 +826,8 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>214</width>
-            <height>266</height>
+            <width>844</width>
+            <height>600</height>
            </rect>
           </property>
           <property name="styleSheet">

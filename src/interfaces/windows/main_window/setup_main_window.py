@@ -44,7 +44,7 @@ class SetupMainWindow:
             "is_active" : False
         },
         {
-            "btn_icon" : "icon_add_user.svg",
+            "btn_icon" : "icon_calculadora.svg",
             "btn_id" : "btn_calculus",
             "btn_text" : "Cálculos del análisis",
             "btn_tooltip" : "Cálculos",
@@ -323,6 +323,7 @@ class SetupMainWindow:
         self.logo_svg = QSvgWidget(Functions.set_svg_image("logo.svg"))
         self.ui.load_pages.logo_layout.addWidget(self.logo_svg)
 
+        # PAGE 2
 
 
 
