@@ -306,7 +306,7 @@
               <x>0</x>
               <y>0</y>
               <width>277</width>
-              <height>726</height>
+              <height>847</height>
              </rect>
             </property>
             <property name="styleSheet">
@@ -365,9 +365,6 @@ Una junta es una conexión entre dos o más eslabones, la cual permite algún mo
               </widget>
              </item>
              <item>
-              <layout class="QHBoxLayout" name="eslabon_layout"/>
-             </item>
-             <item>
               <widget class="QLabel" name="t_grashof">
                <property name="minimumSize">
                 <size>
@@ -410,8 +407,44 @@ Una junta es una conexión entre dos o más eslabones, la cual permite algún mo
                </property>
               </widget>
              </item>
-             <item>
-              <layout class="QHBoxLayout" name="grashof_layout"/>
+             <item alignment="Qt::AlignHCenter">
+              <widget class="QLabel" name="img_grashof">
+               <property name="minimumSize">
+                <size>
+                 <width>190</width>
+                 <height>140</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>190</width>
+                 <height>140</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>16</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">font-size: 16pt</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="pixmap">
+                <pixmap>C:/Users/Usuario/Downloads/tmm_images/grashof.jpg</pixmap>
+               </property>
+               <property name="scaledContents">
+                <bool>true</bool>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+               <property name="openExternalLinks">
+                <bool>false</bool>
+               </property>
+              </widget>
              </item>
              <item>
               <widget class="QLabel" name="description_label_2">
@@ -498,7 +531,7 @@ Una junta es una conexión entre dos o más eslabones, la cual permite algún mo
                 <string/>
                </property>
                <property name="pixmap">
-                <pixmap>../../img/teory/4bar.png</pixmap>
+                <pixmap>C:/Users/Usuario/Downloads/tmm_images/mecanism.png</pixmap>
                </property>
                <property name="scaledContents">
                 <bool>true</bool>
@@ -538,7 +571,7 @@ Una junta es una conexión entre dos o más eslabones, la cual permite algún mo
              <rect>
               <x>0</x>
               <y>0</y>
-              <width>268</width>
+              <width>263</width>
               <height>687</height>
              </rect>
             </property>
@@ -584,7 +617,7 @@ Una junta es una conexión entre dos o más eslabones, la cual permite algún mo
               </widget>
              </item>
              <item>
-              <widget class="QLabel" name="title_label_2">
+              <widget class="QLabel" name="t_position">
                <property name="minimumSize">
                 <size>
                  <width>0</width>
@@ -606,7 +639,7 @@ Una junta es una conexión entre dos o más eslabones, la cual permite algún mo
                 <string notr="true">font-size: 12pt</string>
                </property>
                <property name="text">
-                <string>Custom Widgets Page</string>
+                <string>Posición</string>
                </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>
@@ -614,10 +647,9 @@ Una junta es una conexión entre dos o más eslabones, la cual permite algún mo
               </widget>
              </item>
              <item>
-              <widget class="QLabel" name="description_label_3">
+              <widget class="QLabel" name="description_pos">
                <property name="text">
-                <string>Here will be all the custom widgets, they will be added over time on this page.
-I will try to always record a new tutorial when adding a new Widget and updating the project on Patreon before launching on GitHub and GitHub after the public release.</string>
+                <string>La posición de un punto en el plano puede definirse por medio de un vector de posición. La elección de ejes de referencia es arbitraria y se elige de conformidad con el observador.</string>
                </property>
                <property name="alignment">
                 <set>Qt::AlignJustify|Qt::AlignTop</set>
@@ -628,19 +660,129 @@ I will try to always record a new tutorial when adding a new Widget and updating
               </widget>
              </item>
              <item>
-              <layout class="QHBoxLayout" name="row_1_layout_2"/>
+              <widget class="QLabel" name="t_eslabon_2">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>35</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>35</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">font-size: 12pt</string>
+               </property>
+               <property name="text">
+                <string>  $x_{i}$</string>
+               </property>
+               <property name="textFormat">
+                <enum>Qt::MarkdownText</enum>
+               </property>
+              </widget>
              </item>
              <item>
-              <layout class="QHBoxLayout" name="row_2_layout_2"/>
+              <widget class="QLabel" name="description_grashof_2">
+               <property name="text">
+                <string>Es una relación que predice el comportamiento de rotación o rotabilidad de las inversiones de un mecanismo de cuatro barras basado sólo en las longitudes de los eslabones.</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignJustify|Qt::AlignTop</set>
+               </property>
+               <property name="wordWrap">
+                <bool>true</bool>
+               </property>
+              </widget>
              </item>
              <item>
-              <layout class="QHBoxLayout" name="row_3_layout_2"/>
+              <widget class="QLabel" name="t_grashof_2">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>35</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>35</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">font-size: 12pt</string>
+               </property>
+               <property name="text">
+                <string>Condición de Grashof</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
              </item>
              <item>
-              <layout class="QVBoxLayout" name="row_4_layout_2"/>
+              <widget class="QLabel" name="description_label_3">
+               <property name="text">
+                <string>De cumplirse la condición, el eslabonamiento es de Grashof y por lo menos un eslabón será capaz de realizar una revolución completa con respecto al plano de bancada.</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignJustify|Qt::AlignTop</set>
+               </property>
+               <property name="wordWrap">
+                <bool>true</bool>
+               </property>
+              </widget>
              </item>
              <item>
-              <layout class="QVBoxLayout" name="row_5_layout_2"/>
+              <widget class="QLabel" name="t_4bar_2">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>35</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>35</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">font-size: 12pt</string>
+               </property>
+               <property name="text">
+                <string>Mecanismo de cuatro barras</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="description_eslabon_2">
+               <property name="text">
+                <string>Un eslabón es un cuerpo rígido que posee por lo menos 2 nodos por los cuales se une a otros eslabones.
+Una junta es una conexión entre dos o más eslabones, la cual permite algún movimiento</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignJustify|Qt::AlignTop</set>
+               </property>
+               <property name="wordWrap">
+                <bool>true</bool>
+               </property>
+              </widget>
              </item>
             </layout>
            </widget>
@@ -672,7 +814,7 @@ I will try to always record a new tutorial when adding a new Widget and updating
              <rect>
               <x>0</x>
               <y>0</y>
-              <width>267</width>
+              <width>262</width>
               <height>687</height>
              </rect>
             </property>
@@ -826,8 +968,8 @@ I will try to always record a new tutorial when adding a new Widget and updating
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>844</width>
-            <height>600</height>
+            <width>214</width>
+            <height>266</height>
            </rect>
           </property>
           <property name="styleSheet">
