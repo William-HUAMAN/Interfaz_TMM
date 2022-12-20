@@ -23,7 +23,7 @@ class Ui_MainPages(object):
     def setupUi(self, MainPages):
         if not MainPages.objectName():
             MainPages.setObjectName(u"MainPages")
-        MainPages.resize(864, 709)
+        MainPages.resize(864, 1503)
         self.verticalLayout_3 = QVBoxLayout(MainPages)
         self.verticalLayout_3.setSpacing(0)
         self.verticalLayout_3.setObjectName(u"verticalLayout_3")
@@ -147,7 +147,7 @@ class Ui_MainPages(object):
         self.scroll_area_gen.setWidgetResizable(True)
         self.contents_2 = QWidget()
         self.contents_2.setObjectName(u"contents_2")
-        self.contents_2.setGeometry(QRect(0, 0, 277, 847))
+        self.contents_2.setGeometry(QRect(0, 0, 277, 1420))
         self.contents_2.setStyleSheet(u"background: transparent;")
         self.verticalLayout_5 = QVBoxLayout(self.contents_2)
         self.verticalLayout_5.setSpacing(15)
@@ -168,46 +168,54 @@ class Ui_MainPages(object):
 
         self.verticalLayout_5.addWidget(self.description_eslabon)
 
-        self.t_grashof = QLabel(self.contents_2)
-        self.t_grashof.setObjectName(u"t_grashof")
-        self.t_grashof.setMinimumSize(QSize(0, 35))
-        self.t_grashof.setMaximumSize(QSize(16777215, 35))
+        self.frame_eslabon = QFrame(self.contents_2)
+        self.frame_eslabon.setObjectName(u"frame_eslabon")
+        self.frame_eslabon.setMinimumSize(QSize(220, 300))
+        self.frame_eslabon.setMaximumSize(QSize(220, 300))
+        self.frame_eslabon.setFrameShape(QFrame.StyledPanel)
+        self.frame_eslabon.setFrameShadow(QFrame.Raised)
+        self.layoutWidget_5 = QWidget(self.frame_eslabon)
+        self.layoutWidget_5.setObjectName(u"layoutWidget_5")
+        self.layoutWidget_5.setGeometry(QRect(0, 0, 221, 291))
+        self.eslabon_layout = QVBoxLayout(self.layoutWidget_5)
+        self.eslabon_layout.setObjectName(u"eslabon_layout")
+        self.eslabon_layout.setContentsMargins(0, 0, 0, 0)
+
+        self.verticalLayout_5.addWidget(self.frame_eslabon, 0, Qt.AlignHCenter|Qt.AlignVCenter)
+
+        self.t_grubler = QLabel(self.contents_2)
+        self.t_grubler.setObjectName(u"t_grubler")
+        self.t_grubler.setMinimumSize(QSize(0, 35))
+        self.t_grubler.setMaximumSize(QSize(16777215, 35))
         font2 = QFont()
         font2.setPointSize(12)
-        self.t_grashof.setFont(font2)
-        self.t_grashof.setStyleSheet(u"font-size: 12pt")
-        self.t_grashof.setAlignment(Qt.AlignCenter)
+        self.t_grubler.setFont(font2)
+        self.t_grubler.setStyleSheet(u"font-size: 12pt")
+        self.t_grubler.setAlignment(Qt.AlignCenter)
 
-        self.verticalLayout_5.addWidget(self.t_grashof)
+        self.verticalLayout_5.addWidget(self.t_grubler)
 
-        self.description_grashof = QLabel(self.contents_2)
-        self.description_grashof.setObjectName(u"description_grashof")
-        self.description_grashof.setAlignment(Qt.AlignJustify|Qt.AlignTop)
-        self.description_grashof.setWordWrap(True)
+        self.description_grubler = QLabel(self.contents_2)
+        self.description_grubler.setObjectName(u"description_grubler")
+        self.description_grubler.setAlignment(Qt.AlignJustify|Qt.AlignTop)
+        self.description_grubler.setWordWrap(True)
 
-        self.verticalLayout_5.addWidget(self.description_grashof)
+        self.verticalLayout_5.addWidget(self.description_grubler)
 
-        self.img_grashof = QLabel(self.contents_2)
-        self.img_grashof.setObjectName(u"img_grashof")
-        self.img_grashof.setMinimumSize(QSize(190, 140))
-        self.img_grashof.setMaximumSize(QSize(190, 140))
-        font3 = QFont()
-        font3.setPointSize(16)
-        self.img_grashof.setFont(font3)
-        self.img_grashof.setStyleSheet(u"font-size: 16pt")
-        self.img_grashof.setPixmap(QPixmap(u"C:/Users/Usuario/Downloads/tmm_images/grashof.jpg"))
-        self.img_grashof.setScaledContents(True)
-        self.img_grashof.setAlignment(Qt.AlignCenter)
-        self.img_grashof.setOpenExternalLinks(False)
+        self.frame_gruebler = QFrame(self.contents_2)
+        self.frame_gruebler.setObjectName(u"frame_gruebler")
+        self.frame_gruebler.setMinimumSize(QSize(235, 100))
+        self.frame_gruebler.setMaximumSize(QSize(235, 100))
+        self.frame_gruebler.setFrameShape(QFrame.StyledPanel)
+        self.frame_gruebler.setFrameShadow(QFrame.Raised)
+        self.layoutWidget_4 = QWidget(self.frame_gruebler)
+        self.layoutWidget_4.setObjectName(u"layoutWidget_4")
+        self.layoutWidget_4.setGeometry(QRect(0, 0, 231, 101))
+        self.gruebler_layout = QVBoxLayout(self.layoutWidget_4)
+        self.gruebler_layout.setObjectName(u"gruebler_layout")
+        self.gruebler_layout.setContentsMargins(0, 0, 0, 0)
 
-        self.verticalLayout_5.addWidget(self.img_grashof, 0, Qt.AlignHCenter)
-
-        self.description_label_2 = QLabel(self.contents_2)
-        self.description_label_2.setObjectName(u"description_label_2")
-        self.description_label_2.setAlignment(Qt.AlignJustify|Qt.AlignTop)
-        self.description_label_2.setWordWrap(True)
-
-        self.verticalLayout_5.addWidget(self.description_label_2)
+        self.verticalLayout_5.addWidget(self.frame_gruebler, 0, Qt.AlignHCenter)
 
         self.t_4bar = QLabel(self.contents_2)
         self.t_4bar.setObjectName(u"t_4bar")
@@ -226,18 +234,59 @@ class Ui_MainPages(object):
 
         self.verticalLayout_5.addWidget(self.description_4bar)
 
-        self.img_mecanismo = QLabel(self.contents_2)
-        self.img_mecanismo.setObjectName(u"img_mecanismo")
-        self.img_mecanismo.setEnabled(True)
-        self.img_mecanismo.setMinimumSize(QSize(267, 200))
-        self.img_mecanismo.setMaximumSize(QSize(267, 200))
-        self.img_mecanismo.setFont(font3)
-        self.img_mecanismo.setStyleSheet(u"font-size: 16pt")
-        self.img_mecanismo.setPixmap(QPixmap(u"C:/Users/Usuario/Downloads/tmm_images/mecanism.png"))
-        self.img_mecanismo.setScaledContents(True)
-        self.img_mecanismo.setAlignment(Qt.AlignHCenter|Qt.AlignTop)
+        self.frame_mecanismo = QFrame(self.contents_2)
+        self.frame_mecanismo.setObjectName(u"frame_mecanismo")
+        self.frame_mecanismo.setMinimumSize(QSize(267, 200))
+        self.frame_mecanismo.setMaximumSize(QSize(267, 200))
+        self.frame_mecanismo.setFrameShape(QFrame.StyledPanel)
+        self.frame_mecanismo.setFrameShadow(QFrame.Raised)
+        self.layoutWidget_2 = QWidget(self.frame_mecanismo)
+        self.layoutWidget_2.setObjectName(u"layoutWidget_2")
+        self.layoutWidget_2.setGeometry(QRect(0, 10, 261, 181))
+        self.mecanismo_layout = QVBoxLayout(self.layoutWidget_2)
+        self.mecanismo_layout.setObjectName(u"mecanismo_layout")
+        self.mecanismo_layout.setContentsMargins(0, 0, 0, 0)
 
-        self.verticalLayout_5.addWidget(self.img_mecanismo, 0, Qt.AlignHCenter|Qt.AlignTop)
+        self.verticalLayout_5.addWidget(self.frame_mecanismo, 0, Qt.AlignHCenter)
+
+        self.t_grashof = QLabel(self.contents_2)
+        self.t_grashof.setObjectName(u"t_grashof")
+        self.t_grashof.setMinimumSize(QSize(0, 35))
+        self.t_grashof.setMaximumSize(QSize(16777215, 35))
+        self.t_grashof.setFont(font2)
+        self.t_grashof.setStyleSheet(u"font-size: 12pt")
+        self.t_grashof.setAlignment(Qt.AlignCenter)
+
+        self.verticalLayout_5.addWidget(self.t_grashof)
+
+        self.description_grashof = QLabel(self.contents_2)
+        self.description_grashof.setObjectName(u"description_grashof")
+        self.description_grashof.setAlignment(Qt.AlignJustify|Qt.AlignTop)
+        self.description_grashof.setWordWrap(True)
+
+        self.verticalLayout_5.addWidget(self.description_grashof)
+
+        self.frame_grashof = QFrame(self.contents_2)
+        self.frame_grashof.setObjectName(u"frame_grashof")
+        self.frame_grashof.setMinimumSize(QSize(220, 170))
+        self.frame_grashof.setMaximumSize(QSize(220, 170))
+        self.frame_grashof.setFrameShape(QFrame.StyledPanel)
+        self.frame_grashof.setFrameShadow(QFrame.Raised)
+        self.layoutWidget_3 = QWidget(self.frame_grashof)
+        self.layoutWidget_3.setObjectName(u"layoutWidget_3")
+        self.layoutWidget_3.setGeometry(QRect(0, 0, 221, 161))
+        self.grashof_layout = QVBoxLayout(self.layoutWidget_3)
+        self.grashof_layout.setObjectName(u"grashof_layout")
+        self.grashof_layout.setContentsMargins(0, 0, 0, 0)
+
+        self.verticalLayout_5.addWidget(self.frame_grashof, 0, Qt.AlignHCenter|Qt.AlignTop)
+
+        self.description_label_2 = QLabel(self.contents_2)
+        self.description_label_2.setObjectName(u"description_label_2")
+        self.description_label_2.setAlignment(Qt.AlignJustify|Qt.AlignTop)
+        self.description_label_2.setWordWrap(True)
+
+        self.verticalLayout_5.addWidget(self.description_label_2)
 
         self.scroll_area_gen.setWidget(self.contents_2)
 
@@ -257,7 +306,7 @@ class Ui_MainPages(object):
         self.scroll_area_vel.setWidgetResizable(True)
         self.contents_pos = QWidget()
         self.contents_pos.setObjectName(u"contents_pos")
-        self.contents_pos.setGeometry(QRect(0, 0, 263, 687))
+        self.contents_pos.setGeometry(QRect(0, 0, 263, 1481))
         self.contents_pos.setStyleSheet(u"background: transparent;")
         self.verticalLayout_4 = QVBoxLayout(self.contents_pos)
         self.verticalLayout_4.setSpacing(15)
@@ -271,15 +320,39 @@ class Ui_MainPages(object):
 
         self.verticalLayout_4.addWidget(self.title_section2, 0, Qt.AlignHCenter)
 
-        self.title_label_2 = QLabel(self.contents_pos)
-        self.title_label_2.setObjectName(u"title_label_2")
-        self.title_label_2.setMinimumSize(QSize(0, 35))
-        self.title_label_2.setMaximumSize(QSize(16777215, 35))
-        self.title_label_2.setFont(font2)
-        self.title_label_2.setStyleSheet(u"font-size: 12pt")
-        self.title_label_2.setAlignment(Qt.AlignCenter)
+        self.t_position = QLabel(self.contents_pos)
+        self.t_position.setObjectName(u"t_position")
+        self.t_position.setMinimumSize(QSize(0, 35))
+        self.t_position.setMaximumSize(QSize(16777215, 35))
+        self.t_position.setFont(font2)
+        self.t_position.setStyleSheet(u"font-size: 12pt")
+        self.t_position.setAlignment(Qt.AlignCenter)
 
-        self.verticalLayout_4.addWidget(self.title_label_2)
+        self.verticalLayout_4.addWidget(self.t_position)
+
+        self.description_pos = QLabel(self.contents_pos)
+        self.description_pos.setObjectName(u"description_pos")
+        self.description_pos.setAlignment(Qt.AlignJustify|Qt.AlignTop)
+        self.description_pos.setWordWrap(True)
+
+        self.verticalLayout_4.addWidget(self.description_pos)
+
+        self.description_grashof_2 = QLabel(self.contents_pos)
+        self.description_grashof_2.setObjectName(u"description_grashof_2")
+        self.description_grashof_2.setAlignment(Qt.AlignJustify|Qt.AlignTop)
+        self.description_grashof_2.setWordWrap(True)
+
+        self.verticalLayout_4.addWidget(self.description_grashof_2)
+
+        self.t_grashof_2 = QLabel(self.contents_pos)
+        self.t_grashof_2.setObjectName(u"t_grashof_2")
+        self.t_grashof_2.setMinimumSize(QSize(0, 35))
+        self.t_grashof_2.setMaximumSize(QSize(16777215, 35))
+        self.t_grashof_2.setFont(font2)
+        self.t_grashof_2.setStyleSheet(u"font-size: 12pt")
+        self.t_grashof_2.setAlignment(Qt.AlignCenter)
+
+        self.verticalLayout_4.addWidget(self.t_grashof_2)
 
         self.description_label_3 = QLabel(self.contents_pos)
         self.description_label_3.setObjectName(u"description_label_3")
@@ -288,30 +361,22 @@ class Ui_MainPages(object):
 
         self.verticalLayout_4.addWidget(self.description_label_3)
 
-        self.row_1_layout_2 = QHBoxLayout()
-        self.row_1_layout_2.setObjectName(u"row_1_layout_2")
+        self.t_4bar_2 = QLabel(self.contents_pos)
+        self.t_4bar_2.setObjectName(u"t_4bar_2")
+        self.t_4bar_2.setMinimumSize(QSize(0, 35))
+        self.t_4bar_2.setMaximumSize(QSize(16777215, 35))
+        self.t_4bar_2.setFont(font2)
+        self.t_4bar_2.setStyleSheet(u"font-size: 12pt")
+        self.t_4bar_2.setAlignment(Qt.AlignCenter)
 
-        self.verticalLayout_4.addLayout(self.row_1_layout_2)
+        self.verticalLayout_4.addWidget(self.t_4bar_2)
 
-        self.row_2_layout_2 = QHBoxLayout()
-        self.row_2_layout_2.setObjectName(u"row_2_layout_2")
+        self.description_eslabon_2 = QLabel(self.contents_pos)
+        self.description_eslabon_2.setObjectName(u"description_eslabon_2")
+        self.description_eslabon_2.setAlignment(Qt.AlignJustify|Qt.AlignTop)
+        self.description_eslabon_2.setWordWrap(True)
 
-        self.verticalLayout_4.addLayout(self.row_2_layout_2)
-
-        self.row_3_layout_2 = QHBoxLayout()
-        self.row_3_layout_2.setObjectName(u"row_3_layout_2")
-
-        self.verticalLayout_4.addLayout(self.row_3_layout_2)
-
-        self.row_4_layout_2 = QVBoxLayout()
-        self.row_4_layout_2.setObjectName(u"row_4_layout_2")
-
-        self.verticalLayout_4.addLayout(self.row_4_layout_2)
-
-        self.row_5_layout_2 = QVBoxLayout()
-        self.row_5_layout_2.setObjectName(u"row_5_layout_2")
-
-        self.verticalLayout_4.addLayout(self.row_5_layout_2)
+        self.verticalLayout_4.addWidget(self.description_eslabon_2)
 
         self.scroll_area_vel.setWidget(self.contents_pos)
 
@@ -331,7 +396,7 @@ class Ui_MainPages(object):
         self.scroll_area_vel_2.setWidgetResizable(True)
         self.contents_3 = QWidget()
         self.contents_3.setObjectName(u"contents_3")
-        self.contents_3.setGeometry(QRect(0, 0, 262, 687))
+        self.contents_3.setGeometry(QRect(0, 0, 262, 1481))
         self.contents_3.setStyleSheet(u"background: transparent;")
         self.verticalLayout_6 = QVBoxLayout(self.contents_3)
         self.verticalLayout_6.setSpacing(15)
@@ -362,25 +427,45 @@ class Ui_MainPages(object):
 
         self.verticalLayout_6.addWidget(self.description_label_4)
 
+        self.frame = QFrame(self.contents_3)
+        self.frame.setObjectName(u"frame")
+        self.frame.setMinimumSize(QSize(190, 140))
+        self.frame.setMaximumSize(QSize(190, 140))
+        self.frame.setFrameShape(QFrame.StyledPanel)
+        self.frame.setFrameShadow(QFrame.Raised)
+        self.layoutWidget2 = QWidget(self.frame)
+        self.layoutWidget2.setObjectName(u"layoutWidget2")
+        self.layoutWidget2.setGeometry(QRect(10, 10, 171, 121))
+        self.prueba_layout = QVBoxLayout(self.layoutWidget2)
+        self.prueba_layout.setObjectName(u"prueba_layout")
+        self.prueba_layout.setContentsMargins(0, 0, 0, 0)
+
+        self.verticalLayout_6.addWidget(self.frame, 0, Qt.AlignHCenter)
+
         self.row_1_layout_4 = QHBoxLayout()
         self.row_1_layout_4.setObjectName(u"row_1_layout_4")
 
         self.verticalLayout_6.addLayout(self.row_1_layout_4)
 
-        self.row_3_layout_3 = QHBoxLayout()
-        self.row_3_layout_3.setObjectName(u"row_3_layout_3")
+        self.img_grashof = QLabel(self.contents_3)
+        self.img_grashof.setObjectName(u"img_grashof")
+        self.img_grashof.setMinimumSize(QSize(190, 140))
+        self.img_grashof.setMaximumSize(QSize(190, 140))
+        font3 = QFont()
+        font3.setPointSize(16)
+        self.img_grashof.setFont(font3)
+        self.img_grashof.setStyleSheet(u"font-size: 16pt")
+        self.img_grashof.setPixmap(QPixmap(u"C:/Users/Usuario/Downloads/tmm_images/grashof.jpg"))
+        self.img_grashof.setScaledContents(True)
+        self.img_grashof.setAlignment(Qt.AlignCenter)
+        self.img_grashof.setOpenExternalLinks(False)
 
-        self.verticalLayout_6.addLayout(self.row_3_layout_3)
+        self.verticalLayout_6.addWidget(self.img_grashof)
 
         self.row_2_layout_4 = QHBoxLayout()
         self.row_2_layout_4.setObjectName(u"row_2_layout_4")
 
         self.verticalLayout_6.addLayout(self.row_2_layout_4)
-
-        self.row_3_layout_4 = QHBoxLayout()
-        self.row_3_layout_4.setObjectName(u"row_3_layout_4")
-
-        self.verticalLayout_6.addLayout(self.row_3_layout_4)
 
         self.row_4_layout_4 = QVBoxLayout()
         self.row_4_layout_4.setObjectName(u"row_4_layout_4")
@@ -489,21 +574,27 @@ class Ui_MainPages(object):
         self.t_eslabon.setText(QCoreApplication.translate("MainPages", u"Eslabones y Juntas", None))
         self.description_eslabon.setText(QCoreApplication.translate("MainPages", u"Un eslab\u00f3n es un cuerpo r\u00edgido que posee por lo menos 2 nodos por los cuales se une a otros eslabones.\n"
 "Una junta es una conexi\u00f3n entre dos o m\u00e1s eslabones, la cual permite alg\u00fan movimiento", None))
-        self.t_grashof.setText(QCoreApplication.translate("MainPages", u"Condici\u00f3n de Grashof", None))
-        self.description_grashof.setText(QCoreApplication.translate("MainPages", u"Es una relaci\u00f3n que predice el comportamiento de rotaci\u00f3n o rotabilidad de las inversiones de un mecanismo de cuatro barras basado s\u00f3lo en las longitudes de los eslabones.", None))
-        self.img_grashof.setText("")
-        self.description_label_2.setText(QCoreApplication.translate("MainPages", u"De cumplirse la condici\u00f3n, el eslabonamiento es de Grashof y por lo menos un eslab\u00f3n ser\u00e1 capaz de realizar una revoluci\u00f3n completa con respecto al plano de bancada.", None))
+        self.t_grubler.setText(QCoreApplication.translate("MainPages", u"La ecuaci\u00f3n de Gruebler", None))
+        self.description_grubler.setText(QCoreApplication.translate("MainPages", u"Los grados de libertad de mecanismos planares unidos por juntas comunes pueden ser calculados a partir de la ecuaci\u00f3n de Gruebler.", None))
         self.t_4bar.setText(QCoreApplication.translate("MainPages", u"Mecanismo de cuatro barras", None))
         self.description_4bar.setText(QCoreApplication.translate("MainPages", u"Es un mecanismo plano compuesto por 4 s\u00f3lidos r\u00edgidos conectados entre s\u00ed mediante 4 pares cinem\u00e1ticos de revoluci\u00f3n. Usualmente uno de los s\u00f3lidos est\u00e1 fijo durante su movimiento.", None))
-        self.img_mecanismo.setText("")
+        self.t_grashof.setText(QCoreApplication.translate("MainPages", u"Condici\u00f3n de Grashof", None))
+        self.description_grashof.setText(QCoreApplication.translate("MainPages", u"Es una relaci\u00f3n que predice el comportamiento de rotaci\u00f3n o rotabilidad de las inversiones de un mecanismo de cuatro barras basado s\u00f3lo en las longitudes de los eslabones.", None))
+        self.description_label_2.setText(QCoreApplication.translate("MainPages", u"De cumplirse la condici\u00f3n, el eslabonamiento es de Grashof y por lo menos un eslab\u00f3n ser\u00e1 capaz de realizar una revoluci\u00f3n completa con respecto al plano de bancada.", None))
         self.title_section2.setText(QCoreApplication.translate("MainPages", u"An\u00e1lisis de Posici\u00f3n", None))
-        self.title_label_2.setText(QCoreApplication.translate("MainPages", u"Custom Widgets Page", None))
-        self.description_label_3.setText(QCoreApplication.translate("MainPages", u"Here will be all the custom widgets, they will be added over time on this page.\n"
-"I will try to always record a new tutorial when adding a new Widget and updating the project on Patreon before launching on GitHub and GitHub after the public release.", None))
+        self.t_position.setText(QCoreApplication.translate("MainPages", u"Posici\u00f3n", None))
+        self.description_pos.setText(QCoreApplication.translate("MainPages", u"La posici\u00f3n de un punto en el plano puede definirse por medio de un vector de posici\u00f3n. La elecci\u00f3n de ejes de referencia es arbitraria y se elige de conformidad con el observador.", None))
+        self.description_grashof_2.setText(QCoreApplication.translate("MainPages", u"Es una relaci\u00f3n que predice el comportamiento de rotaci\u00f3n o rotabilidad de las inversiones de un mecanismo de cuatro barras basado s\u00f3lo en las longitudes de los eslabones.", None))
+        self.t_grashof_2.setText(QCoreApplication.translate("MainPages", u"Condici\u00f3n de Grashof", None))
+        self.description_label_3.setText(QCoreApplication.translate("MainPages", u"De cumplirse la condici\u00f3n, el eslabonamiento es de Grashof y por lo menos un eslab\u00f3n ser\u00e1 capaz de realizar una revoluci\u00f3n completa con respecto al plano de bancada.", None))
+        self.t_4bar_2.setText(QCoreApplication.translate("MainPages", u"Mecanismo de cuatro barras", None))
+        self.description_eslabon_2.setText(QCoreApplication.translate("MainPages", u"Un eslab\u00f3n es un cuerpo r\u00edgido que posee por lo menos 2 nodos por los cuales se une a otros eslabones.\n"
+"Una junta es una conexi\u00f3n entre dos o m\u00e1s eslabones, la cual permite alg\u00fan movimiento", None))
         self.title_section3.setText(QCoreApplication.translate("MainPages", u"An\u00e1lisis de Velocidad", None))
         self.title_label_3.setText(QCoreApplication.translate("MainPages", u"Custom Widgets Page", None))
         self.description_label_4.setText(QCoreApplication.translate("MainPages", u"Here will be all the custom widgets, they will be added over time on this page.\n"
 "I will try to always record a new tutorial when adding a new Widget and updating the project on Patreon before launching on GitHub and GitHub after the public release.", None))
+        self.img_grashof.setText("")
         self.title_label.setText(QCoreApplication.translate("MainPages", u"Custom Widgets Page", None))
         self.description_label.setText(QCoreApplication.translate("MainPages", u"Here will be all the custom widgets, they will be added over time on this page.\n"
 "I will try to always record a new tutorial when adding a new Widget and updating the project on Patreon before launching on GitHub and GitHub after the public release.", None))

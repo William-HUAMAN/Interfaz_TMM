@@ -324,7 +324,21 @@ class SetupMainWindow:
         self.ui.load_pages.logo_layout.addWidget(self.logo_svg)
 
         # PAGE 2
+        # column 1
+        self.eslabon_svg = QSvgWidget(Functions.set_svg_image("eslabon.svg"))
+        self.ui.load_pages.eslabon_layout.addWidget(self.eslabon_svg)
 
+        self.gruebler_svg = QSvgWidget(Functions.set_svg_image("gruebler.svg"))
+        self.ui.load_pages.gruebler_layout.addWidget(self.gruebler_svg)
+
+        self.grashof_svg = QSvgWidget(Functions.set_svg_image("grashof.svg"))
+        self.ui.load_pages.grashof_layout.addWidget(self.grashof_svg)
+
+        self.mecanismo_svg = QSvgWidget(Functions.set_svg_image("mecanismo.svg"))
+        self.ui.load_pages.mecanismo_layout.addWidget(self.mecanismo_svg)
+
+        #self.grashof = QSvgWidget(Functions.set_svg_image("mecanismo.svg"))
+        #self.ui.load_pages.prueba_layout.addWidget(self.grashof)
 
         # PAGE 3
         # CIRCULAR PROGRESS 1
