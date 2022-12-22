@@ -341,9 +341,166 @@ class SetupMainWindow:
         #self.ui.load_pages.prueba_layout.addWidget(self.grashof)
 
         # PAGE 3
-        
+        # PY LINE EDIT O2x
+        self.line_O2x = PyLineEdit(
+            text = "",
+            place_holder_text = "O2x",
+            radius = 8,
+            border_size = 2,
+            color = self.themes["app_color"]["text_foreground"],
+            selection_color = self.themes["app_color"]["white"],
+            bg_color = self.themes["app_color"]["dark_one"],
+            bg_color_active = self.themes["app_color"]["dark_three"],
+            context_color = self.themes["app_color"]["context_color"]
+        )
+        self.line_O2x.setMinimumHeight(30)
 
+        # PY LINE EDIT O2y
+        self.line_O2y = PyLineEdit(
+            text="",
+            place_holder_text="O2y",
+            radius=8,
+            border_size=2,
+            color=self.themes["app_color"]["text_foreground"],
+            selection_color=self.themes["app_color"]["white"],
+            bg_color=self.themes["app_color"]["dark_one"],
+            bg_color_active=self.themes["app_color"]["dark_three"],
+            context_color=self.themes["app_color"]["context_color"]
+        )
+        self.line_O2y.setMinimumHeight(30)
 
+        # PY LINE EDIT O4x
+        self.line_O4x = PyLineEdit(
+            text="",
+            place_holder_text="O4x",
+            radius=8,
+            border_size=2,
+            color=self.themes["app_color"]["text_foreground"],
+            selection_color=self.themes["app_color"]["white"],
+            bg_color=self.themes["app_color"]["dark_one"],
+            bg_color_active=self.themes["app_color"]["dark_three"],
+            context_color=self.themes["app_color"]["context_color"]
+        )
+        self.line_O4x.setMinimumHeight(30)
+        # PY LINE EDIT O4y
+        self.line_O4y = PyLineEdit(
+            text="",
+            place_holder_text="O4y",
+            radius=8,
+            border_size=2,
+            color=self.themes["app_color"]["text_foreground"],
+            selection_color=self.themes["app_color"]["white"],
+            bg_color=self.themes["app_color"]["dark_one"],
+            bg_color_active=self.themes["app_color"]["dark_three"],
+            context_color=self.themes["app_color"]["context_color"]
+        )
+        self.line_O4y.setMinimumHeight(30)
+
+        # PY LINE EDIT Eslabón1
+        self.line_eslabon1 = PyLineEdit(
+            text="",
+            place_holder_text="Medida eslabón 1",
+            radius=8,
+            border_size=2,
+            color=self.themes["app_color"]["text_foreground"],
+            selection_color=self.themes["app_color"]["white"],
+            bg_color=self.themes["app_color"]["dark_one"],
+            bg_color_active=self.themes["app_color"]["dark_three"],
+            context_color=self.themes["app_color"]["context_color"]
+        )
+        self.line_eslabon1.setMinimumHeight(30)
+
+        # PY LINE EDIT Eslabón2
+        self.line_eslabon2 = PyLineEdit(
+            text="",
+            place_holder_text="Medida eslabón 2",
+            radius=8,
+            border_size=2,
+            color=self.themes["app_color"]["text_foreground"],
+            selection_color=self.themes["app_color"]["white"],
+            bg_color=self.themes["app_color"]["dark_one"],
+            bg_color_active=self.themes["app_color"]["dark_three"],
+            context_color=self.themes["app_color"]["context_color"]
+        )
+        self.line_eslabon2.setMinimumHeight(30)
+
+        # PY LINE EDIT Eslabón3
+        self.line_eslabon3 = PyLineEdit(
+            text="",
+            place_holder_text="Medida eslabón 3",
+            radius=8,
+            border_size=2,
+            color=self.themes["app_color"]["text_foreground"],
+            selection_color=self.themes["app_color"]["white"],
+            bg_color=self.themes["app_color"]["dark_one"],
+            bg_color_active=self.themes["app_color"]["dark_three"],
+            context_color=self.themes["app_color"]["context_color"]
+        )
+        self.line_eslabon3.setMinimumHeight(30)
+        # PY LINE EDIT Eslabón4
+        self.line_eslabon4 = PyLineEdit(
+            text="",
+            place_holder_text="Medida eslabón 4",
+            radius=8,
+            border_size=2,
+            color=self.themes["app_color"]["text_foreground"],
+            selection_color=self.themes["app_color"]["white"],
+            bg_color=self.themes["app_color"]["dark_one"],
+            bg_color_active=self.themes["app_color"]["dark_three"],
+            context_color=self.themes["app_color"]["context_color"]
+        )
+        self.line_eslabon4.setMinimumHeight(30)
+        # PY LINE EDIT Eslabón distancia P
+        self.line_distance = PyLineEdit(
+            text="",
+            place_holder_text="Medida de la distancia P",
+            radius=8,
+            border_size=2,
+            color=self.themes["app_color"]["text_foreground"],
+            selection_color=self.themes["app_color"]["white"],
+            bg_color=self.themes["app_color"]["dark_one"],
+            bg_color_active=self.themes["app_color"]["dark_three"],
+            context_color=self.themes["app_color"]["context_color"]
+        )
+        self.line_distance.setMinimumHeight(30)
+        # PY LINE EDIT theta2
+        self.line_theta2 = PyLineEdit(
+            text="",
+            place_holder_text="theta 2 (°)",
+            radius=8,
+            border_size=2,
+            color=self.themes["app_color"]["text_foreground"],
+            selection_color=self.themes["app_color"]["white"],
+            bg_color=self.themes["app_color"]["dark_one"],
+            bg_color_active=self.themes["app_color"]["dark_three"],
+            context_color=self.themes["app_color"]["context_color"]
+        )
+        self.line_theta2.setMinimumHeight(30)
+        # PY LINE EDIT omega2
+        self.line_omega2 = PyLineEdit(
+            text="",
+            place_holder_text="omega 2 (rad/s)",
+            radius=8,
+            border_size=2,
+            color=self.themes["app_color"]["text_foreground"],
+            selection_color=self.themes["app_color"]["white"],
+            bg_color=self.themes["app_color"]["dark_one"],
+            bg_color_active=self.themes["app_color"]["dark_three"],
+            context_color=self.themes["app_color"]["context_color"]
+        )
+        self.line_omega2.setMinimumHeight(30)
+        # Agregando los widgets
+        self.ui.load_pages.O2_layout.addWidget(self.line_O2x)
+        self.ui.load_pages.O2_layout.addWidget(self.line_O2y)
+        self.ui.load_pages.O4_layout.addWidget(self.line_O4x)
+        self.ui.load_pages.O4_layout.addWidget(self.line_O4y)
+        self.ui.load_pages.Eslabon_layout1.addWidget(self.line_eslabon1)
+        self.ui.load_pages.Eslabon_layout2.addWidget(self.line_eslabon2)
+        self.ui.load_pages.Eslabon_layout3.addWidget(self.line_eslabon3)
+        self.ui.load_pages.Eslabon_layout4.addWidget(self.line_eslabon4)
+        self.ui.load_pages.P_layout.addWidget(self.line_distance)
+        self.ui.load_pages.theta2_layout.addWidget(self.line_theta2)
+        self.ui.load_pages.velocity_layout.addWidget(self.line_omega2)
         # RIGHT COLUMN
         # ///////////////////////////////////////////////////////////////
 

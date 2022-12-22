@@ -1164,7 +1164,7 @@ I will try to always record a new tutorial when adding a new Widget and updating
               <widget class="QWidget" name="widget" native="true">
                <property name="minimumSize">
                 <size>
-                 <width>500</width>
+                 <width>600</width>
                  <height>400</height>
                 </size>
                </property>
@@ -1213,7 +1213,7 @@ I will try to always record a new tutorial when adding a new Widget and updating
              </item>
              <item>
               <layout class="QVBoxLayout" name="parameters">
-               <item alignment="Qt::AlignTop">
+               <item alignment="Qt::AlignHCenter|Qt::AlignTop">
                 <widget class="QLabel" name="title_section3_2">
                  <property name="minimumSize">
                   <size>
@@ -1236,7 +1236,7 @@ I will try to always record a new tutorial when adding a new Widget and updating
                 </widget>
                </item>
                <item>
-                <layout class="QHBoxLayout" name="horizontalLayout_3">
+                <layout class="QHBoxLayout" name="O2_layout">
                  <item alignment="Qt::AlignLeft|Qt::AlignVCenter">
                   <widget class="QLabel" name="label_7">
                    <property name="minimumSize">
@@ -1251,6 +1251,15 @@ I will try to always record a new tutorial when adding a new Widget and updating
                      <height>30</height>
                     </size>
                    </property>
+                   <property name="styleSheet">
+                    <string notr="true">border :2px solid;
+border-color: rgb(108, 153, 244);
+color: rgb(255, 255, 255);
+border-top-left-radius :5px;
+border-top-right-radius : 5px; 
+border-bottom-left-radius : 5px; 
+border-bottom-right-radius : 5px;</string>
+                   </property>
                    <property name="text">
                     <string>O_2</string>
                    </property>
@@ -1262,7 +1271,7 @@ I will try to always record a new tutorial when adding a new Widget and updating
                 </layout>
                </item>
                <item>
-                <layout class="QHBoxLayout" name="horizontalLayout">
+                <layout class="QHBoxLayout" name="O4_layout">
                  <item alignment="Qt::AlignLeft|Qt::AlignVCenter">
                   <widget class="QLabel" name="label_8">
                    <property name="minimumSize">
@@ -1276,6 +1285,16 @@ I will try to always record a new tutorial when adding a new Widget and updating
                      <width>80</width>
                      <height>30</height>
                     </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">border :2px solid;
+border-color: rgb(108, 153, 244);
+color: rgb(255, 255, 255);
+border-top-left-radius :5px;
+border-top-right-radius : 5px; 
+border-bottom-left-radius : 5px; 
+border-bottom-right-radius : 5px;
+</string>
                    </property>
                    <property name="text">
                     <string>O_4</string>
@@ -1303,6 +1322,15 @@ I will try to always record a new tutorial when adding a new Widget and updating
                      <height>30</height>
                     </size>
                    </property>
+                   <property name="styleSheet">
+                    <string notr="true">border :2px solid;
+border-color: rgb(108, 153, 244);
+color: rgb(255, 255, 255);
+border-top-left-radius :5px;
+border-top-right-radius : 5px; 
+border-bottom-left-radius : 5px; 
+border-bottom-right-radius : 5px;</string>
+                   </property>
                    <property name="text">
                     <string>Eslabón 1</string>
                    </property>
@@ -1328,6 +1356,15 @@ I will try to always record a new tutorial when adding a new Widget and updating
                      <width>80</width>
                      <height>30</height>
                     </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">border :2px solid;
+border-color: rgb(108, 153, 244);
+color: rgb(255, 255, 255);
+border-top-left-radius :5px;
+border-top-right-radius : 5px; 
+border-bottom-left-radius : 5px; 
+border-bottom-right-radius : 5px;</string>
                    </property>
                    <property name="text">
                     <string>Eslabón 2</string>
@@ -1355,6 +1392,15 @@ I will try to always record a new tutorial when adding a new Widget and updating
                      <height>30</height>
                     </size>
                    </property>
+                   <property name="styleSheet">
+                    <string notr="true">border :2px solid;
+border-color: rgb(108, 153, 244);
+color: rgb(255, 255, 255);
+border-top-left-radius :5px;
+border-top-right-radius : 5px; 
+border-bottom-left-radius : 5px; 
+border-bottom-right-radius : 5px;</string>
+                   </property>
                    <property name="text">
                     <string>Eslabón 3</string>
                    </property>
@@ -1381,6 +1427,15 @@ I will try to always record a new tutorial when adding a new Widget and updating
                      <height>30</height>
                     </size>
                    </property>
+                   <property name="styleSheet">
+                    <string notr="true">border :2px solid;
+border-color: rgb(108, 153, 244);
+color: rgb(255, 255, 255);
+border-top-left-radius :5px;
+border-top-right-radius : 5px; 
+border-bottom-left-radius : 5px; 
+border-bottom-right-radius : 5px;</string>
+                   </property>
                    <property name="text">
                     <string>Eslabón 4</string>
                    </property>
@@ -1392,7 +1447,7 @@ I will try to always record a new tutorial when adding a new Widget and updating
                 </layout>
                </item>
                <item>
-                <layout class="QHBoxLayout" name="Eslabon_layout5">
+                <layout class="QHBoxLayout" name="P_layout">
                  <item alignment="Qt::AlignLeft">
                   <widget class="QLabel" name="label_6">
                    <property name="minimumSize">
@@ -1407,6 +1462,15 @@ I will try to always record a new tutorial when adding a new Widget and updating
                      <height>30</height>
                     </size>
                    </property>
+                   <property name="styleSheet">
+                    <string notr="true">border :2px solid;
+border-color: rgb(108, 153, 244);
+color: rgb(255, 255, 255);
+border-top-left-radius :5px;
+border-top-right-radius : 5px; 
+border-bottom-left-radius : 5px; 
+border-bottom-right-radius : 5px;</string>
+                   </property>
                    <property name="text">
                     <string>Distancia P</string>
                    </property>
@@ -1420,10 +1484,74 @@ I will try to always record a new tutorial when adding a new Widget and updating
                <item>
                 <layout class="QHBoxLayout" name="other_layout">
                  <item>
-                  <layout class="QHBoxLayout" name="theta2_layout"/>
+                  <layout class="QHBoxLayout" name="theta2_layout">
+                   <item alignment="Qt::AlignLeft|Qt::AlignVCenter">
+                    <widget class="QLabel" name="label_9">
+                     <property name="minimumSize">
+                      <size>
+                       <width>30</width>
+                       <height>30</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>30</width>
+                       <height>30</height>
+                      </size>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">border :2px solid;
+border-color: rgb(108, 153, 244);
+color: rgb(255, 255, 255);
+border-top-left-radius :5px;
+border-top-right-radius : 5px; 
+border-bottom-left-radius : 5px; 
+border-bottom-right-radius : 5px;</string>
+                     </property>
+                     <property name="text">
+                      <string>θ2</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
                  </item>
                  <item>
-                  <layout class="QHBoxLayout" name="velocity_layout"/>
+                  <layout class="QHBoxLayout" name="velocity_layout">
+                   <item alignment="Qt::AlignLeft|Qt::AlignVCenter">
+                    <widget class="QLabel" name="label_10">
+                     <property name="minimumSize">
+                      <size>
+                       <width>30</width>
+                       <height>30</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>30</width>
+                       <height>30</height>
+                      </size>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">border :2px solid;
+border-color: rgb(108, 153, 244);
+color: rgb(255, 255, 255);
+border-top-left-radius :5px;
+border-top-right-radius : 5px; 
+border-bottom-left-radius : 5px; 
+border-bottom-right-radius : 5px;</string>
+                     </property>
+                     <property name="text">
+                      <string>ω2</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
                  </item>
                 </layout>
                </item>

@@ -306,7 +306,7 @@ class Ui_MainPages(object):
         self.scroll_area_pos.setWidgetResizable(True)
         self.contents_pos = QWidget()
         self.contents_pos.setObjectName(u"contents_pos")
-        self.contents_pos.setGeometry(QRect(0, 0, 263, 1481))
+        self.contents_pos.setGeometry(QRect(0, 0, 217, 616))
         self.contents_pos.setStyleSheet(u"background: transparent;")
         self.verticalLayout_4 = QVBoxLayout(self.contents_pos)
         self.verticalLayout_4.setSpacing(15)
@@ -396,7 +396,7 @@ class Ui_MainPages(object):
         self.scroll_area_vel.setWidgetResizable(True)
         self.contents_3 = QWidget()
         self.contents_3.setObjectName(u"contents_3")
-        self.contents_3.setGeometry(QRect(0, 0, 262, 1481))
+        self.contents_3.setGeometry(QRect(0, 0, 233, 625))
         self.contents_3.setStyleSheet(u"background: transparent;")
         self.verticalLayout_6 = QVBoxLayout(self.contents_3)
         self.verticalLayout_6.setSpacing(15)
@@ -500,12 +500,249 @@ class Ui_MainPages(object):
         self.scroll_area.setWidgetResizable(True)
         self.contents = QWidget()
         self.contents.setObjectName(u"contents")
-        self.contents.setGeometry(QRect(0, 0, 214, 266))
+        self.contents.setGeometry(QRect(0, 0, 844, 1483))
         self.contents.setStyleSheet(u"background: transparent;")
         self.verticalLayout = QVBoxLayout(self.contents)
         self.verticalLayout.setSpacing(15)
         self.verticalLayout.setObjectName(u"verticalLayout")
         self.verticalLayout.setContentsMargins(5, 5, 5, 5)
+        self.name_app_2 = QLabel(self.contents)
+        self.name_app_2.setObjectName(u"name_app_2")
+        self.name_app_2.setMinimumSize(QSize(0, 70))
+        self.name_app_2.setMaximumSize(QSize(16777215, 70))
+        self.name_app_2.setFont(font)
+        self.name_app_2.setStyleSheet(u"font: 24pt \"Segoe UI\";")
+
+        self.verticalLayout.addWidget(self.name_app_2, 0, Qt.AlignHCenter)
+
+        self.Initial_layout = QHBoxLayout()
+        self.Initial_layout.setObjectName(u"Initial_layout")
+        self.widget = QWidget(self.contents)
+        self.widget.setObjectName(u"widget")
+        self.widget.setMinimumSize(QSize(600, 400))
+        self.widget.setStyleSheet(u"background-color: rgb(0, 255, 0);")
+        self.verticalLayoutWidget_2 = QWidget(self.widget)
+        self.verticalLayoutWidget_2.setObjectName(u"verticalLayoutWidget_2")
+        self.verticalLayoutWidget_2.setGeometry(QRect(3, 0, 491, 251))
+        self.verticalLayout_7 = QVBoxLayout(self.verticalLayoutWidget_2)
+        self.verticalLayout_7.setObjectName(u"verticalLayout_7")
+        self.verticalLayout_7.setContentsMargins(0, 0, 0, 0)
+        self.frame_2 = QFrame(self.widget)
+        self.frame_2.setObjectName(u"frame_2")
+        self.frame_2.setGeometry(QRect(10, 260, 481, 131))
+        self.frame_2.setFrameShape(QFrame.StyledPanel)
+        self.frame_2.setFrameShadow(QFrame.Raised)
+        self.horizontalLayoutWidget_3 = QWidget(self.frame_2)
+        self.horizontalLayoutWidget_3.setObjectName(u"horizontalLayoutWidget_3")
+        self.horizontalLayoutWidget_3.setGeometry(QRect(-1, 10, 481, 121))
+        self.horizontalLayout_4 = QHBoxLayout(self.horizontalLayoutWidget_3)
+        self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
+        self.horizontalLayout_4.setContentsMargins(0, 0, 0, 0)
+
+        self.Initial_layout.addWidget(self.widget)
+
+        self.parameters = QVBoxLayout()
+        self.parameters.setObjectName(u"parameters")
+        self.title_section3_2 = QLabel(self.contents)
+        self.title_section3_2.setObjectName(u"title_section3_2")
+        self.title_section3_2.setMinimumSize(QSize(0, 50))
+        self.title_section3_2.setMaximumSize(QSize(16777215, 50))
+        self.title_section3_2.setStyleSheet(u"font: 18pt \"Segoe UI\";")
+
+        self.parameters.addWidget(self.title_section3_2, 0, Qt.AlignHCenter|Qt.AlignTop)
+
+        self.O2_layout = QHBoxLayout()
+        self.O2_layout.setObjectName(u"O2_layout")
+        self.label_7 = QLabel(self.contents)
+        self.label_7.setObjectName(u"label_7")
+        self.label_7.setMinimumSize(QSize(80, 30))
+        self.label_7.setMaximumSize(QSize(80, 30))
+        self.label_7.setStyleSheet(u"border :2px solid;\n"
+"border-color: rgb(108, 153, 244);\n"
+"color: rgb(255, 255, 255);\n"
+"border-top-left-radius :5px;\n"
+"border-top-right-radius : 5px; \n"
+"border-bottom-left-radius : 5px; \n"
+"border-bottom-right-radius : 5px;")
+        self.label_7.setAlignment(Qt.AlignCenter)
+
+        self.O2_layout.addWidget(self.label_7, 0, Qt.AlignLeft|Qt.AlignVCenter)
+
+
+        self.parameters.addLayout(self.O2_layout)
+
+        self.O4_layout = QHBoxLayout()
+        self.O4_layout.setObjectName(u"O4_layout")
+        self.label_8 = QLabel(self.contents)
+        self.label_8.setObjectName(u"label_8")
+        self.label_8.setMinimumSize(QSize(80, 30))
+        self.label_8.setMaximumSize(QSize(80, 30))
+        self.label_8.setStyleSheet(u"border :2px solid;\n"
+"border-color: rgb(108, 153, 244);\n"
+"color: rgb(255, 255, 255);\n"
+"border-top-left-radius :5px;\n"
+"border-top-right-radius : 5px; \n"
+"border-bottom-left-radius : 5px; \n"
+"border-bottom-right-radius : 5px;\n"
+"")
+        self.label_8.setAlignment(Qt.AlignCenter)
+
+        self.O4_layout.addWidget(self.label_8, 0, Qt.AlignLeft|Qt.AlignVCenter)
+
+
+        self.parameters.addLayout(self.O4_layout)
+
+        self.Eslabon_layout1 = QHBoxLayout()
+        self.Eslabon_layout1.setObjectName(u"Eslabon_layout1")
+        self.label_2 = QLabel(self.contents)
+        self.label_2.setObjectName(u"label_2")
+        self.label_2.setMinimumSize(QSize(80, 30))
+        self.label_2.setMaximumSize(QSize(80, 30))
+        self.label_2.setStyleSheet(u"border :2px solid;\n"
+"border-color: rgb(108, 153, 244);\n"
+"color: rgb(255, 255, 255);\n"
+"border-top-left-radius :5px;\n"
+"border-top-right-radius : 5px; \n"
+"border-bottom-left-radius : 5px; \n"
+"border-bottom-right-radius : 5px;")
+        self.label_2.setAlignment(Qt.AlignCenter)
+
+        self.Eslabon_layout1.addWidget(self.label_2, 0, Qt.AlignLeft)
+
+
+        self.parameters.addLayout(self.Eslabon_layout1)
+
+        self.Eslabon_layout2 = QHBoxLayout()
+        self.Eslabon_layout2.setObjectName(u"Eslabon_layout2")
+        self.label_3 = QLabel(self.contents)
+        self.label_3.setObjectName(u"label_3")
+        self.label_3.setMinimumSize(QSize(80, 30))
+        self.label_3.setMaximumSize(QSize(80, 30))
+        self.label_3.setStyleSheet(u"border :2px solid;\n"
+"border-color: rgb(108, 153, 244);\n"
+"color: rgb(255, 255, 255);\n"
+"border-top-left-radius :5px;\n"
+"border-top-right-radius : 5px; \n"
+"border-bottom-left-radius : 5px; \n"
+"border-bottom-right-radius : 5px;")
+        self.label_3.setAlignment(Qt.AlignCenter)
+
+        self.Eslabon_layout2.addWidget(self.label_3, 0, Qt.AlignLeft|Qt.AlignVCenter)
+
+
+        self.parameters.addLayout(self.Eslabon_layout2)
+
+        self.Eslabon_layout3 = QHBoxLayout()
+        self.Eslabon_layout3.setObjectName(u"Eslabon_layout3")
+        self.label_4 = QLabel(self.contents)
+        self.label_4.setObjectName(u"label_4")
+        self.label_4.setMinimumSize(QSize(80, 30))
+        self.label_4.setMaximumSize(QSize(80, 30))
+        self.label_4.setStyleSheet(u"border :2px solid;\n"
+"border-color: rgb(108, 153, 244);\n"
+"color: rgb(255, 255, 255);\n"
+"border-top-left-radius :5px;\n"
+"border-top-right-radius : 5px; \n"
+"border-bottom-left-radius : 5px; \n"
+"border-bottom-right-radius : 5px;")
+        self.label_4.setAlignment(Qt.AlignCenter)
+
+        self.Eslabon_layout3.addWidget(self.label_4, 0, Qt.AlignLeft|Qt.AlignVCenter)
+
+
+        self.parameters.addLayout(self.Eslabon_layout3)
+
+        self.Eslabon_layout4 = QHBoxLayout()
+        self.Eslabon_layout4.setObjectName(u"Eslabon_layout4")
+        self.label_5 = QLabel(self.contents)
+        self.label_5.setObjectName(u"label_5")
+        self.label_5.setMinimumSize(QSize(80, 30))
+        self.label_5.setMaximumSize(QSize(80, 30))
+        self.label_5.setStyleSheet(u"border :2px solid;\n"
+"border-color: rgb(108, 153, 244);\n"
+"color: rgb(255, 255, 255);\n"
+"border-top-left-radius :5px;\n"
+"border-top-right-radius : 5px; \n"
+"border-bottom-left-radius : 5px; \n"
+"border-bottom-right-radius : 5px;")
+        self.label_5.setAlignment(Qt.AlignCenter)
+
+        self.Eslabon_layout4.addWidget(self.label_5, 0, Qt.AlignLeft|Qt.AlignVCenter)
+
+
+        self.parameters.addLayout(self.Eslabon_layout4)
+
+        self.P_layout = QHBoxLayout()
+        self.P_layout.setObjectName(u"P_layout")
+        self.label_6 = QLabel(self.contents)
+        self.label_6.setObjectName(u"label_6")
+        self.label_6.setMinimumSize(QSize(80, 30))
+        self.label_6.setMaximumSize(QSize(80, 30))
+        self.label_6.setStyleSheet(u"border :2px solid;\n"
+"border-color: rgb(108, 153, 244);\n"
+"color: rgb(255, 255, 255);\n"
+"border-top-left-radius :5px;\n"
+"border-top-right-radius : 5px; \n"
+"border-bottom-left-radius : 5px; \n"
+"border-bottom-right-radius : 5px;")
+        self.label_6.setAlignment(Qt.AlignCenter)
+
+        self.P_layout.addWidget(self.label_6, 0, Qt.AlignLeft)
+
+
+        self.parameters.addLayout(self.P_layout)
+
+        self.other_layout = QHBoxLayout()
+        self.other_layout.setObjectName(u"other_layout")
+        self.theta2_layout = QHBoxLayout()
+        self.theta2_layout.setObjectName(u"theta2_layout")
+        self.label_9 = QLabel(self.contents)
+        self.label_9.setObjectName(u"label_9")
+        self.label_9.setMinimumSize(QSize(30, 30))
+        self.label_9.setMaximumSize(QSize(30, 30))
+        self.label_9.setStyleSheet(u"border :2px solid;\n"
+"border-color: rgb(108, 153, 244);\n"
+"color: rgb(255, 255, 255);\n"
+"border-top-left-radius :5px;\n"
+"border-top-right-radius : 5px; \n"
+"border-bottom-left-radius : 5px; \n"
+"border-bottom-right-radius : 5px;")
+        self.label_9.setAlignment(Qt.AlignCenter)
+
+        self.theta2_layout.addWidget(self.label_9, 0, Qt.AlignLeft|Qt.AlignVCenter)
+
+
+        self.other_layout.addLayout(self.theta2_layout)
+
+        self.velocity_layout = QHBoxLayout()
+        self.velocity_layout.setObjectName(u"velocity_layout")
+        self.label_10 = QLabel(self.contents)
+        self.label_10.setObjectName(u"label_10")
+        self.label_10.setMinimumSize(QSize(30, 30))
+        self.label_10.setMaximumSize(QSize(30, 30))
+        self.label_10.setStyleSheet(u"border :2px solid;\n"
+"border-color: rgb(108, 153, 244);\n"
+"color: rgb(255, 255, 255);\n"
+"border-top-left-radius :5px;\n"
+"border-top-right-radius : 5px; \n"
+"border-bottom-left-radius : 5px; \n"
+"border-bottom-right-radius : 5px;")
+        self.label_10.setAlignment(Qt.AlignCenter)
+
+        self.velocity_layout.addWidget(self.label_10, 0, Qt.AlignLeft|Qt.AlignVCenter)
+
+
+        self.other_layout.addLayout(self.velocity_layout)
+
+
+        self.parameters.addLayout(self.other_layout)
+
+
+        self.Initial_layout.addLayout(self.parameters)
+
+
+        self.verticalLayout.addLayout(self.Initial_layout)
+
         self.title_label = QLabel(self.contents)
         self.title_label.setObjectName(u"title_label")
         self.title_label.setMaximumSize(QSize(16777215, 40))
@@ -515,17 +752,22 @@ class Ui_MainPages(object):
 
         self.verticalLayout.addWidget(self.title_label)
 
+        self.row_1_layout = QHBoxLayout()
+        self.row_1_layout.setObjectName(u"row_1_layout")
         self.description_label = QLabel(self.contents)
         self.description_label.setObjectName(u"description_label")
         self.description_label.setAlignment(Qt.AlignHCenter|Qt.AlignTop)
         self.description_label.setWordWrap(True)
 
-        self.verticalLayout.addWidget(self.description_label)
+        self.row_1_layout.addWidget(self.description_label)
 
-        self.row_1_layout = QHBoxLayout()
-        self.row_1_layout.setObjectName(u"row_1_layout")
 
         self.verticalLayout.addLayout(self.row_1_layout)
+
+        self.row_5_layout = QVBoxLayout()
+        self.row_5_layout.setObjectName(u"row_5_layout")
+
+        self.verticalLayout.addLayout(self.row_5_layout)
 
         self.row_2_layout = QHBoxLayout()
         self.row_2_layout.setObjectName(u"row_2_layout")
@@ -542,11 +784,6 @@ class Ui_MainPages(object):
 
         self.verticalLayout.addLayout(self.row_4_layout)
 
-        self.row_5_layout = QVBoxLayout()
-        self.row_5_layout.setObjectName(u"row_5_layout")
-
-        self.verticalLayout.addLayout(self.row_5_layout)
-
         self.scroll_area.setWidget(self.contents)
 
         self.page_3_layout.addWidget(self.scroll_area)
@@ -558,7 +795,7 @@ class Ui_MainPages(object):
 
         self.retranslateUi(MainPages)
 
-        self.pages.setCurrentIndex(1)
+        self.pages.setCurrentIndex(2)
 
 
         QMetaObject.connectSlotsByName(MainPages)
@@ -595,7 +832,18 @@ class Ui_MainPages(object):
         self.description_label_4.setText(QCoreApplication.translate("MainPages", u"Here will be all the custom widgets, they will be added over time on this page.\n"
 "I will try to always record a new tutorial when adding a new Widget and updating the project on Patreon before launching on GitHub and GitHub after the public release.", None))
         self.img_grashof.setText("")
-        self.title_label.setText(QCoreApplication.translate("MainPages", u"Custom Widgets Page", None))
+        self.name_app_2.setText(QCoreApplication.translate("MainPages", u"An\u00e1lisis del Mecanismo", None))
+        self.title_section3_2.setText(QCoreApplication.translate("MainPages", u"Par\u00e1metros", None))
+        self.label_7.setText(QCoreApplication.translate("MainPages", u"O_2", None))
+        self.label_8.setText(QCoreApplication.translate("MainPages", u"O_4", None))
+        self.label_2.setText(QCoreApplication.translate("MainPages", u"Eslab\u00f3n 1", None))
+        self.label_3.setText(QCoreApplication.translate("MainPages", u"Eslab\u00f3n 2", None))
+        self.label_4.setText(QCoreApplication.translate("MainPages", u"Eslab\u00f3n 3", None))
+        self.label_5.setText(QCoreApplication.translate("MainPages", u"Eslab\u00f3n 4", None))
+        self.label_6.setText(QCoreApplication.translate("MainPages", u"Distancia P", None))
+        self.label_9.setText(QCoreApplication.translate("MainPages", u"\u03b82", None))
+        self.label_10.setText(QCoreApplication.translate("MainPages", u"\u03c92", None))
+        self.title_label.setText(QCoreApplication.translate("MainPages", u"An\u00e1lisis de Posici\u00f3n", None))
         self.description_label.setText(QCoreApplication.translate("MainPages", u"Here will be all the custom widgets, they will be added over time on this page.\n"
 "I will try to always record a new tutorial when adding a new Widget and updating the project on Patreon before launching on GitHub and GitHub after the public release.", None))
     # retranslateUi
