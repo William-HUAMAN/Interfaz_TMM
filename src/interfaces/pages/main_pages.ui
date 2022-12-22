@@ -32,7 +32,7 @@
    <item>
     <widget class="QStackedWidget" name="pages">
      <property name="currentIndex">
-      <number>1</number>
+      <number>2</number>
      </property>
      <widget class="QWidget" name="page_1">
       <property name="styleSheet">
@@ -647,7 +647,7 @@ Una junta es una conexión entre dos o más eslabones, la cual permite algún mo
        <item>
         <layout class="QVBoxLayout" name="teory_col2">
          <item>
-          <widget class="QScrollArea" name="scroll_area_vel">
+          <widget class="QScrollArea" name="scroll_area_pos">
            <property name="styleSheet">
             <string notr="true">background: transparent;</string>
            </property>
@@ -668,8 +668,8 @@ Una junta es una conexión entre dos o más eslabones, la cual permite algún mo
              <rect>
               <x>0</x>
               <y>0</y>
-              <width>263</width>
-              <height>1481</height>
+              <width>217</width>
+              <height>616</height>
              </rect>
             </property>
             <property name="styleSheet">
@@ -865,7 +865,7 @@ Una junta es una conexión entre dos o más eslabones, la cual permite algún mo
        <item>
         <layout class="QVBoxLayout" name="teory_col3">
          <item>
-          <widget class="QScrollArea" name="scroll_area_vel_2">
+          <widget class="QScrollArea" name="scroll_area_vel">
            <property name="styleSheet">
             <string notr="true">background: transparent;</string>
            </property>
@@ -886,8 +886,8 @@ Una junta es una conexión entre dos o más eslabones, la cual permite algún mo
              <rect>
               <x>0</x>
               <y>0</y>
-              <width>262</width>
-              <height>1481</height>
+              <width>233</width>
+              <height>625</height>
              </rect>
             </property>
             <property name="styleSheet">
@@ -1106,8 +1106,8 @@ I will try to always record a new tutorial when adding a new Widget and updating
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>214</width>
-            <height>266</height>
+            <width>844</width>
+            <height>1483</height>
            </rect>
           </property>
           <property name="styleSheet">
@@ -1129,6 +1129,308 @@ I will try to always record a new tutorial when adding a new Widget and updating
            <property name="bottomMargin">
             <number>5</number>
            </property>
+           <item alignment="Qt::AlignHCenter">
+            <widget class="QLabel" name="name_app_2">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>70</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>70</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>24</pointsize>
+               <italic>false</italic>
+               <bold>false</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">font: 24pt &quot;Segoe UI&quot;;</string>
+             </property>
+             <property name="text">
+              <string>Análisis del Mecanismo</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="Initial_layout">
+             <item>
+              <widget class="QWidget" name="widget" native="true">
+               <property name="minimumSize">
+                <size>
+                 <width>500</width>
+                 <height>400</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(0, 255, 0);</string>
+               </property>
+               <widget class="QWidget" name="verticalLayoutWidget_2">
+                <property name="geometry">
+                 <rect>
+                  <x>3</x>
+                  <y>0</y>
+                  <width>491</width>
+                  <height>251</height>
+                 </rect>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_7"/>
+               </widget>
+               <widget class="QFrame" name="frame_2">
+                <property name="geometry">
+                 <rect>
+                  <x>10</x>
+                  <y>260</y>
+                  <width>481</width>
+                  <height>131</height>
+                 </rect>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <widget class="QWidget" name="horizontalLayoutWidget_3">
+                 <property name="geometry">
+                  <rect>
+                   <x>-1</x>
+                   <y>10</y>
+                   <width>481</width>
+                   <height>121</height>
+                  </rect>
+                 </property>
+                 <layout class="QHBoxLayout" name="horizontalLayout_4"/>
+                </widget>
+               </widget>
+              </widget>
+             </item>
+             <item>
+              <layout class="QVBoxLayout" name="parameters">
+               <item alignment="Qt::AlignTop">
+                <widget class="QLabel" name="title_section3_2">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>50</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>50</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">font: 18pt &quot;Segoe UI&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>Parámetros</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_3">
+                 <item alignment="Qt::AlignLeft|Qt::AlignVCenter">
+                  <widget class="QLabel" name="label_7">
+                   <property name="minimumSize">
+                    <size>
+                     <width>80</width>
+                     <height>30</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>80</width>
+                     <height>30</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string>O_2</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout">
+                 <item alignment="Qt::AlignLeft|Qt::AlignVCenter">
+                  <widget class="QLabel" name="label_8">
+                   <property name="minimumSize">
+                    <size>
+                     <width>80</width>
+                     <height>30</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>80</width>
+                     <height>30</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string>O_4</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="Eslabon_layout1">
+                 <item alignment="Qt::AlignLeft">
+                  <widget class="QLabel" name="label_2">
+                   <property name="minimumSize">
+                    <size>
+                     <width>80</width>
+                     <height>30</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>80</width>
+                     <height>30</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string>Eslabón 1</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="Eslabon_layout2">
+                 <item alignment="Qt::AlignLeft|Qt::AlignVCenter">
+                  <widget class="QLabel" name="label_3">
+                   <property name="minimumSize">
+                    <size>
+                     <width>80</width>
+                     <height>30</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>80</width>
+                     <height>30</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string>Eslabón 2</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="Eslabon_layout3">
+                 <item alignment="Qt::AlignLeft|Qt::AlignVCenter">
+                  <widget class="QLabel" name="label_4">
+                   <property name="minimumSize">
+                    <size>
+                     <width>80</width>
+                     <height>30</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>80</width>
+                     <height>30</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string>Eslabón 3</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="Eslabon_layout4">
+                 <item alignment="Qt::AlignLeft|Qt::AlignVCenter">
+                  <widget class="QLabel" name="label_5">
+                   <property name="minimumSize">
+                    <size>
+                     <width>80</width>
+                     <height>30</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>80</width>
+                     <height>30</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string>Eslabón 4</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="Eslabon_layout5">
+                 <item alignment="Qt::AlignLeft">
+                  <widget class="QLabel" name="label_6">
+                   <property name="minimumSize">
+                    <size>
+                     <width>80</width>
+                     <height>30</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>80</width>
+                     <height>30</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string>Distancia P</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="other_layout">
+                 <item>
+                  <layout class="QHBoxLayout" name="theta2_layout"/>
+                 </item>
+                 <item>
+                  <layout class="QHBoxLayout" name="velocity_layout"/>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </item>
            <item>
             <widget class="QLabel" name="title_label">
              <property name="maximumSize">
@@ -1146,7 +1448,7 @@ I will try to always record a new tutorial when adding a new Widget and updating
               <string notr="true">font-size: 16pt</string>
              </property>
              <property name="text">
-              <string>Custom Widgets Page</string>
+              <string>Análisis de Posición</string>
              </property>
              <property name="alignment">
               <set>Qt::AlignCenter</set>
@@ -1154,21 +1456,25 @@ I will try to always record a new tutorial when adding a new Widget and updating
             </widget>
            </item>
            <item>
-            <widget class="QLabel" name="description_label">
-             <property name="text">
-              <string>Here will be all the custom widgets, they will be added over time on this page.
+            <layout class="QHBoxLayout" name="row_1_layout">
+             <item>
+              <widget class="QLabel" name="description_label">
+               <property name="text">
+                <string>Here will be all the custom widgets, they will be added over time on this page.
 I will try to always record a new tutorial when adding a new Widget and updating the project on Patreon before launching on GitHub and GitHub after the public release.</string>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignHCenter|Qt::AlignTop</set>
-             </property>
-             <property name="wordWrap">
-              <bool>true</bool>
-             </property>
-            </widget>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignHCenter|Qt::AlignTop</set>
+               </property>
+               <property name="wordWrap">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
            </item>
            <item>
-            <layout class="QHBoxLayout" name="row_1_layout"/>
+            <layout class="QVBoxLayout" name="row_5_layout"/>
            </item>
            <item>
             <layout class="QHBoxLayout" name="row_2_layout"/>
@@ -1178,9 +1484,6 @@ I will try to always record a new tutorial when adding a new Widget and updating
            </item>
            <item>
             <layout class="QVBoxLayout" name="row_4_layout"/>
-           </item>
-           <item>
-            <layout class="QVBoxLayout" name="row_5_layout"/>
            </item>
           </layout>
          </widget>
