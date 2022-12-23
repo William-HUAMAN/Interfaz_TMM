@@ -14,6 +14,6 @@ import json
 
 # pandas
 # numpy
-# matplotlib
+# pyqtgraph
 # docxtpl
 from docxtpl import DocxTemplate

@@ -2,18 +2,19 @@
 from src.core.libraries import *
 
 # Importando configuraciones
-from src.core.json_settings import Settings     # Archivo JSON de configuraciones
-from src.core.json_themes import Themes         # Tema de color seleccionado
+from src.core.json_settings import Settings  # Archivo JSON de configuraciones
+from src.core.json_themes import Themes  # Tema de color seleccionado
 
 # Importando recursos gráficos
 from src.widgets.py_table_widget.py_table_widget import PyTableWidget
-from . functions_main_window import *
-from src.widgets import * 
-from . ui_main import *                         # Cargando la interfaz principal
+from .functions_main_window import *
+from src.widgets import *
+from .ui_main import *  # Cargando la interfaz principal
 
 # MAIN FUNCTIONS 
 # ///////////////////////////////////////////////////////////////
-from . functions_main_window import *
+from .functions_main_window import *
+
 
 # PY WINDOW
 # ////////////////////////////////////////////////////////////// 
@@ -21,92 +22,92 @@ class SetupMainWindow:
     def __init__(self):
         super().__init__()
         # SETUP MAIN WINDOw
-        self.ui = UI_MainWindow ()
+        self.ui = UI_MainWindow()
         self.ui.setup_ui(self)
 
     # ADD LEFT MENUS
     # ///////////////////////////////////////////////////////////////
     add_left_menus = [
         {
-            "btn_icon" : "icon_home.svg",
-            "btn_id" : "btn_home",
-            "btn_text" : "Inicio",
-            "btn_tooltip" : "Página de Inicio",
-            "show_top" : True,
-            "is_active" : True
+            "btn_icon": "icon_home.svg",
+            "btn_id": "btn_home",
+            "btn_text": "Inicio",
+            "btn_tooltip": "Página de Inicio",
+            "show_top": True,
+            "is_active": True
         },
         {
-            "btn_icon" : "icon_books.svg",
-            "btn_id" : "btn_teory",
-            "btn_text" : "Fundamento teórico",
-            "btn_tooltip" : "Mostrar teoría",
-            "show_top" : True,
-            "is_active" : False
+            "btn_icon": "icon_books.svg",
+            "btn_id": "btn_teory",
+            "btn_text": "Fundamento teórico",
+            "btn_tooltip": "Mostrar teoría",
+            "show_top": True,
+            "is_active": False
         },
         {
-            "btn_icon" : "icon_calculadora.svg",
-            "btn_id" : "btn_calculus",
-            "btn_text" : "Cálculos del análisis",
-            "btn_tooltip" : "Cálculos",
-            "show_top" : True,
-            "is_active" : False
+            "btn_icon": "icon_calculadora.svg",
+            "btn_id": "btn_calculus",
+            "btn_text": "Cálculos del análisis",
+            "btn_tooltip": "Cálculos",
+            "show_top": True,
+            "is_active": False
         },
         {
-            "btn_icon" : "icon_file.svg",
-            "btn_id" : "btn_new_file",
-            "btn_text" : "New File",
-            "btn_tooltip" : "Create new file",
-            "show_top" : True,
-            "is_active" : False
+            "btn_icon": "icon_file.svg",
+            "btn_id": "btn_new_file",
+            "btn_text": "New File",
+            "btn_tooltip": "Create new file",
+            "show_top": True,
+            "is_active": False
         },
         {
-            "btn_icon" : "icon_folder_open.svg",
-            "btn_id" : "btn_open_file",
-            "btn_text" : "Open File",
-            "btn_tooltip" : "Open file",
-            "show_top" : True,
-            "is_active" : False
+            "btn_icon": "icon_folder_open.svg",
+            "btn_id": "btn_open_file",
+            "btn_text": "Open File",
+            "btn_tooltip": "Open file",
+            "show_top": True,
+            "is_active": False
         },
         {
-            "btn_icon" : "icon_save.svg",
-            "btn_id" : "btn_save",
-            "btn_text" : "Guardar",
-            "btn_tooltip" : "Guardar proyecto",
-            "show_top" : True,
-            "is_active" : False
+            "btn_icon": "icon_save.svg",
+            "btn_id": "btn_save",
+            "btn_text": "Guardar",
+            "btn_tooltip": "Guardar proyecto",
+            "show_top": True,
+            "is_active": False
         },
         {
-            "btn_icon" : "icon_info.svg",
-            "btn_id" : "btn_info",
-            "btn_text" : "Información",
-            "btn_tooltip" : "Panel de Información",
-            "show_top" : False,
-            "is_active" : False
+            "btn_icon": "icon_info.svg",
+            "btn_id": "btn_info",
+            "btn_text": "Información",
+            "btn_tooltip": "Panel de Información",
+            "show_top": False,
+            "is_active": False
         },
         {
-            "btn_icon" : "icon_settings.svg",
-            "btn_id" : "btn_settings",
-            "btn_text" : "Ajustes",
-            "btn_tooltip" : "Abrir ajustes",
-            "show_top" : False,
-            "is_active" : False
+            "btn_icon": "icon_settings.svg",
+            "btn_id": "btn_settings",
+            "btn_text": "Ajustes",
+            "btn_tooltip": "Abrir ajustes",
+            "show_top": False,
+            "is_active": False
         }
     ]
 
-     # ADD TITLE BAR MENUS
+    # ADD TITLE BAR MENUS
     # ///////////////////////////////////////////////////////////////
     add_title_bar_menus = [
         {
-            "btn_icon" : "icon_search.svg",
-            "btn_id" : "btn_search",
-            "btn_tooltip" : "Buscar",
-            "is_active" : False
+            "btn_icon": "icon_search.svg",
+            "btn_id": "btn_search",
+            "btn_tooltip": "Buscar",
+            "is_active": False
         },
         {
-            "btn_icon" : "icon_export.svg",
-            "btn_id" : "btn_top_export",
-            "btn_tooltip" : "Exportar",
-            "is_active" : False
+            "btn_icon": "icon_export.svg",
+            "btn_id": "btn_top_export",
+            "btn_tooltip": "Exportar",
+            "is_active": False
         }
     ]
 
@@ -127,7 +128,7 @@ class SetupMainWindow:
         # APP TITLE
         # ///////////////////////////////////////////////////////////////
         self.setWindowTitle(self.settings["app_name"])
-        
+
         # REMOVE TITLE BAR
         # ///////////////////////////////////////////////////////////////
         if self.settings["custom_title_bar"]:
@@ -180,9 +181,9 @@ class SetupMainWindow:
         MainFunctions.set_page(self, self.ui.load_pages.page_1)
         MainFunctions.set_left_column_menu(
             self,
-            menu = self.ui.left_column.menus.menu_1,
-            title = "Settings Left Column",
-            icon_path = Functions.set_svg_icon("icon_settings.svg")
+            menu=self.ui.left_column.menus.menu_1,
+            title="Settings Left Column",
+            icon_path=Functions.set_svg_icon("icon_settings.svg")
         )
         MainFunctions.set_right_column_menu(self, self.ui.right_column.menu_1)
 
@@ -265,48 +266,48 @@ class SetupMainWindow:
         # PAGE 1 - first page
         # new file button
         self.new_file_btn = PyPushButton(
-            text = " Crear un Proyecto",
-            radius = 8,
-            color = self.themes["app_color"]["text_foreground"],
-            bg_color = self.themes["app_color"]["dark_one"],
-            bg_color_hover = self.themes["app_color"]["dark_three"],
-            bg_color_pressed = self.themes["app_color"]["dark_four"]
+            text=" Crear un Proyecto",
+            radius=8,
+            color=self.themes["app_color"]["text_foreground"],
+            bg_color=self.themes["app_color"]["dark_one"],
+            bg_color_hover=self.themes["app_color"]["dark_three"],
+            bg_color_pressed=self.themes["app_color"]["dark_four"]
         )
         self.icon_new_file = QIcon(Functions.set_svg_icon("icon_file.svg"))
         self.new_file_btn.setMinimumHeight(30)
         self.new_file_btn.setIcon(self.icon_new_file)
 
         self.open_dir_btn = PyPushButton(
-            text = " Abrir un Proyecto",
-            radius = 8,
-            color = self.themes["app_color"]["text_foreground"],
-            bg_color = self.themes["app_color"]["dark_one"],
-            bg_color_hover = self.themes["app_color"]["dark_three"],
-            bg_color_pressed = self.themes["app_color"]["dark_four"]
+            text=" Abrir un Proyecto",
+            radius=8,
+            color=self.themes["app_color"]["text_foreground"],
+            bg_color=self.themes["app_color"]["dark_one"],
+            bg_color_hover=self.themes["app_color"]["dark_three"],
+            bg_color_pressed=self.themes["app_color"]["dark_four"]
         )
         self.icon_folder = QIcon(Functions.set_svg_icon("icon_folder_open.svg"))
         self.open_dir_btn.setMinimumHeight(30)
         self.open_dir_btn.setIcon(self.icon_folder)
 
         self.user_guide_btn = PyPushButton(
-            text = " Guía de usuario",
-            radius = 8,
-            color = self.themes["app_color"]["text_foreground"],
-            bg_color = self.themes["app_color"]["dark_one"],
-            bg_color_hover = self.themes["app_color"]["dark_three"],
-            bg_color_pressed = self.themes["app_color"]["dark_four"]
+            text=" Guía de usuario",
+            radius=8,
+            color=self.themes["app_color"]["text_foreground"],
+            bg_color=self.themes["app_color"]["dark_one"],
+            bg_color_hover=self.themes["app_color"]["dark_three"],
+            bg_color_pressed=self.themes["app_color"]["dark_four"]
         )
         self.icon_user_guide = QIcon(Functions.set_svg_icon("icon_restore.svg"))
         self.user_guide_btn.setMinimumHeight(30)
         self.user_guide_btn.setIcon(self.icon_user_guide)
 
         self.contact_btn = PyPushButton(
-            text = "  Contáctanos",
-            radius = 8,
-            color = self.themes["app_color"]["text_foreground"],
-            bg_color = self.themes["app_color"]["dark_one"],
-            bg_color_hover = self.themes["app_color"]["dark_three"],
-            bg_color_pressed = self.themes["app_color"]["dark_four"]
+            text="  Contáctanos",
+            radius=8,
+            color=self.themes["app_color"]["text_foreground"],
+            bg_color=self.themes["app_color"]["dark_one"],
+            bg_color_hover=self.themes["app_color"]["dark_three"],
+            bg_color_pressed=self.themes["app_color"]["dark_four"]
         )
         self.icon_support = QIcon(Functions.set_svg_icon("icon_support.svg"))
         self.contact_btn.setMinimumHeight(30)
@@ -318,7 +319,6 @@ class SetupMainWindow:
         self.ui.load_pages.btns_basics.addWidget(self.user_guide_btn)
         self.ui.load_pages.btns_basics.addWidget(self.contact_btn)
 
-        
         # Agregando el logo
         self.logo_svg = QSvgWidget(Functions.set_svg_image("logo.svg"))
         self.ui.load_pages.logo_layout.addWidget(self.logo_svg)
@@ -337,21 +337,21 @@ class SetupMainWindow:
         self.mecanismo_svg = QSvgWidget(Functions.set_svg_image("mecanismo.svg"))
         self.ui.load_pages.mecanismo_layout.addWidget(self.mecanismo_svg)
 
-        #self.grashof = QSvgWidget(Functions.set_svg_image("mecanismo.svg"))
-        #self.ui.load_pages.prueba_layout.addWidget(self.grashof)
+        # self.grashof = QSvgWidget(Functions.set_svg_image("mecanismo.svg"))
+        # self.ui.load_pages.prueba_layout.addWidget(self.grashof)
 
         # PAGE 3
         # PY LINE EDIT O2x
         self.line_O2x = PyLineEdit(
-            text = "",
-            place_holder_text = "O2x",
-            radius = 8,
-            border_size = 2,
-            color = self.themes["app_color"]["text_foreground"],
-            selection_color = self.themes["app_color"]["white"],
-            bg_color = self.themes["app_color"]["dark_one"],
-            bg_color_active = self.themes["app_color"]["dark_three"],
-            context_color = self.themes["app_color"]["context_color"]
+            text="",
+            place_holder_text="O2x",
+            radius=8,
+            border_size=2,
+            color=self.themes["app_color"]["text_foreground"],
+            selection_color=self.themes["app_color"]["white"],
+            bg_color=self.themes["app_color"]["dark_one"],
+            bg_color_active=self.themes["app_color"]["dark_three"],
+            context_color=self.themes["app_color"]["context_color"]
         )
         self.line_O2x.setMinimumHeight(30)
 
@@ -489,6 +489,139 @@ class SetupMainWindow:
             context_color=self.themes["app_color"]["context_color"]
         )
         self.line_omega2.setMinimumHeight(30)
+
+        # Tabla de valores obtenidos mediante el análisis de Posición
+        self.table_positions = PyTableWidget(
+            radius=8,
+            color=self.themes["app_color"]["text_foreground"],
+            selection_color=self.themes["app_color"]["context_color"],
+            bg_color=self.themes["app_color"]["bg_two"],
+            header_horizontal_color=self.themes["app_color"]["dark_two"],
+            header_vertical_color=self.themes["app_color"]["bg_three"],
+            bottom_line_color=self.themes["app_color"]["bg_three"],
+            grid_line_color=self.themes["app_color"]["bg_one"],
+            scroll_bar_bg_color=self.themes["app_color"]["bg_one"],
+            scroll_bar_btn_color=self.themes["app_color"]["dark_four"],
+            context_color=self.themes["app_color"]["context_color"]
+        )
+        self.table_positions.setColumnCount(7)
+        self.table_positions.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
+        self.table_positions.setSelectionMode(QAbstractItemView.ExtendedSelection)
+        self.table_positions.setSelectionBehavior(QAbstractItemView.SelectRows)
+
+        # Columns / Header
+        self.t1_column_1 = QTableWidgetItem()
+        self.t1_column_1.setTextAlignment(Qt.AlignCenter)
+        self.t1_column_1.setText("θ2")
+
+        self.t1_column_2 = QTableWidgetItem()
+        self.t1_column_2.setTextAlignment(Qt.AlignCenter)
+        self.t1_column_2.setText("Ax")
+
+        self.t1_column_3 = QTableWidgetItem()
+        self.t1_column_3.setTextAlignment(Qt.AlignCenter)
+        self.t1_column_3.setText("Ay")
+
+        self.t1_column_4 = QTableWidgetItem()
+        self.t1_column_4.setTextAlignment(Qt.AlignCenter)
+        self.t1_column_4.setText("Bx")
+
+        self.t1_column_5 = QTableWidgetItem()
+        self.t1_column_5.setTextAlignment(Qt.AlignCenter)
+        self.t1_column_5.setText("By")
+
+        self.t1_column_6 = QTableWidgetItem()
+        self.t1_column_6.setTextAlignment(Qt.AlignCenter)
+        self.t1_column_6.setText("θ3")
+
+        self.t1_column_7 = QTableWidgetItem()
+        self.t1_column_7.setTextAlignment(Qt.AlignCenter)
+        self.t1_column_7.setText("θ4")
+
+        # Set column
+        self.table_positions.setHorizontalHeaderItem(0, self.t1_column_1)
+        self.table_positions.setHorizontalHeaderItem(1, self.t1_column_2)
+        self.table_positions.setHorizontalHeaderItem(2, self.t1_column_3)
+        self.table_positions.setHorizontalHeaderItem(3, self.t1_column_4)
+        self.table_positions.setHorizontalHeaderItem(4, self.t1_column_5)
+        self.table_positions.setHorizontalHeaderItem(5, self.t1_column_6)
+        self.table_positions.setHorizontalHeaderItem(6, self.t1_column_7)
+
+        for x in range(11):
+            row_number = self.table_positions.rowCount()
+            self.table_positions.insertRow(row_number)  # Insert row
+            self.table_positions.setItem(row_number, 0, QTableWidgetItem(str("Wanderson")))  # Add name
+            self.table_positions.setItem(row_number, 1, QTableWidgetItem(str("vfx_on_fire_" + str(x))))  # Add nick
+            self.pass_text = QTableWidgetItem()
+            self.pass_text.setTextAlignment(Qt.AlignCenter)
+            self.pass_text.setText("12345" + str(x))
+            self.table_positions.setItem(row_number, 2, self.pass_text)  # Add pass
+            self.table_positions.setRowHeight(row_number, 22)
+
+        # Tabla de valores obtenidos mediante el análisis de Velocidad
+        self.table_velocitys = PyTableWidget(
+            radius=8,
+            color=self.themes["app_color"]["text_foreground"],
+            selection_color=self.themes["app_color"]["context_color"],
+            bg_color=self.themes["app_color"]["bg_two"],
+            header_horizontal_color=self.themes["app_color"]["dark_two"],
+            header_vertical_color=self.themes["app_color"]["bg_three"],
+            bottom_line_color=self.themes["app_color"]["bg_three"],
+            grid_line_color=self.themes["app_color"]["bg_one"],
+            scroll_bar_bg_color=self.themes["app_color"]["bg_one"],
+            scroll_bar_btn_color=self.themes["app_color"]["dark_four"],
+            context_color=self.themes["app_color"]["context_color"]
+        )
+        self.table_velocitys.setColumnCount(6)
+        self.table_velocitys.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
+        self.table_velocitys.setSelectionMode(QAbstractItemView.ExtendedSelection)
+        self.table_velocitys.setSelectionBehavior(QAbstractItemView.SelectRows)
+
+        # Columns / Header
+        self.t2_column_1 = QTableWidgetItem()
+        self.t2_column_1.setTextAlignment(Qt.AlignCenter)
+        self.t2_column_1.setText("ω2")
+
+        self.t2_column_2 = QTableWidgetItem()
+        self.t2_column_2.setTextAlignment(Qt.AlignCenter)
+        self.t2_column_2.setText("ω3")
+
+        self.t2_column_3 = QTableWidgetItem()
+        self.t2_column_3.setTextAlignment(Qt.AlignCenter)
+        self.t2_column_3.setText("ω4")
+
+        self.t2_column_4 = QTableWidgetItem()
+        self.t2_column_4.setTextAlignment(Qt.AlignCenter)
+        self.t2_column_4.setText("V_A")
+
+        self.t2_column_5 = QTableWidgetItem()
+        self.t2_column_5.setTextAlignment(Qt.AlignCenter)
+        self.t2_column_5.setText("V_B")
+
+        self.t2_column_6 = QTableWidgetItem()
+        self.t2_column_6.setTextAlignment(Qt.AlignCenter)
+        self.t2_column_6.setText("V_P")
+
+        # Set column
+        self.table_velocitys.setHorizontalHeaderItem(0, self.t2_column_1)
+        self.table_velocitys.setHorizontalHeaderItem(1, self.t2_column_2)
+        self.table_velocitys.setHorizontalHeaderItem(2, self.t2_column_3)
+        self.table_velocitys.setHorizontalHeaderItem(3, self.t2_column_4)
+        self.table_velocitys.setHorizontalHeaderItem(4, self.t2_column_5)
+        self.table_velocitys.setHorizontalHeaderItem(5, self.t2_column_6)
+
+        for x in range(11):
+            row_number = self.table_velocitys.rowCount()
+            self.table_velocitys.insertRow(row_number)  # Insert row
+            self.table_velocitys.setItem(row_number, 0, QTableWidgetItem(str("Velocidades")))  # Add name
+            self.table_velocitys.setItem(row_number, 1, QTableWidgetItem(str("vfx_on_fire_" + str(x))))  # Add nick
+            self.pass_text = QTableWidgetItem()
+            self.pass_text.setTextAlignment(Qt.AlignCenter)
+            self.pass_text.setText("12345" + str(x))
+            self.table_velocitys.setItem(row_number, 2, self.pass_text)  # Add pass
+            self.table_velocitys.setRowHeight(row_number, 22)
+
+
         # Agregando los widgets
         self.ui.load_pages.O2_layout.addWidget(self.line_O2x)
         self.ui.load_pages.O2_layout.addWidget(self.line_O2y)
@@ -501,6 +634,8 @@ class SetupMainWindow:
         self.ui.load_pages.P_layout.addWidget(self.line_distance)
         self.ui.load_pages.theta2_layout.addWidget(self.line_theta2)
         self.ui.load_pages.velocity_layout.addWidget(self.line_omega2)
+        self.ui.load_pages.table1_layout.addWidget(self.table_positions)
+        self.ui.load_pages.table2_layout.addWidget(self.table_velocitys)
         # RIGHT COLUMN
         # ///////////////////////////////////////////////////////////////
 
@@ -523,15 +658,15 @@ class SetupMainWindow:
 
         # PY name file edit
         self.name_file_edit = PyLineEdit(
-            text = "",
-            place_holder_text = "Place holder text",
-            radius = 8,
-            border_size = 2,
-            color = self.themes["app_color"]["text_foreground"],
-            selection_color = self.themes["app_color"]["white"],
-            bg_color = self.themes["app_color"]["dark_one"],
-            bg_color_active = self.themes["app_color"]["dark_three"],
-            context_color = self.themes["app_color"]["context_color"]
+            text="",
+            place_holder_text="Place holder text",
+            radius=8,
+            border_size=2,
+            color=self.themes["app_color"]["text_foreground"],
+            selection_color=self.themes["app_color"]["white"],
+            bg_color=self.themes["app_color"]["dark_one"],
+            bg_color_active=self.themes["app_color"]["dark_three"],
+            context_color=self.themes["app_color"]["context_color"]
         )
         self.name_file_edit.setMinimumHeight(40)
 
