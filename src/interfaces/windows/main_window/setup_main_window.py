@@ -339,6 +339,12 @@ class SetupMainWindow:
         self.mecanismo_svg = QSvgWidget(Functions.set_svg_image("mecanismo.svg"))
         self.ui.load_pages.mecanismo_layout.addWidget(self.mecanismo_svg)
 
+        self.ec_analisis1 = QSvgWidget(Functions.set_svg_image("ec_analisis1.svg"))
+        self.ui.load_pages.Ec_pos_layout.addWidget(self.ec_analisis1)
+
+        self.ec_analisis2 = QSvgWidget(Functions.set_svg_image("ec_analisis2.svg"))
+        self.ui.load_pages.Ec_vel_layout.addWidget(self.ec_analisis2)
+
         # self.grashof = QSvgWidget(Functions.set_svg_image("mecanismo.svg"))
         # self.ui.load_pages.prueba_layout.addWidget(self.grashof)
 

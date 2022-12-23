@@ -32,7 +32,7 @@
    <item>
     <widget class="QStackedWidget" name="pages">
      <property name="currentIndex">
-      <number>2</number>
+      <number>1</number>
      </property>
      <widget class="QWidget" name="page_1">
       <property name="styleSheet">
@@ -668,8 +668,8 @@ Una junta es una conexión entre dos o más eslabones, la cual permite algún mo
              <rect>
               <x>0</x>
               <y>0</y>
-              <width>217</width>
-              <height>616</height>
+              <width>277</width>
+              <height>1131</height>
              </rect>
             </property>
             <property name="styleSheet">
@@ -757,19 +757,6 @@ Una junta es una conexión entre dos o más eslabones, la cual permite algún mo
               </widget>
              </item>
              <item>
-              <widget class="QLabel" name="description_grashof_2">
-               <property name="text">
-                <string>Es una relación que predice el comportamiento de rotación o rotabilidad de las inversiones de un mecanismo de cuatro barras basado sólo en las longitudes de los eslabones.</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignJustify|Qt::AlignTop</set>
-               </property>
-               <property name="wordWrap">
-                <bool>true</bool>
-               </property>
-              </widget>
-             </item>
-             <item>
               <widget class="QLabel" name="t_grashof_2">
                <property name="minimumSize">
                 <size>
@@ -792,17 +779,30 @@ Una junta es una conexión entre dos o más eslabones, la cual permite algún mo
                 <string notr="true">font-size: 12pt</string>
                </property>
                <property name="text">
-                <string>Condición de Grashof</string>
+                <string>¿Qué es el análisis de Posición?</string>
                </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="description_grashof_2">
+               <property name="text">
+                <string>El análisis de posición es uno de los pasos iniciales en la síntesis de mecanismos, donde la generación de movimiento y de trayectoria son unos de los problemas principales en la síntesis dimensional de mecanismos.</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignJustify|Qt::AlignTop</set>
+               </property>
+               <property name="wordWrap">
+                <bool>true</bool>
                </property>
               </widget>
              </item>
              <item>
               <widget class="QLabel" name="description_label_3">
                <property name="text">
-                <string>De cumplirse la condición, el eslabonamiento es de Grashof y por lo menos un eslabón será capaz de realizar una revolución completa con respecto al plano de bancada.</string>
+                <string>Las ecuaciones necesarias para este procedimiento se detallan a continuación:</string>
                </property>
                <property name="alignment">
                 <set>Qt::AlignJustify|Qt::AlignTop</set>
@@ -813,47 +813,20 @@ Una junta es una conexión entre dos o más eslabones, la cual permite algún mo
               </widget>
              </item>
              <item>
-              <widget class="QLabel" name="t_4bar_2">
+              <widget class="QWidget" name="widget_2" native="true">
                <property name="minimumSize">
                 <size>
-                 <width>0</width>
-                 <height>35</height>
+                 <width>267</width>
+                 <height>0</height>
                 </size>
                </property>
                <property name="maximumSize">
                 <size>
-                 <width>16777215</width>
-                 <height>35</height>
+                 <width>267</width>
+                 <height>16777215</height>
                 </size>
                </property>
-               <property name="font">
-                <font>
-                 <pointsize>12</pointsize>
-                </font>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">font-size: 12pt</string>
-               </property>
-               <property name="text">
-                <string>Mecanismo de cuatro barras</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignCenter</set>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QLabel" name="description_eslabon_2">
-               <property name="text">
-                <string>Un eslabón es un cuerpo rígido que posee por lo menos 2 nodos por los cuales se une a otros eslabones.
-Una junta es una conexión entre dos o más eslabones, la cual permite algún movimiento</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignJustify|Qt::AlignTop</set>
-               </property>
-               <property name="wordWrap">
-                <bool>true</bool>
-               </property>
+               <layout class="QVBoxLayout" name="Ec_pos_layout"/>
               </widget>
              </item>
             </layout>
@@ -886,8 +859,8 @@ Una junta es una conexión entre dos o más eslabones, la cual permite algún mo
              <rect>
               <x>0</x>
               <y>0</y>
-              <width>233</width>
-              <height>625</height>
+              <width>277</width>
+              <height>1131</height>
              </rect>
             </property>
             <property name="styleSheet">
@@ -954,7 +927,7 @@ Una junta es una conexión entre dos o más eslabones, la cual permite algún mo
                 <string notr="true">font-size: 12pt</string>
                </property>
                <property name="text">
-                <string>Custom Widgets Page</string>
+                <string>Velocidad</string>
                </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>
@@ -964,8 +937,7 @@ Una junta es una conexión entre dos o más eslabones, la cual permite algún mo
              <item>
               <widget class="QLabel" name="description_label_4">
                <property name="text">
-                <string>Here will be all the custom widgets, they will be added over time on this page.
-I will try to always record a new tutorial when adding a new Widget and updating the project on Patreon before launching on GitHub and GitHub after the public release.</string>
+                <string>El análisis gráfico de velocidad determina la velocidad de puntos de un mecanismo en una sola configuración. Se debe hacer énfasis en que los resultados de este análisis corresponden a la posición actual del mecanismo. Conforme el mecanismo se mueve, la configuración cambia al igual que las velocidades.</string>
                </property>
                <property name="alignment">
                 <set>Qt::AlignJustify|Qt::AlignTop</set>
@@ -975,89 +947,65 @@ I will try to always record a new tutorial when adding a new Widget and updating
                </property>
               </widget>
              </item>
-             <item alignment="Qt::AlignHCenter">
-              <widget class="QFrame" name="frame">
+             <item>
+              <widget class="QLabel" name="t_4bar_2">
                <property name="minimumSize">
                 <size>
-                 <width>190</width>
-                 <height>140</height>
+                 <width>0</width>
+                 <height>35</height>
                 </size>
                </property>
                <property name="maximumSize">
                 <size>
-                 <width>190</width>
-                 <height>140</height>
-                </size>
-               </property>
-               <property name="frameShape">
-                <enum>QFrame::StyledPanel</enum>
-               </property>
-               <property name="frameShadow">
-                <enum>QFrame::Raised</enum>
-               </property>
-               <widget class="QWidget" name="layoutWidget">
-                <property name="geometry">
-                 <rect>
-                  <x>10</x>
-                  <y>10</y>
-                  <width>171</width>
-                  <height>121</height>
-                 </rect>
-                </property>
-                <layout class="QVBoxLayout" name="prueba_layout"/>
-               </widget>
-              </widget>
-             </item>
-             <item>
-              <layout class="QHBoxLayout" name="row_1_layout_4"/>
-             </item>
-             <item>
-              <widget class="QLabel" name="img_grashof">
-               <property name="minimumSize">
-                <size>
-                 <width>190</width>
-                 <height>140</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>190</width>
-                 <height>140</height>
+                 <width>16777215</width>
+                 <height>35</height>
                 </size>
                </property>
                <property name="font">
                 <font>
-                 <pointsize>16</pointsize>
+                 <pointsize>12</pointsize>
                 </font>
                </property>
                <property name="styleSheet">
-                <string notr="true">font-size: 16pt</string>
+                <string notr="true">font-size: 12pt</string>
                </property>
                <property name="text">
-                <string/>
-               </property>
-               <property name="pixmap">
-                <pixmap>C:/Users/Usuario/Downloads/tmm_images/grashof.jpg</pixmap>
-               </property>
-               <property name="scaledContents">
-                <bool>true</bool>
+                <string>Ecuaciones a utilizar</string>
                </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>
                </property>
-               <property name="openExternalLinks">
-                <bool>false</bool>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="description_eslabon_2">
+               <property name="text">
+                <string>A continuación, se detallan las ecuaciones a emplear en este procedimiento.</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignJustify|Qt::AlignTop</set>
+               </property>
+               <property name="wordWrap">
+                <bool>true</bool>
                </property>
               </widget>
              </item>
              <item>
-              <layout class="QHBoxLayout" name="row_2_layout_4"/>
-             </item>
-             <item>
-              <layout class="QVBoxLayout" name="row_4_layout_4"/>
-             </item>
-             <item>
-              <layout class="QVBoxLayout" name="row_5_layout_4"/>
+              <widget class="QWidget" name="widget_3" native="true">
+               <property name="minimumSize">
+                <size>
+                 <width>267</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>267</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <layout class="QVBoxLayout" name="Ec_vel_layout"/>
+              </widget>
              </item>
             </layout>
            </widget>

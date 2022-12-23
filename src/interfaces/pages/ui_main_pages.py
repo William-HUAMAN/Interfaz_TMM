@@ -306,7 +306,7 @@ class Ui_MainPages(object):
         self.scroll_area_pos.setWidgetResizable(True)
         self.contents_pos = QWidget()
         self.contents_pos.setObjectName(u"contents_pos")
-        self.contents_pos.setGeometry(QRect(0, 0, 217, 616))
+        self.contents_pos.setGeometry(QRect(0, 0, 277, 1131))
         self.contents_pos.setStyleSheet(u"background: transparent;")
         self.verticalLayout_4 = QVBoxLayout(self.contents_pos)
         self.verticalLayout_4.setSpacing(15)
@@ -337,13 +337,6 @@ class Ui_MainPages(object):
 
         self.verticalLayout_4.addWidget(self.description_pos)
 
-        self.description_grashof_2 = QLabel(self.contents_pos)
-        self.description_grashof_2.setObjectName(u"description_grashof_2")
-        self.description_grashof_2.setAlignment(Qt.AlignJustify|Qt.AlignTop)
-        self.description_grashof_2.setWordWrap(True)
-
-        self.verticalLayout_4.addWidget(self.description_grashof_2)
-
         self.t_grashof_2 = QLabel(self.contents_pos)
         self.t_grashof_2.setObjectName(u"t_grashof_2")
         self.t_grashof_2.setMinimumSize(QSize(0, 35))
@@ -354,6 +347,13 @@ class Ui_MainPages(object):
 
         self.verticalLayout_4.addWidget(self.t_grashof_2)
 
+        self.description_grashof_2 = QLabel(self.contents_pos)
+        self.description_grashof_2.setObjectName(u"description_grashof_2")
+        self.description_grashof_2.setAlignment(Qt.AlignJustify|Qt.AlignTop)
+        self.description_grashof_2.setWordWrap(True)
+
+        self.verticalLayout_4.addWidget(self.description_grashof_2)
+
         self.description_label_3 = QLabel(self.contents_pos)
         self.description_label_3.setObjectName(u"description_label_3")
         self.description_label_3.setAlignment(Qt.AlignJustify|Qt.AlignTop)
@@ -361,22 +361,14 @@ class Ui_MainPages(object):
 
         self.verticalLayout_4.addWidget(self.description_label_3)
 
-        self.t_4bar_2 = QLabel(self.contents_pos)
-        self.t_4bar_2.setObjectName(u"t_4bar_2")
-        self.t_4bar_2.setMinimumSize(QSize(0, 35))
-        self.t_4bar_2.setMaximumSize(QSize(16777215, 35))
-        self.t_4bar_2.setFont(font2)
-        self.t_4bar_2.setStyleSheet(u"font-size: 12pt")
-        self.t_4bar_2.setAlignment(Qt.AlignCenter)
+        self.widget_2 = QWidget(self.contents_pos)
+        self.widget_2.setObjectName(u"widget_2")
+        self.widget_2.setMinimumSize(QSize(267, 0))
+        self.widget_2.setMaximumSize(QSize(267, 16777215))
+        self.Ec_pos_layout = QVBoxLayout(self.widget_2)
+        self.Ec_pos_layout.setObjectName(u"Ec_pos_layout")
 
-        self.verticalLayout_4.addWidget(self.t_4bar_2)
-
-        self.description_eslabon_2 = QLabel(self.contents_pos)
-        self.description_eslabon_2.setObjectName(u"description_eslabon_2")
-        self.description_eslabon_2.setAlignment(Qt.AlignJustify|Qt.AlignTop)
-        self.description_eslabon_2.setWordWrap(True)
-
-        self.verticalLayout_4.addWidget(self.description_eslabon_2)
+        self.verticalLayout_4.addWidget(self.widget_2)
 
         self.scroll_area_pos.setWidget(self.contents_pos)
 
@@ -396,7 +388,7 @@ class Ui_MainPages(object):
         self.scroll_area_vel.setWidgetResizable(True)
         self.contents_3 = QWidget()
         self.contents_3.setObjectName(u"contents_3")
-        self.contents_3.setGeometry(QRect(0, 0, 233, 625))
+        self.contents_3.setGeometry(QRect(0, 0, 277, 1131))
         self.contents_3.setStyleSheet(u"background: transparent;")
         self.verticalLayout_6 = QVBoxLayout(self.contents_3)
         self.verticalLayout_6.setSpacing(15)
@@ -427,55 +419,31 @@ class Ui_MainPages(object):
 
         self.verticalLayout_6.addWidget(self.description_label_4)
 
-        self.frame = QFrame(self.contents_3)
-        self.frame.setObjectName(u"frame")
-        self.frame.setMinimumSize(QSize(190, 140))
-        self.frame.setMaximumSize(QSize(190, 140))
-        self.frame.setFrameShape(QFrame.StyledPanel)
-        self.frame.setFrameShadow(QFrame.Raised)
-        self.layoutWidget2 = QWidget(self.frame)
-        self.layoutWidget2.setObjectName(u"layoutWidget2")
-        self.layoutWidget2.setGeometry(QRect(10, 10, 171, 121))
-        self.prueba_layout = QVBoxLayout(self.layoutWidget2)
-        self.prueba_layout.setObjectName(u"prueba_layout")
-        self.prueba_layout.setContentsMargins(0, 0, 0, 0)
+        self.t_4bar_2 = QLabel(self.contents_3)
+        self.t_4bar_2.setObjectName(u"t_4bar_2")
+        self.t_4bar_2.setMinimumSize(QSize(0, 35))
+        self.t_4bar_2.setMaximumSize(QSize(16777215, 35))
+        self.t_4bar_2.setFont(font2)
+        self.t_4bar_2.setStyleSheet(u"font-size: 12pt")
+        self.t_4bar_2.setAlignment(Qt.AlignCenter)
 
-        self.verticalLayout_6.addWidget(self.frame, 0, Qt.AlignHCenter)
+        self.verticalLayout_6.addWidget(self.t_4bar_2)
 
-        self.row_1_layout_4 = QHBoxLayout()
-        self.row_1_layout_4.setObjectName(u"row_1_layout_4")
+        self.description_eslabon_2 = QLabel(self.contents_3)
+        self.description_eslabon_2.setObjectName(u"description_eslabon_2")
+        self.description_eslabon_2.setAlignment(Qt.AlignJustify|Qt.AlignTop)
+        self.description_eslabon_2.setWordWrap(True)
 
-        self.verticalLayout_6.addLayout(self.row_1_layout_4)
+        self.verticalLayout_6.addWidget(self.description_eslabon_2)
 
-        self.img_grashof = QLabel(self.contents_3)
-        self.img_grashof.setObjectName(u"img_grashof")
-        self.img_grashof.setMinimumSize(QSize(190, 140))
-        self.img_grashof.setMaximumSize(QSize(190, 140))
-        font3 = QFont()
-        font3.setPointSize(16)
-        self.img_grashof.setFont(font3)
-        self.img_grashof.setStyleSheet(u"font-size: 16pt")
-        self.img_grashof.setPixmap(QPixmap(u"C:/Users/Usuario/Downloads/tmm_images/grashof.jpg"))
-        self.img_grashof.setScaledContents(True)
-        self.img_grashof.setAlignment(Qt.AlignCenter)
-        self.img_grashof.setOpenExternalLinks(False)
+        self.widget_3 = QWidget(self.contents_3)
+        self.widget_3.setObjectName(u"widget_3")
+        self.widget_3.setMinimumSize(QSize(267, 0))
+        self.widget_3.setMaximumSize(QSize(267, 16777215))
+        self.Ec_vel_layout = QVBoxLayout(self.widget_3)
+        self.Ec_vel_layout.setObjectName(u"Ec_vel_layout")
 
-        self.verticalLayout_6.addWidget(self.img_grashof)
-
-        self.row_2_layout_4 = QHBoxLayout()
-        self.row_2_layout_4.setObjectName(u"row_2_layout_4")
-
-        self.verticalLayout_6.addLayout(self.row_2_layout_4)
-
-        self.row_4_layout_4 = QVBoxLayout()
-        self.row_4_layout_4.setObjectName(u"row_4_layout_4")
-
-        self.verticalLayout_6.addLayout(self.row_4_layout_4)
-
-        self.row_5_layout_4 = QVBoxLayout()
-        self.row_5_layout_4.setObjectName(u"row_5_layout_4")
-
-        self.verticalLayout_6.addLayout(self.row_5_layout_4)
+        self.verticalLayout_6.addWidget(self.widget_3)
 
         self.scroll_area_vel.setWidget(self.contents_3)
 
@@ -529,13 +497,13 @@ class Ui_MainPages(object):
         self.frame_parameters.setMaximumSize(QSize(320, 410))
         self.frame_parameters.setFrameShape(QFrame.StyledPanel)
         self.frame_parameters.setFrameShadow(QFrame.Raised)
-        self.layoutWidget3 = QWidget(self.frame_parameters)
-        self.layoutWidget3.setObjectName(u"layoutWidget3")
-        self.layoutWidget3.setGeometry(QRect(0, 0, 321, 411))
-        self.parameters = QVBoxLayout(self.layoutWidget3)
+        self.layoutWidget2 = QWidget(self.frame_parameters)
+        self.layoutWidget2.setObjectName(u"layoutWidget2")
+        self.layoutWidget2.setGeometry(QRect(0, 0, 321, 411))
+        self.parameters = QVBoxLayout(self.layoutWidget2)
         self.parameters.setObjectName(u"parameters")
         self.parameters.setContentsMargins(0, 0, 0, 0)
-        self.title_section3_2 = QLabel(self.layoutWidget3)
+        self.title_section3_2 = QLabel(self.layoutWidget2)
         self.title_section3_2.setObjectName(u"title_section3_2")
         self.title_section3_2.setMinimumSize(QSize(0, 50))
         self.title_section3_2.setMaximumSize(QSize(16777215, 50))
@@ -553,7 +521,7 @@ class Ui_MainPages(object):
 
         self.O2_layout = QHBoxLayout()
         self.O2_layout.setObjectName(u"O2_layout")
-        self.label_7 = QLabel(self.layoutWidget3)
+        self.label_7 = QLabel(self.layoutWidget2)
         self.label_7.setObjectName(u"label_7")
         self.label_7.setMinimumSize(QSize(80, 30))
         self.label_7.setMaximumSize(QSize(80, 30))
@@ -573,7 +541,7 @@ class Ui_MainPages(object):
 
         self.O4_layout = QHBoxLayout()
         self.O4_layout.setObjectName(u"O4_layout")
-        self.label_8 = QLabel(self.layoutWidget3)
+        self.label_8 = QLabel(self.layoutWidget2)
         self.label_8.setObjectName(u"label_8")
         self.label_8.setMinimumSize(QSize(80, 30))
         self.label_8.setMaximumSize(QSize(80, 30))
@@ -593,7 +561,7 @@ class Ui_MainPages(object):
 
         self.Eslabon_layout2 = QHBoxLayout()
         self.Eslabon_layout2.setObjectName(u"Eslabon_layout2")
-        self.label_3 = QLabel(self.layoutWidget3)
+        self.label_3 = QLabel(self.layoutWidget2)
         self.label_3.setObjectName(u"label_3")
         self.label_3.setMinimumSize(QSize(80, 30))
         self.label_3.setMaximumSize(QSize(80, 30))
@@ -613,7 +581,7 @@ class Ui_MainPages(object):
 
         self.Eslabon_layout3 = QHBoxLayout()
         self.Eslabon_layout3.setObjectName(u"Eslabon_layout3")
-        self.label_4 = QLabel(self.layoutWidget3)
+        self.label_4 = QLabel(self.layoutWidget2)
         self.label_4.setObjectName(u"label_4")
         self.label_4.setMinimumSize(QSize(80, 30))
         self.label_4.setMaximumSize(QSize(80, 30))
@@ -633,7 +601,7 @@ class Ui_MainPages(object):
 
         self.Eslabon_layout4 = QHBoxLayout()
         self.Eslabon_layout4.setObjectName(u"Eslabon_layout4")
-        self.label_5 = QLabel(self.layoutWidget3)
+        self.label_5 = QLabel(self.layoutWidget2)
         self.label_5.setObjectName(u"label_5")
         self.label_5.setMinimumSize(QSize(80, 30))
         self.label_5.setMaximumSize(QSize(80, 30))
@@ -653,7 +621,7 @@ class Ui_MainPages(object):
 
         self.P_layout = QHBoxLayout()
         self.P_layout.setObjectName(u"P_layout")
-        self.label_6 = QLabel(self.layoutWidget3)
+        self.label_6 = QLabel(self.layoutWidget2)
         self.label_6.setObjectName(u"label_6")
         self.label_6.setMinimumSize(QSize(80, 30))
         self.label_6.setMaximumSize(QSize(80, 30))
@@ -675,7 +643,7 @@ class Ui_MainPages(object):
         self.other_layout.setObjectName(u"other_layout")
         self.theta2_layout = QHBoxLayout()
         self.theta2_layout.setObjectName(u"theta2_layout")
-        self.label_9 = QLabel(self.layoutWidget3)
+        self.label_9 = QLabel(self.layoutWidget2)
         self.label_9.setObjectName(u"label_9")
         self.label_9.setMinimumSize(QSize(30, 30))
         self.label_9.setMaximumSize(QSize(30, 30))
@@ -695,7 +663,7 @@ class Ui_MainPages(object):
 
         self.velocity_layout = QHBoxLayout()
         self.velocity_layout.setObjectName(u"velocity_layout")
-        self.label_10 = QLabel(self.layoutWidget3)
+        self.label_10 = QLabel(self.layoutWidget2)
         self.label_10.setObjectName(u"label_10")
         self.label_10.setMinimumSize(QSize(30, 30))
         self.label_10.setMaximumSize(QSize(30, 30))
@@ -726,11 +694,11 @@ class Ui_MainPages(object):
         self.Position_title.setObjectName(u"Position_title")
         self.Position_title.setMinimumSize(QSize(0, 70))
         self.Position_title.setMaximumSize(QSize(16777215, 70))
-        font4 = QFont()
-        font4.setPointSize(20)
-        font4.setBold(False)
-        font4.setItalic(False)
-        self.Position_title.setFont(font4)
+        font3 = QFont()
+        font3.setPointSize(20)
+        font3.setBold(False)
+        font3.setItalic(False)
+        self.Position_title.setFont(font3)
         self.Position_title.setStyleSheet(u"font: 20pt \"Segoe UI\";\n"
 "border :2px solid;\n"
 "border-color: rgb(108, 153, 244);\n"
@@ -768,7 +736,7 @@ class Ui_MainPages(object):
 
         self.retranslateUi(MainPages)
 
-        self.pages.setCurrentIndex(2)
+        self.pages.setCurrentIndex(1)
 
 
         QMetaObject.connectSlotsByName(MainPages)
@@ -794,17 +762,14 @@ class Ui_MainPages(object):
         self.title_section2.setText(QCoreApplication.translate("MainPages", u"An\u00e1lisis de Posici\u00f3n", None))
         self.t_position.setText(QCoreApplication.translate("MainPages", u"Posici\u00f3n", None))
         self.description_pos.setText(QCoreApplication.translate("MainPages", u"La posici\u00f3n de un punto en el plano puede definirse por medio de un vector de posici\u00f3n. La elecci\u00f3n de ejes de referencia es arbitraria y se elige de conformidad con el observador.", None))
-        self.description_grashof_2.setText(QCoreApplication.translate("MainPages", u"Es una relaci\u00f3n que predice el comportamiento de rotaci\u00f3n o rotabilidad de las inversiones de un mecanismo de cuatro barras basado s\u00f3lo en las longitudes de los eslabones.", None))
-        self.t_grashof_2.setText(QCoreApplication.translate("MainPages", u"Condici\u00f3n de Grashof", None))
-        self.description_label_3.setText(QCoreApplication.translate("MainPages", u"De cumplirse la condici\u00f3n, el eslabonamiento es de Grashof y por lo menos un eslab\u00f3n ser\u00e1 capaz de realizar una revoluci\u00f3n completa con respecto al plano de bancada.", None))
-        self.t_4bar_2.setText(QCoreApplication.translate("MainPages", u"Mecanismo de cuatro barras", None))
-        self.description_eslabon_2.setText(QCoreApplication.translate("MainPages", u"Un eslab\u00f3n es un cuerpo r\u00edgido que posee por lo menos 2 nodos por los cuales se une a otros eslabones.\n"
-"Una junta es una conexi\u00f3n entre dos o m\u00e1s eslabones, la cual permite alg\u00fan movimiento", None))
+        self.t_grashof_2.setText(QCoreApplication.translate("MainPages", u"\u00bfQu\u00e9 es el an\u00e1lisis de Posici\u00f3n?", None))
+        self.description_grashof_2.setText(QCoreApplication.translate("MainPages", u"El an\u00e1lisis de posici\u00f3n es uno de los pasos iniciales en la s\u00edntesis de mecanismos, donde la generaci\u00f3n de movimiento y de trayectoria son unos de los problemas principales en la s\u00edntesis dimensional de mecanismos.", None))
+        self.description_label_3.setText(QCoreApplication.translate("MainPages", u"Las ecuaciones necesarias para este procedimiento se detallan a continuaci\u00f3n:", None))
         self.title_section3.setText(QCoreApplication.translate("MainPages", u"An\u00e1lisis de Velocidad", None))
-        self.title_label_3.setText(QCoreApplication.translate("MainPages", u"Custom Widgets Page", None))
-        self.description_label_4.setText(QCoreApplication.translate("MainPages", u"Here will be all the custom widgets, they will be added over time on this page.\n"
-"I will try to always record a new tutorial when adding a new Widget and updating the project on Patreon before launching on GitHub and GitHub after the public release.", None))
-        self.img_grashof.setText("")
+        self.title_label_3.setText(QCoreApplication.translate("MainPages", u"Velocidad", None))
+        self.description_label_4.setText(QCoreApplication.translate("MainPages", u"El an\u00e1lisis gr\u00e1fico de velocidad determina la velocidad de puntos de un mecanismo en una sola configuraci\u00f3n. Se debe hacer \u00e9nfasis en que los resultados de este an\u00e1lisis corresponden a la posici\u00f3n actual del mecanismo. Conforme el mecanismo se mueve, la configuraci\u00f3n cambia al igual que las velocidades.", None))
+        self.t_4bar_2.setText(QCoreApplication.translate("MainPages", u"Ecuaciones a utilizar", None))
+        self.description_eslabon_2.setText(QCoreApplication.translate("MainPages", u"A continuaci\u00f3n, se detallan las ecuaciones a emplear en este procedimiento.", None))
         self.title_section3_2.setText(QCoreApplication.translate("MainPages", u"Par\u00e1metros", None))
         self.label_7.setText(QCoreApplication.translate("MainPages", u"O_2", None))
         self.label_8.setText(QCoreApplication.translate("MainPages", u"O_4", None))
