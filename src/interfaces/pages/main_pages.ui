@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>864</width>
-    <height>1503</height>
+    <height>1153</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -1107,7 +1107,7 @@ I will try to always record a new tutorial when adding a new Widget and updating
             <x>0</x>
             <y>0</y>
             <width>844</width>
-            <height>1483</height>
+            <height>1133</height>
            </rect>
           </property>
           <property name="styleSheet">
@@ -1509,13 +1509,13 @@ border-bottom-right-radius : 8px;</string>
              </property>
              <property name="font">
               <font>
-               <pointsize>24</pointsize>
+               <pointsize>20</pointsize>
                <italic>false</italic>
                <bold>false</bold>
               </font>
              </property>
              <property name="styleSheet">
-              <string notr="true">font: 24pt &quot;Segoe UI&quot;;
+              <string notr="true">font: 20pt &quot;Segoe UI&quot;;
 border :2px solid;
 border-color: rgb(108, 153, 244);
 color: rgb(255, 255, 255);
@@ -1525,7 +1525,7 @@ border-bottom-left-radius : 5px;
 border-bottom-right-radius : 5px;</string>
              </property>
              <property name="text">
-              <string>Análisis de Posición del Mecanismo</string>
+              <string>Resultados del análisis de Posición y Velocidad del mecanismo</string>
              </property>
              <property name="alignment">
               <set>Qt::AlignCenter</set>
@@ -1549,66 +1549,6 @@ border-bottom-right-radius : 5px;</string>
              <layout class="QHBoxLayout" name="horizontalLayout_3">
               <item>
                <layout class="QHBoxLayout" name="table1_layout"/>
-              </item>
-             </layout>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLabel" name="Velocity_title">
-             <property name="minimumSize">
-              <size>
-               <width>0</width>
-               <height>70</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>16777215</width>
-               <height>70</height>
-              </size>
-             </property>
-             <property name="font">
-              <font>
-               <pointsize>24</pointsize>
-               <italic>false</italic>
-               <bold>false</bold>
-              </font>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">font: 24pt &quot;Segoe UI&quot;;
-border :2px solid;
-border-color: rgb(108, 153, 244);
-color: rgb(255, 255, 255);
-border-top-left-radius :5px;
-border-top-right-radius : 5px; 
-border-bottom-left-radius : 5px; 
-border-bottom-right-radius : 5px;</string>
-             </property>
-             <property name="text">
-              <string>Análisis de velocidad del Mecanismo</string>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignCenter</set>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QWidget" name="widget_2" native="true">
-             <property name="minimumSize">
-              <size>
-               <width>0</width>
-               <height>310</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>16777215</width>
-               <height>310</height>
-              </size>
-             </property>
-             <layout class="QHBoxLayout" name="horizontalLayout_4">
-              <item>
-               <layout class="QHBoxLayout" name="table2_layout"/>
               </item>
              </layout>
             </widget>

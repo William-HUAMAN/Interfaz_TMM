@@ -51,6 +51,6 @@ def analyze(O2_x, O2_y, O4_x, O4_y, L_2, L_3, L_4, p, theta_2, omega_2):
     V_BA = L3*omega3
     V_B = L4*omega4
 
-    tabla=[theta2,round(Ax,2),round(Ay,2),round(Bx,2),round(By,2),round(theta3,2),round(theta4,2),omega2,omega3,omega4,V_A,V_B,0]
+    tabla=[theta2,round(Ax,2),round(Ay,2),round(Bx,2),round(By,2),round(theta3,2),round(theta4,2),round(omega2,2),round(omega3, 2),round(omega4,2),V_A,V_B," "]
     return tabla
 

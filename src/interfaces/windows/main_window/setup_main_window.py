@@ -503,7 +503,7 @@ class SetupMainWindow:
             scroll_bar_btn_color=self.themes["app_color"]["dark_four"],
             context_color=self.themes["app_color"]["context_color"]
         )
-        self.table_positions.setColumnCount(7)
+        self.table_positions.setColumnCount(13)
         self.table_positions.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
         self.table_positions.setSelectionMode(QAbstractItemView.ExtendedSelection)
         self.table_positions.setSelectionBehavior(QAbstractItemView.SelectRows)
@@ -537,6 +537,31 @@ class SetupMainWindow:
         self.t1_column_7.setTextAlignment(Qt.AlignCenter)
         self.t1_column_7.setText("θ4")
 
+        # Columns / Header
+        self.t1_column_8= QTableWidgetItem()
+        self.t1_column_8.setTextAlignment(Qt.AlignCenter)
+        self.t1_column_8.setText("ω2")
+
+        self.t1_column_9 = QTableWidgetItem()
+        self.t1_column_9.setTextAlignment(Qt.AlignCenter)
+        self.t1_column_9.setText("ω3")
+
+        self.t1_column_10 = QTableWidgetItem()
+        self.t1_column_10.setTextAlignment(Qt.AlignCenter)
+        self.t1_column_10.setText("ω4")
+
+        self.t1_column_11 = QTableWidgetItem()
+        self.t1_column_11.setTextAlignment(Qt.AlignCenter)
+        self.t1_column_11.setText("V_A")
+
+        self.t1_column_12 = QTableWidgetItem()
+        self.t1_column_12.setTextAlignment(Qt.AlignCenter)
+        self.t1_column_12.setText("V_B")
+
+        self.t1_column_13 = QTableWidgetItem()
+        self.t1_column_13.setTextAlignment(Qt.AlignCenter)
+        self.t1_column_13.setText("V_P")
+
         # Set column
         self.table_positions.setHorizontalHeaderItem(0, self.t1_column_1)
         self.table_positions.setHorizontalHeaderItem(1, self.t1_column_2)
@@ -545,58 +570,17 @@ class SetupMainWindow:
         self.table_positions.setHorizontalHeaderItem(4, self.t1_column_5)
         self.table_positions.setHorizontalHeaderItem(5, self.t1_column_6)
         self.table_positions.setHorizontalHeaderItem(6, self.t1_column_7)
-
+        self.table_positions.setHorizontalHeaderItem(7, self.t1_column_8)
+        self.table_positions.setHorizontalHeaderItem(8, self.t1_column_9)
+        self.table_positions.setHorizontalHeaderItem(9, self.t1_column_10)
+        self.table_positions.setHorizontalHeaderItem(10, self.t1_column_11)
+        self.table_positions.setHorizontalHeaderItem(11, self.t1_column_12)
+        self.table_positions.setHorizontalHeaderItem(12, self.t1_column_13)
         # Tabla de valores obtenidos mediante el análisis de Velocidad
-        self.table_velocitys = PyTableWidget(
-            radius=8,
-            color=self.themes["app_color"]["text_foreground"],
-            selection_color=self.themes["app_color"]["context_color"],
-            bg_color=self.themes["app_color"]["bg_two"],
-            header_horizontal_color=self.themes["app_color"]["dark_two"],
-            header_vertical_color=self.themes["app_color"]["bg_three"],
-            bottom_line_color=self.themes["app_color"]["bg_three"],
-            grid_line_color=self.themes["app_color"]["bg_one"],
-            scroll_bar_bg_color=self.themes["app_color"]["bg_one"],
-            scroll_bar_btn_color=self.themes["app_color"]["dark_four"],
-            context_color=self.themes["app_color"]["context_color"]
-        )
-        self.table_velocitys.setColumnCount(6)
-        self.table_velocitys.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
-        self.table_velocitys.setSelectionMode(QAbstractItemView.ExtendedSelection)
-        self.table_velocitys.setSelectionBehavior(QAbstractItemView.SelectRows)
 
-        # Columns / Header
-        self.t2_column_1 = QTableWidgetItem()
-        self.t2_column_1.setTextAlignment(Qt.AlignCenter)
-        self.t2_column_1.setText("ω2")
 
-        self.t2_column_2 = QTableWidgetItem()
-        self.t2_column_2.setTextAlignment(Qt.AlignCenter)
-        self.t2_column_2.setText("ω3")
 
-        self.t2_column_3 = QTableWidgetItem()
-        self.t2_column_3.setTextAlignment(Qt.AlignCenter)
-        self.t2_column_3.setText("ω4")
 
-        self.t2_column_4 = QTableWidgetItem()
-        self.t2_column_4.setTextAlignment(Qt.AlignCenter)
-        self.t2_column_4.setText("V_A")
-
-        self.t2_column_5 = QTableWidgetItem()
-        self.t2_column_5.setTextAlignment(Qt.AlignCenter)
-        self.t2_column_5.setText("V_B")
-
-        self.t2_column_6 = QTableWidgetItem()
-        self.t2_column_6.setTextAlignment(Qt.AlignCenter)
-        self.t2_column_6.setText("V_P")
-
-        # Set column
-        self.table_velocitys.setHorizontalHeaderItem(0, self.t2_column_1)
-        self.table_velocitys.setHorizontalHeaderItem(1, self.t2_column_2)
-        self.table_velocitys.setHorizontalHeaderItem(2, self.t2_column_3)
-        self.table_velocitys.setHorizontalHeaderItem(3, self.t2_column_4)
-        self.table_velocitys.setHorizontalHeaderItem(4, self.t2_column_5)
-        self.table_velocitys.setHorizontalHeaderItem(5, self.t2_column_6)
 
         # Función para realizar el análisis del mecanismo
         def calculate():
@@ -631,17 +615,13 @@ class SetupMainWindow:
                 self.table_positions.setItem(row_number, 4, QTableWidgetItem(str(x[4])))
                 self.table_positions.setItem(row_number, 5, QTableWidgetItem(str(x[5])))
                 self.table_positions.setItem(row_number, 6, QTableWidgetItem(str(x[6])))
+                self.table_positions.setItem(row_number, 7, QTableWidgetItem(str(x[7])))
+                self.table_positions.setItem(row_number, 8, QTableWidgetItem(str(x[8])))
+                self.table_positions.setItem(row_number, 9, QTableWidgetItem(str(x[9])))
+                self.table_positions.setItem(row_number, 10, QTableWidgetItem(str(x[10])))
+                self.table_positions.setItem(row_number, 11, QTableWidgetItem(str(x[11])))
                 self.table_positions.setRowHeight(row_number, 22)
 
-                #row_number2 = self.table_positions.rowCount()
-                #self.table_positions.insertRow(row_number)  # Insert row
-                #self.table_positions.setItem(row_number2, 0, QTableWidgetItem(str(x[7])))  # Add nick
-                #self.table_positions.setItem(row_number2, 1, QTableWidgetItem(str(x[8])))
-                #self.table_positions.setItem(row_number2, 2, QTableWidgetItem(str(x[9])))
-                #self.table_positions.setItem(row_number2, 3, QTableWidgetItem(str(x[10])))
-                #self.table_positions.setItem(row_number2, 4, QTableWidgetItem(str(x[11])))
-                #self.table_positions.setItem(row_number2, 5, QTableWidgetItem(str(x[12])))
-                #self.table_positions.setRowHeight(row_number2, 22)
 
 
         self.analyze_button.clicked.connect(calculate)
@@ -658,7 +638,6 @@ class SetupMainWindow:
         self.ui.load_pages.theta2_layout.addWidget(self.line_theta2)
         self.ui.load_pages.velocity_layout.addWidget(self.line_omega2)
         self.ui.load_pages.table1_layout.addWidget(self.table_positions)
-        self.ui.load_pages.table2_layout.addWidget(self.table_velocitys)
 
         # RIGHT COLUMN
         # ///////////////////////////////////////////////////////////////
