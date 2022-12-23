@@ -1,6 +1,6 @@
 # Importando Librerías necesarias
 from src.core.libraries import *
-
+import pyqtgraph as pg
 # Importando configuraciones
 from src.core.json_settings import Settings  # Archivo JSON de configuraciones
 from src.core.json_themes import Themes  # Tema de color seleccionado
@@ -343,6 +343,17 @@ class SetupMainWindow:
         # self.ui.load_pages.prueba_layout.addWidget(self.grashof)
 
         # PAGE 3
+        # gráfica
+        self.graph = pg.PlotWidget()
+        self.graph.showGrid(x=True, y=True)
+
+        x_s = [0, 10, 40, 60]
+        y_s = [0, 50, 35, 0]
+        self.graph = pg.PlotWidget()
+        self.graph.showGrid(x=True, y=True)
+        self.graph.plot(x_s, y_s, pen='r', symbol='o', symbolPen='b', symbolBrush=0.2)
+        self.ui.load_pages.graph_layout.addWidget(self.graph)
+
         self.analyze_button = PyPushButton(
             text="Analizar",
             radius=8,
@@ -584,6 +595,7 @@ class SetupMainWindow:
 
         # Función para realizar el análisis del mecanismo
         def calculate():
+            self.ui.load_pages.graph_layout.removeWidget(self.graph)
             global tabla
             O2x = self.line_O2x.text()
             O2y = self.line_O2y.text()
@@ -595,6 +607,7 @@ class SetupMainWindow:
             P = self.line_distance.text()
             theta2 = self.line_theta2.text()
             omega2 = self.line_omega2.text()
+
 
             theta2_values = [theta2, 0, 20, 40, 60, 80, 100, 120, 140, 160, 180]
             tabla = []
@@ -621,6 +634,19 @@ class SetupMainWindow:
                 self.table_positions.setItem(row_number, 10, QTableWidgetItem(str(x[10])))
                 self.table_positions.setItem(row_number, 11, QTableWidgetItem(str(x[11])))
                 self.table_positions.setRowHeight(row_number, 22)
+
+
+            #///////////////////////////////////////gráfica lineal///////////////////////////////////////////////
+            # gráfica
+            self.graph = pg.PlotWidget()
+            self.graph.showGrid(x=True, y=True)
+
+            x_s = [float(O2x), float(tabla[0][1]), float(tabla[0][3]), float(O4x)]
+            y_s = [float(O2y), float(tabla[0][2]), float(tabla[0][4]), float(O4y)]
+            self.graph = pg.PlotWidget()
+            self.graph.showGrid(x=True, y=True)
+            self.graph.plot(x_s, y_s, pen='r', symbol='o', symbolPen='b', symbolBrush=0.2)
+            self.ui.load_pages.graph_layout.addWidget(self.graph)
 
 
 
