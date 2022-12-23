@@ -14,6 +14,7 @@ from .ui_main import *  # Cargando la interfaz principal
 # MAIN FUNCTIONS 
 # ///////////////////////////////////////////////////////////////
 from .functions_main_window import *
+from src.math.analysis import analyze
 
 
 # PY WINDOW
@@ -22,6 +23,7 @@ class SetupMainWindow:
     def __init__(self):
         super().__init__()
         # SETUP MAIN WINDOw
+        self.analyze_button = None
         self.ui = UI_MainWindow()
         self.ui.setup_ui(self)
 
@@ -341,6 +343,17 @@ class SetupMainWindow:
         # self.ui.load_pages.prueba_layout.addWidget(self.grashof)
 
         # PAGE 3
+        self.analyze_button = PyPushButton(
+            text="Analizar",
+            radius=8,
+            color=self.themes["app_color"]["text_foreground"],
+            bg_color=self.themes["app_color"]["dark_one"],
+            bg_color_hover=self.themes["app_color"]["dark_three"],
+            bg_color_pressed=self.themes["app_color"]["dark_four"]
+        )
+        self.analyze_button.setMinimumHeight(40)
+        self.analyze_button.setMinimumWidth(80)
+
         # PY LINE EDIT O2x
         self.line_O2x = PyLineEdit(
             text="",
@@ -395,20 +408,6 @@ class SetupMainWindow:
             context_color=self.themes["app_color"]["context_color"]
         )
         self.line_O4y.setMinimumHeight(30)
-
-        # PY LINE EDIT Eslabón1
-        self.line_eslabon1 = PyLineEdit(
-            text="",
-            place_holder_text="Medida eslabón 1",
-            radius=8,
-            border_size=2,
-            color=self.themes["app_color"]["text_foreground"],
-            selection_color=self.themes["app_color"]["white"],
-            bg_color=self.themes["app_color"]["dark_one"],
-            bg_color_active=self.themes["app_color"]["dark_three"],
-            context_color=self.themes["app_color"]["context_color"]
-        )
-        self.line_eslabon1.setMinimumHeight(30)
 
         # PY LINE EDIT Eslabón2
         self.line_eslabon2 = PyLineEdit(
@@ -547,17 +546,6 @@ class SetupMainWindow:
         self.table_positions.setHorizontalHeaderItem(5, self.t1_column_6)
         self.table_positions.setHorizontalHeaderItem(6, self.t1_column_7)
 
-        for x in range(11):
-            row_number = self.table_positions.rowCount()
-            self.table_positions.insertRow(row_number)  # Insert row
-            self.table_positions.setItem(row_number, 0, QTableWidgetItem(str("Wanderson")))  # Add name
-            self.table_positions.setItem(row_number, 1, QTableWidgetItem(str("vfx_on_fire_" + str(x))))  # Add nick
-            self.pass_text = QTableWidgetItem()
-            self.pass_text.setTextAlignment(Qt.AlignCenter)
-            self.pass_text.setText("12345" + str(x))
-            self.table_positions.setItem(row_number, 2, self.pass_text)  # Add pass
-            self.table_positions.setRowHeight(row_number, 22)
-
         # Tabla de valores obtenidos mediante el análisis de Velocidad
         self.table_velocitys = PyTableWidget(
             radius=8,
@@ -610,24 +598,59 @@ class SetupMainWindow:
         self.table_velocitys.setHorizontalHeaderItem(4, self.t2_column_5)
         self.table_velocitys.setHorizontalHeaderItem(5, self.t2_column_6)
 
-        for x in range(11):
-            row_number = self.table_velocitys.rowCount()
-            self.table_velocitys.insertRow(row_number)  # Insert row
-            self.table_velocitys.setItem(row_number, 0, QTableWidgetItem(str("Velocidades")))  # Add name
-            self.table_velocitys.setItem(row_number, 1, QTableWidgetItem(str("vfx_on_fire_" + str(x))))  # Add nick
-            self.pass_text = QTableWidgetItem()
-            self.pass_text.setTextAlignment(Qt.AlignCenter)
-            self.pass_text.setText("12345" + str(x))
-            self.table_velocitys.setItem(row_number, 2, self.pass_text)  # Add pass
-            self.table_velocitys.setRowHeight(row_number, 22)
+        # Función para realizar el análisis del mecanismo
+        def calculate():
+            global tabla
+            O2x = self.line_O2x.text()
+            O2y = self.line_O2y.text()
+            O4x = self.line_O4x.text()
+            O4y = self.line_O4y.text()
+            L2 = self.line_eslabon2.text()
+            L3 = self.line_eslabon3.text()
+            L4 = self.line_eslabon4.text()
+            P = self.line_distance.text()
+            theta2 = self.line_theta2.text()
+            omega2 = self.line_omega2.text()
+
+            theta2_values = [theta2, 0, 20, 40, 60, 80, 100, 120, 140, 160, 180]
+            tabla = []
+            for value in theta2_values:
+                data1 = analyze(O2x, O2y, O4x, O4y, L2, L3, L4, P, value, omega2)
+                tabla.append(data1)
+                # data_initial = [] + data
+
+            print(tabla)
+            # para la primera tabla
+            for x in tabla:
+                row_number = self.table_positions.rowCount()
+                self.table_positions.insertRow(row_number)  # Insert row
+                self.table_positions.setItem(row_number, 0, QTableWidgetItem(str(x[0])))  # Add nick
+                self.table_positions.setItem(row_number, 1, QTableWidgetItem(str(x[1])))
+                self.table_positions.setItem(row_number, 2, QTableWidgetItem(str(x[2])))
+                self.table_positions.setItem(row_number, 3, QTableWidgetItem(str(x[3])))
+                self.table_positions.setItem(row_number, 4, QTableWidgetItem(str(x[4])))
+                self.table_positions.setItem(row_number, 5, QTableWidgetItem(str(x[5])))
+                self.table_positions.setItem(row_number, 6, QTableWidgetItem(str(x[6])))
+                self.table_positions.setRowHeight(row_number, 22)
+
+                #row_number2 = self.table_positions.rowCount()
+                #self.table_positions.insertRow(row_number)  # Insert row
+                #self.table_positions.setItem(row_number2, 0, QTableWidgetItem(str(x[7])))  # Add nick
+                #self.table_positions.setItem(row_number2, 1, QTableWidgetItem(str(x[8])))
+                #self.table_positions.setItem(row_number2, 2, QTableWidgetItem(str(x[9])))
+                #self.table_positions.setItem(row_number2, 3, QTableWidgetItem(str(x[10])))
+                #self.table_positions.setItem(row_number2, 4, QTableWidgetItem(str(x[11])))
+                #self.table_positions.setItem(row_number2, 5, QTableWidgetItem(str(x[12])))
+                #self.table_positions.setRowHeight(row_number2, 22)
 
 
+        self.analyze_button.clicked.connect(calculate)
         # Agregando los widgets
+        self.ui.load_pages.play_layout.addWidget(self.analyze_button)
         self.ui.load_pages.O2_layout.addWidget(self.line_O2x)
         self.ui.load_pages.O2_layout.addWidget(self.line_O2y)
         self.ui.load_pages.O4_layout.addWidget(self.line_O4x)
         self.ui.load_pages.O4_layout.addWidget(self.line_O4y)
-        self.ui.load_pages.Eslabon_layout1.addWidget(self.line_eslabon1)
         self.ui.load_pages.Eslabon_layout2.addWidget(self.line_eslabon2)
         self.ui.load_pages.Eslabon_layout3.addWidget(self.line_eslabon3)
         self.ui.load_pages.Eslabon_layout4.addWidget(self.line_eslabon4)
@@ -636,6 +659,7 @@ class SetupMainWindow:
         self.ui.load_pages.velocity_layout.addWidget(self.line_omega2)
         self.ui.load_pages.table1_layout.addWidget(self.table_positions)
         self.ui.load_pages.table2_layout.addWidget(self.table_velocitys)
+
         # RIGHT COLUMN
         # ///////////////////////////////////////////////////////////////
 

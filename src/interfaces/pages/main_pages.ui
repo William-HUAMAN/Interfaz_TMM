@@ -668,8 +668,8 @@ Una junta es una conexión entre dos o más eslabones, la cual permite algún mo
              <rect>
               <x>0</x>
               <y>0</y>
-              <width>263</width>
-              <height>1481</height>
+              <width>217</width>
+              <height>616</height>
              </rect>
             </property>
             <property name="styleSheet">
@@ -886,8 +886,8 @@ Una junta es una conexión entre dos o más eslabones, la cual permite algún mo
              <rect>
               <x>0</x>
               <y>0</y>
-              <width>262</width>
-              <height>1481</height>
+              <width>233</width>
+              <height>625</height>
              </rect>
             </property>
             <property name="styleSheet">
@@ -1132,19 +1132,26 @@ I will try to always record a new tutorial when adding a new Widget and updating
            <item>
             <layout class="QHBoxLayout" name="Initial_layout">
              <item>
-              <layout class="QVBoxLayout" name="verticalLayout_8"/>
+              <layout class="QVBoxLayout" name="verticalLayout_8">
+               <item>
+                <layout class="QHBoxLayout" name="graph_layout"/>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="play_layout"/>
+               </item>
+              </layout>
              </item>
              <item alignment="Qt::AlignRight|Qt::AlignTop">
               <widget class="QFrame" name="frame_parameters">
                <property name="minimumSize">
                 <size>
-                 <width>280</width>
+                 <width>320</width>
                  <height>410</height>
                 </size>
                </property>
                <property name="maximumSize">
                 <size>
-                 <width>280</width>
+                 <width>320</width>
                  <height>410</height>
                 </size>
                </property>
@@ -1154,12 +1161,12 @@ I will try to always record a new tutorial when adding a new Widget and updating
                <property name="frameShadow">
                 <enum>QFrame::Raised</enum>
                </property>
-               <widget class="QWidget" name="">
+               <widget class="QWidget" name="layoutWidget">
                 <property name="geometry">
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>281</width>
+                  <width>321</width>
                   <height>411</height>
                  </rect>
                 </property>
@@ -1258,42 +1265,6 @@ border-bottom-right-radius : 8px;</string>
                      </property>
                      <property name="text">
                       <string>O_4</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignCenter</set>
-                     </property>
-                    </widget>
-                   </item>
-                  </layout>
-                 </item>
-                 <item>
-                  <layout class="QHBoxLayout" name="Eslabon_layout1">
-                   <item alignment="Qt::AlignLeft">
-                    <widget class="QLabel" name="label_2">
-                     <property name="minimumSize">
-                      <size>
-                       <width>80</width>
-                       <height>30</height>
-                      </size>
-                     </property>
-                     <property name="maximumSize">
-                      <size>
-                       <width>80</width>
-                       <height>30</height>
-                      </size>
-                     </property>
-                     <property name="styleSheet">
-                      <string notr="true">border :2px solid;
-border-color: rgb(30, 34, 41);
-color: rgb(255, 255, 255);
-border-top-left-radius :8px;
-border-top-right-radius : 8px; 
-border-bottom-left-radius : 8px; 
-border-bottom-right-radius : 8px;
-</string>
-                     </property>
-                     <property name="text">
-                      <string>Eslabón 1</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignCenter</set>
