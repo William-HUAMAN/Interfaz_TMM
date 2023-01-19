@@ -6,6 +6,7 @@ from src.core.json_settings import Settings  # Archivo JSON de configuraciones
 from src.core.json_themes import Themes  # Tema de color seleccionado
 
 # Importando recursos gráficos
+from main import MainWindow
 from src.widgets.py_table_widget.py_table_widget import PyTableWidget
 from .functions_main_window import *
 from src.widgets import *
@@ -220,6 +221,8 @@ class SetupMainWindow:
         # LEFT COLUMN
         # ///////////////////////////////////////////////////////////////
         # BTN Documentation
+        def visit_page():
+            webbrowser.open_new("https://spiral-square-81f.notion.site/Proyecto-PEMS-e88a3f889a894bc7b089d58fd7fb9d92")
 
         self.left_btn_doc = PyPushButton(
             text="Guía de usuario",
@@ -231,42 +234,130 @@ class SetupMainWindow:
         )
         self.left_btn_doc.setMaximumHeight(40)
         self.ui.left_column.menus.btn_4_layout.addWidget(self.left_btn_doc)
+        self.left_btn_doc.clicked.connect(visit_page)
 
-        # BTN 1
-        self.left_btn_1 = PyPushButton(
-            text="Btn 1",
+        # COLOR THEME 1
+        self.lbl_theme = PyLabel(
+            text="Tema de color",
             radius=8,
-            color=self.themes["app_color"]["text_foreground"],
+            bg_color=self.themes["app_color"]["bg_two"],
+            font_family=self.settings["font"]["family"],
+            text_size=self.settings["font"]["text_size"],
+            color=self.themes["app_color"]["text_description"]
+        )
+        # THEME BUTTON
+        def change_theme():
+            self.btn_theme.is_active = True
+            self.btn_theme.update()
+
+        self.btn_theme = PyIconButton(
+            icon_path=Functions.set_svg_icon("icon_add_user.svg"),
+            parent=self,
+            app_parent=self.ui.central_widget,
+            tooltip_text="Light",
+            width=50,
+            height=45,
+            radius=8,
+            dark_one=self.themes["app_color"]["dark_one"],
+            icon_color=self.themes["app_color"]["icon_color"],
+            icon_color_hover=self.themes["app_color"]["icon_hover"],
+            icon_color_pressed=self.themes["app_color"]["white"],
+            icon_color_active=self.themes["app_color"]["icon_active"],
             bg_color=self.themes["app_color"]["dark_one"],
             bg_color_hover=self.themes["app_color"]["dark_three"],
-            bg_color_pressed=self.themes["app_color"]["dark_four"]
+            bg_color_pressed=self.themes["app_color"]["context_color"],
+            is_active=False
         )
-        self.left_btn_1.setMaximumHeight(40)
-        self.ui.left_column.menus.btn_1_layout.addWidget(self.left_btn_1)
+        self.btn_theme.clicked.connect(change_theme)
 
-        # BTN 2
-        self.left_btn_2 = PyPushButton(
-            text="Btn With Icon",
+        self.lbl_sizetext = PyLabel(
+            text="Tamaño de texto",
             radius=8,
-            color=self.themes["app_color"]["text_foreground"],
-            bg_color=self.themes["app_color"]["dark_one"],
-            bg_color_hover=self.themes["app_color"]["dark_three"],
-            bg_color_pressed=self.themes["app_color"]["dark_four"]
+            bg_color=self.themes["app_color"]["bg_two"],
+            font_family=self.settings["font"]["family"],
+            text_size=self.settings["font"]["text_size"],
+            color=self.themes["app_color"]["text_description"]
         )
-        self.icon = QIcon(Functions.set_svg_icon("icon_settings.svg"))
-        self.left_btn_2.setIcon(self.icon)
-        self.left_btn_2.setMaximumHeight(40)
-        self.ui.left_column.menus.btn_2_layout.addWidget(self.left_btn_2)
+        self.spin_text = PySpinBox(
+            radius=8,
+            color=self.themes["app_color"]["white"],
+            bg_color=self.themes["app_color"]["dark_two"],
+        )
+        self.spin_text.setMaximumHeight(45)
+        self.spin_text.setMaximumWidth(50)
+        self.spin_text.setMinimum(7)
+        self.spin_text.setValue(self.settings["font"]["text_size"])
+        self.spin_text.setMaximum(22)
 
-        # BTN 3 - Default QPushButton
-        self.left_btn_3 = QPushButton("Default QPushButton")
-        self.left_btn_3.setMaximumHeight(40)
-        self.ui.left_column.menus.btn_3_layout.addWidget(self.left_btn_3)
+        def change_sizeText():
+            # load data from json file
+            with open('src/core/settings.json', 'r') as file:
+                data = json.load(file)
+
+            # modify the value
+            data['font']['text_size']=self.spin_text.value()
+            with open('src/core/settings.json', 'w') as file:
+                json.dump(data, file)
+
+
+        self.spin_text.valueChanged.connect(change_sizeText)
+
+        self.lbl_name = PyLabel(
+            text="Nombre del Proyecto",
+            radius=8,
+            bg_color=self.themes["app_color"]["bg_two"],
+            font_family=self.settings["font"]["family"],
+            text_size=self.settings["font"]["text_size"],
+            color=self.themes["app_color"]["text_description"]
+        )
+        with open('src/core/project_properties.json', 'r') as file:
+            self.project = json.load(file)
+
+        self.line_name = PyLineEdit(
+            text="",
+            place_holder_text=self.project['file_name'],
+            radius=8,
+            border_size=2,
+            color=self.themes["app_color"]["text_foreground"],
+            selection_color=self.themes["app_color"]["white"],
+            bg_color=self.themes["app_color"]["dark_one"],
+            bg_color_active=self.themes["app_color"]["dark_three"],
+            context_color=self.themes["app_color"]["context_color"]
+        )
+        self.line_name.setMinimumHeight(40)
+
+        self.lbl_note = PyLabel(
+            text="Los cambios realizados estarán disponibles la siguiente vez que se cargue la aplicación",
+            radius=8,
+            bg_color=self.themes["app_color"]["bg_two"],
+            font_family=self.settings["font"]["family"],
+            text_size=self.settings["font"]["text_size"],
+            color=self.themes["app_color"]["text_description"]
+        )
+        # self.text_1.setMaximumHeight(100)
+        self.ui.left_column.menus.theme_Layout.addWidget(self.lbl_theme)
+        self.ui.left_column.menus.theme_Layout.addWidget(self.btn_theme)
+        self.ui.left_column.menus.sizetext_Layout.addWidget(self.lbl_sizetext)
+        self.ui.left_column.menus.sizetext_Layout.addWidget(self.spin_text)
+        self.ui.left_column.menus.name_Layout.addWidget(self.lbl_name)
+        self.ui.left_column.menus.name_Layout.addWidget(self.line_name)
+        self.ui.left_column.menus.name_Layout.addWidget(self.lbl_note)
 
         # PAGES
         # ///////////////////////////////////////////////////////////////
         # PAGE 1 - first page
         # new file button
+        def creating_file():
+            directory = QFileDialog.getExistingDirectory()
+            with open('src/core/project_properties.json', 'r') as file:
+                data_dir = json.load(file)
+                if data_dir != " ":
+                    data_dir['directory'] = directory
+                else:
+                    data_dir = json.load(file)
+            with open('src/core/project_properties.json', 'w') as file:
+                json.dump(data_dir, file)
+
         self.new_file_btn = PyPushButton(
             text=" Crear un Proyecto",
             radius=8,
@@ -278,7 +369,18 @@ class SetupMainWindow:
         self.icon_new_file = QIcon(Functions.set_svg_icon("icon_file.svg"))
         self.new_file_btn.setMinimumHeight(30)
         self.new_file_btn.setIcon(self.icon_new_file)
+        self.new_file_btn.clicked.connect(creating_file)
 
+        def open_file():
+            directory = QFileDialog.getExistingDirectory()
+            with open('src/core/project_properties.json', 'r') as file:
+                data_dir = json.load(file)
+                if data_dir != " ":
+                    data_dir['directory'] = directory
+                else:
+                    data_dir = json.load(file)
+            with open('src/core/project_properties.json', 'w') as file:
+                json.dump(data_dir, file)
         self.open_dir_btn = PyPushButton(
             text=" Abrir un Proyecto",
             radius=8,
@@ -290,6 +392,7 @@ class SetupMainWindow:
         self.icon_folder = QIcon(Functions.set_svg_icon("icon_folder_open.svg"))
         self.open_dir_btn.setMinimumHeight(30)
         self.open_dir_btn.setIcon(self.icon_folder)
+        self.open_dir_btn.clicked.connect(open_file)
 
         self.user_guide_btn = PyPushButton(
             text=" Guía de usuario",
@@ -302,6 +405,7 @@ class SetupMainWindow:
         self.icon_user_guide = QIcon(Functions.set_svg_icon("icon_restore.svg"))
         self.user_guide_btn.setMinimumHeight(30)
         self.user_guide_btn.setIcon(self.icon_user_guide)
+        self.user_guide_btn.clicked.connect(visit_page)
 
         self.contact_btn = PyPushButton(
             text="  Contáctanos",
@@ -327,6 +431,16 @@ class SetupMainWindow:
 
         # PAGE 2
         # column 1
+        self.lbl_eslabon = PyLabel(
+            text="Un eslabón es un cuerpo rígido que posee al menos dos nodos por los cuales se une a eslabones.\nUna "
+                 "junta es una conexión entre dos o más eslabones, lo cual permite su movimiento.",
+            radius=8,
+            bg_color=self.themes["app_color"]["bg_two"],
+            font_family=self.settings["font"]["family"],
+            text_size=self.settings["font"]["text_size"],
+            color=self.themes["app_color"]["text_description"]
+        )
+
         self.eslabon_svg = QSvgWidget(Functions.set_svg_image("eslabon.svg"))
         self.ui.load_pages.eslabon_layout.addWidget(self.eslabon_svg)
 
@@ -555,7 +669,7 @@ class SetupMainWindow:
         self.t1_column_7.setText("θ4")
 
         # Columns / Header
-        self.t1_column_8= QTableWidgetItem()
+        self.t1_column_8 = QTableWidgetItem()
         self.t1_column_8.setTextAlignment(Qt.AlignCenter)
         self.t1_column_8.setText("ω2")
 
@@ -593,11 +707,8 @@ class SetupMainWindow:
         self.table_positions.setHorizontalHeaderItem(10, self.t1_column_11)
         self.table_positions.setHorizontalHeaderItem(11, self.t1_column_12)
         self.table_positions.setHorizontalHeaderItem(12, self.t1_column_13)
+
         # Tabla de valores obtenidos mediante el análisis de Velocidad
-
-
-
-
 
         # Función para realizar el análisis del mecanismo
         def calculate():
@@ -613,7 +724,6 @@ class SetupMainWindow:
             P = self.line_distance.text()
             theta2 = self.line_theta2.text()
             omega2 = self.line_omega2.text()
-
 
             theta2_values = [theta2, 0, 20, 40, 60, 80, 100, 120, 140, 160, 180]
             tabla = []
@@ -641,8 +751,7 @@ class SetupMainWindow:
                 self.table_positions.setItem(row_number, 11, QTableWidgetItem(str(x[11])))
                 self.table_positions.setRowHeight(row_number, 22)
 
-
-            #///////////////////////////////////////gráfica lineal///////////////////////////////////////////////
+            # ///////////////////////////////////////gráfica lineal///////////////////////////////////////////////
             # gráfica
             self.graph = pg.PlotWidget()
             self.graph.showGrid(x=True, y=True)
@@ -653,8 +762,6 @@ class SetupMainWindow:
             self.graph.showGrid(x=True, y=True)
             self.graph.plot(x_s, y_s, pen='r', symbol='o', symbolPen='b', symbolBrush=0.2)
             self.ui.load_pages.graph_layout.addWidget(self.graph)
-
-
 
         self.analyze_button.clicked.connect(calculate)
         # Agregando los widgets

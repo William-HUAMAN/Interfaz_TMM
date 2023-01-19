@@ -1,3 +1,3 @@
-# PY PUSH BUTTON
+# PY LABEL
 # ///////////////////////////////////////////////////////////////
-from .py_push_button import PyPushButton
+from .py_label import PyLabel

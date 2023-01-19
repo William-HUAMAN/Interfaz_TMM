@@ -11,7 +11,8 @@ import sys
 
 # Librería para trabajar con archivos json
 import json
-
+# Librería para abrir la web
+import webbrowser
 # pandas
 # numpy
 # pyqtgraph

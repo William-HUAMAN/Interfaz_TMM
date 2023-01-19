@@ -15,14 +15,14 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QLabel, QSizePolicy, QStackedWidget,
-    QVBoxLayout, QWidget)
+from PySide6.QtWidgets import (QApplication, QHBoxLayout, QLabel, QSizePolicy,
+    QStackedWidget, QVBoxLayout, QWidget)
 
 class Ui_LeftColumn(object):
     def setupUi(self, LeftColumn):
         if not LeftColumn.objectName():
             LeftColumn.setObjectName(u"LeftColumn")
-        LeftColumn.resize(240, 600)
+        LeftColumn.resize(679, 600)
         self.main_pages_layout = QVBoxLayout(LeftColumn)
         self.main_pages_layout.setSpacing(0)
         self.main_pages_layout.setObjectName(u"main_pages_layout")
@@ -35,48 +35,25 @@ class Ui_LeftColumn(object):
         self.verticalLayout.setSpacing(5)
         self.verticalLayout.setObjectName(u"verticalLayout")
         self.verticalLayout.setContentsMargins(5, 5, 5, 5)
-        self.btn_1_widget = QWidget(self.menu_1)
-        self.btn_1_widget.setObjectName(u"btn_1_widget")
-        self.btn_1_widget.setMinimumSize(QSize(0, 40))
-        self.btn_1_widget.setMaximumSize(QSize(16777215, 40))
-        self.btn_1_layout = QVBoxLayout(self.btn_1_widget)
-        self.btn_1_layout.setSpacing(0)
-        self.btn_1_layout.setObjectName(u"btn_1_layout")
-        self.btn_1_layout.setContentsMargins(0, 0, 0, 0)
+        self.theme_Layout = QHBoxLayout()
+        self.theme_Layout.setObjectName(u"theme_Layout")
 
-        self.verticalLayout.addWidget(self.btn_1_widget)
+        self.verticalLayout.addLayout(self.theme_Layout)
 
-        self.btn_2_widget = QWidget(self.menu_1)
-        self.btn_2_widget.setObjectName(u"btn_2_widget")
-        self.btn_2_widget.setMinimumSize(QSize(0, 40))
-        self.btn_2_widget.setMaximumSize(QSize(16777215, 40))
-        self.btn_2_layout = QVBoxLayout(self.btn_2_widget)
-        self.btn_2_layout.setSpacing(0)
-        self.btn_2_layout.setObjectName(u"btn_2_layout")
-        self.btn_2_layout.setContentsMargins(0, 0, 0, 0)
+        self.sizetext_Layout = QHBoxLayout()
+        self.sizetext_Layout.setObjectName(u"sizetext_Layout")
 
-        self.verticalLayout.addWidget(self.btn_2_widget)
+        self.verticalLayout.addLayout(self.sizetext_Layout)
 
-        self.btn_3_widget = QWidget(self.menu_1)
-        self.btn_3_widget.setObjectName(u"btn_3_widget")
-        self.btn_3_widget.setMinimumSize(QSize(0, 40))
-        self.btn_3_widget.setMaximumSize(QSize(16777215, 40))
-        self.btn_3_layout = QVBoxLayout(self.btn_3_widget)
-        self.btn_3_layout.setSpacing(0)
-        self.btn_3_layout.setObjectName(u"btn_3_layout")
-        self.btn_3_layout.setContentsMargins(0, 0, 0, 0)
+        self.name_Layout = QVBoxLayout()
+        self.name_Layout.setObjectName(u"name_Layout")
 
-        self.verticalLayout.addWidget(self.btn_3_widget)
+        self.verticalLayout.addLayout(self.name_Layout)
 
-        self.label_1 = QLabel(self.menu_1)
-        self.label_1.setObjectName(u"label_1")
-        font = QFont()
-        font.setPointSize(16)
-        self.label_1.setFont(font)
-        self.label_1.setStyleSheet(u"font-size: 16pt")
-        self.label_1.setAlignment(Qt.AlignCenter)
+        self.dir_Layout = QVBoxLayout()
+        self.dir_Layout.setObjectName(u"dir_Layout")
 
-        self.verticalLayout.addWidget(self.label_1)
+        self.verticalLayout.addLayout(self.dir_Layout)
 
         self.menus.addWidget(self.menu_1)
         self.menu_2 = QWidget()
@@ -89,9 +66,9 @@ class Ui_LeftColumn(object):
         self.label_3.setObjectName(u"label_3")
         self.label_3.setMinimumSize(QSize(220, 0))
         self.label_3.setMaximumSize(QSize(220, 16777215))
-        font1 = QFont()
-        font1.setPointSize(10)
-        self.label_3.setFont(font1)
+        font = QFont()
+        font.setPointSize(10)
+        self.label_3.setFont(font)
         self.label_3.setStyleSheet(u"font-size: 10pt")
         self.label_3.setAlignment(Qt.AlignCenter)
         self.label_3.setWordWrap(True)
@@ -112,7 +89,7 @@ class Ui_LeftColumn(object):
 
         self.label_2 = QLabel(self.menu_2)
         self.label_2.setObjectName(u"label_2")
-        self.label_2.setFont(font1)
+        self.label_2.setFont(font)
         self.label_2.setStyleSheet(u"font-size: 10pt")
         self.label_2.setAlignment(Qt.AlignCenter)
 
@@ -125,7 +102,7 @@ class Ui_LeftColumn(object):
 
         self.retranslateUi(LeftColumn)
 
-        self.menus.setCurrentIndex(1)
+        self.menus.setCurrentIndex(0)
 
 
         QMetaObject.connectSlotsByName(LeftColumn)
@@ -133,7 +110,6 @@ class Ui_LeftColumn(object):
 
     def retranslateUi(self, LeftColumn):
         LeftColumn.setWindowTitle(QCoreApplication.translate("LeftColumn", u"Form", None))
-        self.label_1.setText(QCoreApplication.translate("LeftColumn", u"Configuraciones", None))
         self.label_3.setText(QCoreApplication.translate("LeftColumn", u" El presente producto es una herramienta software desarrollada por un grupo de estudiantes de la Universidad Nacional de Trujillo con la finalidad de facilitar a los nuevos estudiantes la parte operativa al realizar el an\u00e1lisis de Posici\u00f3n de Mecanismos de 4 Barras. Si usted es nuevo en la aplicaci\u00f3n, sientase libre de revisar la documentaci\u00f3n que se adjunta debajo.", None))
         self.label_2.setText("")
     # retranslateUi

@@ -1,3 +1,3 @@
-# PY PUSH BUTTON
+# PY SPINBOX
 # ///////////////////////////////////////////////////////////////
-from .py_push_button import PyPushButton
+from .py_spin_box import PySpinBox

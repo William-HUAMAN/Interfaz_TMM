@@ -5,51 +5,48 @@ from src.core.libraries import *
 # STYLE
 # ///////////////////////////////////////////////////////////////
 style = '''
-QPushButton {{
+QLabel {{
 	border: none;
+    text_size: {_text_size};
+    font: {_text_size}pt "{_font_family}";
     padding-left: 10px;
     padding-right: 5px;
     color: {_color};
-	border-radius: {_radius};	
+	border-radius: {_radius}px;
 	background-color: {_bg_color};
-}}
-QPushButton:hover {{
-	background-color: {_bg_color_hover};
-}}
-QPushButton:pressed {{	
-	background-color: {_bg_color_pressed};
 }}
 '''
 
+
 # PY PUSH BUTTON
 # ///////////////////////////////////////////////////////////////
-class PyPushButton(QPushButton):
+class PyLabel(QLabel):
     def __init__(
-        self, 
-        text,
-        radius,
-        color,
-        bg_color,
-        bg_color_hover,
-        bg_color_pressed,
-        parent = None,
+            self,
+            text,
+            font_family,
+            text_size,
+            radius,
+            color,
+            bg_color,
+            parent=None,
     ):
         super().__init__()
 
         # SET PARAMETRES
         self.setText(text)
+        self.setWordWrap(True)
+
         if parent != None:
             self.setParent(parent)
-        self.setCursor(Qt.PointingHandCursor)
 
         # SET STYLESHEET
         custom_style = style.format(
-            _color = color,
-            _radius = radius,
-            _bg_color = bg_color,
-            _bg_color_hover = bg_color_hover,
-            _bg_color_pressed = bg_color_pressed
+            _color=color,
+            _radius=radius,
+            _bg_color=bg_color,
+            _font_family=font_family,
+            _text_size=text_size,
         )
         self.setStyleSheet(custom_style)
 
-        
