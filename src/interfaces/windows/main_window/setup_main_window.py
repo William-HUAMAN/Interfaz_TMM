@@ -1,4 +1,6 @@
 # Importando Librerías necesarias
+import numpy
+
 from src.core.libraries import *
 import pyqtgraph as pg
 # Importando configuraciones
@@ -838,7 +840,7 @@ class SetupMainWindow:
         # Función para realizar el análisis del mecanismo
         def calculate():
             self.ui.load_pages.graph_layout.removeWidget(self.graph)
-            self.lbl_grashof_cond.setText(" si es grasshof")
+
             global tabla
             O2x = self.line_O2x.text()
             O2y = self.line_O2y.text()
@@ -852,6 +854,17 @@ class SetupMainWindow:
             omega2 = self.line_omega2.text()
             alpha2 = self.line_alpha2.text()
             delta3 = self.line_delta3.text()
+
+            # verificando condicion de grashof
+            L1 = numpy.sqrt((float(O4x) - float(O2x)) ** 2 + (float(O4y) - float(O2y)) ** 2)
+            eslabones = [L1, float(L2), float(L3), float(L4)]
+            eslabones.sort()
+            a_suma = eslabones[0]+eslabones[3]
+            b_suma = eslabones[1]+eslabones[2]
+            if a_suma<b_suma:
+                self.lbl_grashof_cond.setText(" si es grasshof")
+            else:
+                self.lbl_grashof_cond.setText(" no es grasshof")
 
             theta2_values = [theta2, 0, 20, 40, 60, 80, 100, 120, 140, 160, 180]
             tabla = []
