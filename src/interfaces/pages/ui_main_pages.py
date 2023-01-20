@@ -23,7 +23,7 @@ class Ui_MainPages(object):
     def setupUi(self, MainPages):
         if not MainPages.objectName():
             MainPages.setObjectName(u"MainPages")
-        MainPages.resize(864, 1400)
+        MainPages.resize(864, 833)
         self.verticalLayout_3 = QVBoxLayout(MainPages)
         self.verticalLayout_3.setSpacing(0)
         self.verticalLayout_3.setObjectName(u"verticalLayout_3")
@@ -151,7 +151,7 @@ class Ui_MainPages(object):
         self.scroll_area_gen.setWidgetResizable(True)
         self.contents_2 = QWidget()
         self.contents_2.setObjectName(u"contents_2")
-        self.contents_2.setGeometry(QRect(0, 0, 277, 1312))
+        self.contents_2.setGeometry(QRect(0, 0, 277, 1110))
         self.contents_2.setStyleSheet(u"background: transparent;")
         self.verticalLayout_5 = QVBoxLayout(self.contents_2)
         self.verticalLayout_5.setSpacing(15)
@@ -304,7 +304,7 @@ class Ui_MainPages(object):
         self.scroll_area_pos.setWidgetResizable(True)
         self.contents_pos = QWidget()
         self.contents_pos.setObjectName(u"contents_pos")
-        self.contents_pos.setGeometry(QRect(0, 0, 299, 1378))
+        self.contents_pos.setGeometry(QRect(0, 0, 299, 237))
         self.contents_pos.setStyleSheet(u"background: transparent;")
         self.verticalLayout_4 = QVBoxLayout(self.contents_pos)
         self.verticalLayout_4.setSpacing(15)
@@ -375,7 +375,7 @@ class Ui_MainPages(object):
         self.scroll_area_vel.setWidgetResizable(True)
         self.contents_3 = QWidget()
         self.contents_3.setObjectName(u"contents_3")
-        self.contents_3.setGeometry(QRect(0, 0, 277, 1378))
+        self.contents_3.setGeometry(QRect(0, 0, 277, 170))
         self.contents_3.setStyleSheet(u"background: transparent;")
         self.verticalLayout_6 = QVBoxLayout(self.contents_3)
         self.verticalLayout_6.setSpacing(15)
@@ -436,7 +436,7 @@ class Ui_MainPages(object):
         self.scroll_area.setWidgetResizable(True)
         self.contents = QWidget()
         self.contents.setObjectName(u"contents")
-        self.contents.setGeometry(QRect(0, 0, 844, 1380))
+        self.contents.setGeometry(QRect(0, 0, 844, 813))
         self.contents.setStyleSheet(u"background: transparent;")
         self.verticalLayout = QVBoxLayout(self.contents)
         self.verticalLayout.setSpacing(15)
@@ -446,16 +446,36 @@ class Ui_MainPages(object):
         self.Initial_layout.setObjectName(u"Initial_layout")
         self.verticalLayout_8 = QVBoxLayout()
         self.verticalLayout_8.setObjectName(u"verticalLayout_8")
-        self.graph_layout = QHBoxLayout()
+        self.graph_layout = QVBoxLayout()
         self.graph_layout.setObjectName(u"graph_layout")
 
         self.verticalLayout_8.addLayout(self.graph_layout)
 
+        self.cond_grashof_layout = QHBoxLayout()
+        self.cond_grashof_layout.setObjectName(u"cond_grashof_layout")
+        self.label_14 = QLabel(self.contents)
+        self.label_14.setObjectName(u"label_14")
+        self.label_14.setMinimumSize(QSize(80, 30))
+        self.label_14.setMaximumSize(QSize(80, 30))
+        self.label_14.setStyleSheet(u"border :2px solid;\n"
+"border-color: rgb(30, 34, 41);\n"
+"color: rgb(255, 255, 255);\n"
+"border-top-left-radius :8px;\n"
+"border-top-right-radius : 8px; \n"
+"border-bottom-left-radius : 8px; \n"
+"border-bottom-right-radius : 8px;")
+        self.label_14.setAlignment(Qt.AlignCenter)
+
+        self.cond_grashof_layout.addWidget(self.label_14, 0, Qt.AlignLeft|Qt.AlignVCenter)
+
+
+        self.verticalLayout_8.addLayout(self.cond_grashof_layout)
+
 
         self.Initial_layout.addLayout(self.verticalLayout_8)
 
-        self.verticalLayout_9 = QVBoxLayout()
-        self.verticalLayout_9.setObjectName(u"verticalLayout_9")
+        self.horizontalLayout = QHBoxLayout()
+        self.horizontalLayout.setObjectName(u"horizontalLayout")
         self.parameters = QVBoxLayout()
         self.parameters.setObjectName(u"parameters")
         self.title_section3_2 = QLabel(self.contents)
@@ -574,25 +594,50 @@ class Ui_MainPages(object):
 
         self.parameters.addLayout(self.Eslabon_layout4)
 
+        self.PointP_layout = QHBoxLayout()
+        self.PointP_layout.setObjectName(u"PointP_layout")
         self.P_layout = QHBoxLayout()
         self.P_layout.setObjectName(u"P_layout")
-        self.label_6 = QLabel(self.contents)
-        self.label_6.setObjectName(u"label_6")
-        self.label_6.setMinimumSize(QSize(80, 30))
-        self.label_6.setMaximumSize(QSize(80, 30))
-        self.label_6.setStyleSheet(u"border :2px solid;\n"
+        self.label_11 = QLabel(self.contents)
+        self.label_11.setObjectName(u"label_11")
+        self.label_11.setMinimumSize(QSize(30, 30))
+        self.label_11.setMaximumSize(QSize(30, 30))
+        self.label_11.setStyleSheet(u"border :2px solid;\n"
 "border-color: rgb(30, 34, 41);\n"
 "color: rgb(255, 255, 255);\n"
 "border-top-left-radius :8px;\n"
 "border-top-right-radius : 8px; \n"
 "border-bottom-left-radius : 8px; \n"
 "border-bottom-right-radius : 8px;")
-        self.label_6.setAlignment(Qt.AlignCenter)
+        self.label_11.setAlignment(Qt.AlignCenter)
 
-        self.P_layout.addWidget(self.label_6, 0, Qt.AlignLeft)
+        self.P_layout.addWidget(self.label_11, 0, Qt.AlignLeft|Qt.AlignVCenter)
 
 
-        self.parameters.addLayout(self.P_layout)
+        self.PointP_layout.addLayout(self.P_layout)
+
+        self.delta3_layout = QHBoxLayout()
+        self.delta3_layout.setObjectName(u"delta3_layout")
+        self.label_12 = QLabel(self.contents)
+        self.label_12.setObjectName(u"label_12")
+        self.label_12.setMinimumSize(QSize(30, 30))
+        self.label_12.setMaximumSize(QSize(30, 30))
+        self.label_12.setStyleSheet(u"border :2px solid;\n"
+"border-color: rgb(30, 34, 41);\n"
+"color: rgb(255, 255, 255);\n"
+"border-top-left-radius :8px;\n"
+"border-top-right-radius : 8px; \n"
+"border-bottom-left-radius : 8px; \n"
+"border-bottom-right-radius : 8px;")
+        self.label_12.setAlignment(Qt.AlignCenter)
+
+        self.delta3_layout.addWidget(self.label_12, 0, Qt.AlignLeft|Qt.AlignVCenter)
+
+
+        self.PointP_layout.addLayout(self.delta3_layout)
+
+
+        self.parameters.addLayout(self.PointP_layout)
 
         self.other_layout = QHBoxLayout()
         self.other_layout.setObjectName(u"other_layout")
@@ -636,6 +681,26 @@ class Ui_MainPages(object):
 
         self.other_layout.addLayout(self.velocity_layout)
 
+        self.aceleration_layout = QHBoxLayout()
+        self.aceleration_layout.setObjectName(u"aceleration_layout")
+        self.label_13 = QLabel(self.contents)
+        self.label_13.setObjectName(u"label_13")
+        self.label_13.setMinimumSize(QSize(30, 30))
+        self.label_13.setMaximumSize(QSize(30, 30))
+        self.label_13.setStyleSheet(u"border :2px solid;\n"
+"border-color: rgb(30, 34, 41);\n"
+"color: rgb(255, 255, 255);\n"
+"border-top-left-radius :8px;\n"
+"border-top-right-radius : 8px; \n"
+"border-bottom-left-radius : 8px; \n"
+"border-bottom-right-radius : 8px;")
+        self.label_13.setAlignment(Qt.AlignCenter)
+
+        self.aceleration_layout.addWidget(self.label_13, 0, Qt.AlignLeft|Qt.AlignVCenter)
+
+
+        self.other_layout.addLayout(self.aceleration_layout)
+
 
         self.parameters.addLayout(self.other_layout)
 
@@ -645,10 +710,10 @@ class Ui_MainPages(object):
         self.parameters.addLayout(self.play_layout)
 
 
-        self.verticalLayout_9.addLayout(self.parameters)
+        self.horizontalLayout.addLayout(self.parameters)
 
 
-        self.Initial_layout.addLayout(self.verticalLayout_9)
+        self.Initial_layout.addLayout(self.horizontalLayout)
 
 
         self.verticalLayout.addLayout(self.Initial_layout)
@@ -717,15 +782,18 @@ class Ui_MainPages(object):
         self.t_grashof_2.setText(QCoreApplication.translate("MainPages", u"\u00bfQu\u00e9 es el an\u00e1lisis de Posici\u00f3n?", None))
         self.title_section3.setText(QCoreApplication.translate("MainPages", u"An\u00e1lisis de Velocidad", None))
         self.title_label_3.setText(QCoreApplication.translate("MainPages", u"Velocidad", None))
+        self.label_14.setText(QCoreApplication.translate("MainPages", u"Cond. Grashof", None))
         self.title_section3_2.setText(QCoreApplication.translate("MainPages", u"Par\u00e1metros", None))
         self.label_7.setText(QCoreApplication.translate("MainPages", u"O_2", None))
         self.label_8.setText(QCoreApplication.translate("MainPages", u"O_4", None))
         self.label_3.setText(QCoreApplication.translate("MainPages", u"Eslab\u00f3n 2", None))
         self.label_4.setText(QCoreApplication.translate("MainPages", u"Eslab\u00f3n 3", None))
         self.label_5.setText(QCoreApplication.translate("MainPages", u"Eslab\u00f3n 4", None))
-        self.label_6.setText(QCoreApplication.translate("MainPages", u"Distancia P", None))
+        self.label_11.setText(QCoreApplication.translate("MainPages", u"P", None))
+        self.label_12.setText(QCoreApplication.translate("MainPages", u"\u03b43", None))
         self.label_9.setText(QCoreApplication.translate("MainPages", u"\u03b82", None))
         self.label_10.setText(QCoreApplication.translate("MainPages", u"\u03c92", None))
+        self.label_13.setText(QCoreApplication.translate("MainPages", u"\u03b12", None))
         self.Position_title.setText(QCoreApplication.translate("MainPages", u"Resultados del an\u00e1lisis de Posici\u00f3n y Velocidad del mecanismo", None))
     # retranslateUi
 

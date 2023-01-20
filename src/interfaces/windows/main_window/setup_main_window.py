@@ -536,6 +536,17 @@ class SetupMainWindow:
         self.graph.plot(x_s, y_s, pen='r', symbol='o', symbolPen='b', symbolBrush=0.2)
         self.ui.load_pages.graph_layout.addWidget(self.graph)
 
+        self.lbl_grashof_cond = PyLabel(
+            text="",
+            radius=8,
+            bg_color=self.themes["app_color"]["bg_two"],
+            font_family=self.settings["font"]["family"],
+            text_size=self.settings["font"]["text_size"],
+            color=self.themes["app_color"]["white"]
+        )
+        self.lbl_grashof_cond.setMinimumWidth(500)
+        self.lbl_grashof_cond.setMaximumHeight(30)
+
         self.analyze_button = PyPushButton(
             text="Analizar",
             radius=8,
@@ -655,6 +666,20 @@ class SetupMainWindow:
             context_color=self.themes["app_color"]["context_color"]
         )
         self.line_distance.setMinimumHeight(30)
+
+        # delta3
+        self.line_delta3 = PyLineEdit(
+            text="",
+            place_holder_text="Delta 3",
+            radius=8,
+            border_size=2,
+            color=self.themes["app_color"]["text_foreground"],
+            selection_color=self.themes["app_color"]["white"],
+            bg_color=self.themes["app_color"]["dark_one"],
+            bg_color_active=self.themes["app_color"]["dark_three"],
+            context_color=self.themes["app_color"]["context_color"]
+        )
+        self.line_delta3.setMinimumHeight(30)
         # PY LINE EDIT theta2
         self.line_theta2 = PyLineEdit(
             text="",
@@ -682,6 +707,20 @@ class SetupMainWindow:
         )
         self.line_omega2.setMinimumHeight(30)
 
+        # PY LINE EDIT omega2
+        self.line_alpha2 = PyLineEdit(
+            text="",
+            place_holder_text="alpha 2 (rad/s^2)",
+            radius=8,
+            border_size=2,
+            color=self.themes["app_color"]["text_foreground"],
+            selection_color=self.themes["app_color"]["white"],
+            bg_color=self.themes["app_color"]["dark_one"],
+            bg_color_active=self.themes["app_color"]["dark_three"],
+            context_color=self.themes["app_color"]["context_color"]
+        )
+        self.line_alpha2.setMinimumHeight(30)
+
         # Tabla de valores obtenidos mediante el análisis de Posición
         self.table_positions = PyTableWidget(
             radius=8,
@@ -696,7 +735,7 @@ class SetupMainWindow:
             scroll_bar_btn_color=self.themes["app_color"]["dark_four"],
             context_color=self.themes["app_color"]["context_color"]
         )
-        self.table_positions.setColumnCount(13)
+        self.table_positions.setColumnCount(18)
         self.table_positions.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
         self.table_positions.setSelectionMode(QAbstractItemView.ExtendedSelection)
         self.table_positions.setSelectionBehavior(QAbstractItemView.SelectRows)
@@ -755,6 +794,26 @@ class SetupMainWindow:
         self.t1_column_13.setTextAlignment(Qt.AlignCenter)
         self.t1_column_13.setText("V_P")
 
+        self.t1_column_14 = QTableWidgetItem()
+        self.t1_column_14.setTextAlignment(Qt.AlignCenter)
+        self.t1_column_14.setText("α3")
+
+        self.t1_column_15 = QTableWidgetItem()
+        self.t1_column_15.setTextAlignment(Qt.AlignCenter)
+        self.t1_column_15.setText("α4")
+
+        self.t1_column_16 = QTableWidgetItem()
+        self.t1_column_16.setTextAlignment(Qt.AlignCenter)
+        self.t1_column_16.setText("Ac_A")
+
+        self.t1_column_17 = QTableWidgetItem()
+        self.t1_column_17.setTextAlignment(Qt.AlignCenter)
+        self.t1_column_17.setText("Ac_BA")
+
+        self.t1_column_18 = QTableWidgetItem()
+        self.t1_column_18.setTextAlignment(Qt.AlignCenter)
+        self.t1_column_18.setText("Ac_B")
+
         # Set column
         self.table_positions.setHorizontalHeaderItem(0, self.t1_column_1)
         self.table_positions.setHorizontalHeaderItem(1, self.t1_column_2)
@@ -769,13 +828,17 @@ class SetupMainWindow:
         self.table_positions.setHorizontalHeaderItem(10, self.t1_column_11)
         self.table_positions.setHorizontalHeaderItem(11, self.t1_column_12)
         self.table_positions.setHorizontalHeaderItem(12, self.t1_column_13)
-
+        self.table_positions.setHorizontalHeaderItem(13, self.t1_column_14)
+        self.table_positions.setHorizontalHeaderItem(14, self.t1_column_15)
+        self.table_positions.setHorizontalHeaderItem(15, self.t1_column_16)
+        self.table_positions.setHorizontalHeaderItem(16, self.t1_column_17)
+        self.table_positions.setHorizontalHeaderItem(17, self.t1_column_18)
         # Tabla de valores obtenidos mediante el análisis de Velocidad
 
         # Función para realizar el análisis del mecanismo
         def calculate():
             self.ui.load_pages.graph_layout.removeWidget(self.graph)
-            self.table_positions.clear()
+            self.lbl_grashof_cond.setText(" si es grasshof")
             global tabla
             O2x = self.line_O2x.text()
             O2y = self.line_O2y.text()
@@ -787,11 +850,13 @@ class SetupMainWindow:
             P = self.line_distance.text()
             theta2 = self.line_theta2.text()
             omega2 = self.line_omega2.text()
+            alpha2 = self.line_alpha2.text()
+            delta3 = self.line_delta3.text()
 
             theta2_values = [theta2, 0, 20, 40, 60, 80, 100, 120, 140, 160, 180]
             tabla = []
             for value in theta2_values:
-                data1 = analyze(O2x, O2y, O4x, O4y, L2, L3, L4, P, value, omega2)
+                data1 = analyze(O2x, O2y, O4x, O4y, L2, L3, L4, P, value, omega2, alpha2, delta3)
                 tabla.append(data1)
                 # data_initial = [] + data
 
@@ -808,8 +873,8 @@ class SetupMainWindow:
             # print(tabla)
             # para la primera tabla
             #self.table_positions.clear()
-            #self.table_positions.setRowCount(12)
-            #self.table_positions.setColumnCount(13)
+            #self.table_positions.setRowCount()
+            self.table_positions.setColumnCount(18)
 
             for x in tabla:
                 row_number = self.table_positions.rowCount()
@@ -826,6 +891,12 @@ class SetupMainWindow:
                 self.table_positions.setItem(row_number, 9, QTableWidgetItem(str(x[9])))
                 self.table_positions.setItem(row_number, 10, QTableWidgetItem(str(x[10])))
                 self.table_positions.setItem(row_number, 11, QTableWidgetItem(str(x[11])))
+                self.table_positions.setItem(row_number, 12, QTableWidgetItem(str(x[12])))
+                self.table_positions.setItem(row_number, 13, QTableWidgetItem(str(x[13])))
+                self.table_positions.setItem(row_number, 14, QTableWidgetItem(str(x[14])))
+                self.table_positions.setItem(row_number, 15, QTableWidgetItem(str(x[15])))
+                self.table_positions.setItem(row_number, 16, QTableWidgetItem(str(x[16])))
+                self.table_positions.setItem(row_number, 17, QTableWidgetItem(str(x[17])))
                 self.table_positions.setRowHeight(row_number, 22)
 
             # ///////////////////////////////////////gráfica lineal///////////////////////////////////////////////
@@ -842,6 +913,7 @@ class SetupMainWindow:
 
         self.analyze_button.clicked.connect(calculate)
         # Agregando los widgets
+        self.ui.load_pages.cond_grashof_layout.addWidget(self.lbl_grashof_cond)
         self.ui.load_pages.play_layout.addWidget(self.analyze_button)
         self.ui.load_pages.O2_layout.addWidget(self.line_O2x)
         self.ui.load_pages.O2_layout.addWidget(self.line_O2y)
@@ -851,8 +923,10 @@ class SetupMainWindow:
         self.ui.load_pages.Eslabon_layout3.addWidget(self.line_eslabon3)
         self.ui.load_pages.Eslabon_layout4.addWidget(self.line_eslabon4)
         self.ui.load_pages.P_layout.addWidget(self.line_distance)
+        self.ui.load_pages.delta3_layout.addWidget(self.line_delta3)
         self.ui.load_pages.theta2_layout.addWidget(self.line_theta2)
         self.ui.load_pages.velocity_layout.addWidget(self.line_omega2)
+        self.ui.load_pages.aceleration_layout.addWidget(self.line_alpha2)
         self.ui.load_pages.table1_layout.addWidget(self.table_positions)
 
         # RIGHT COLUMN

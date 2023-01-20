@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>864</width>
-    <height>1400</height>
+    <height>833</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -306,7 +306,7 @@
               <x>0</x>
               <y>0</y>
               <width>277</width>
-              <height>1312</height>
+              <height>1110</height>
              </rect>
             </property>
             <property name="styleSheet">
@@ -624,7 +624,7 @@
               <x>0</x>
               <y>0</y>
               <width>299</width>
-              <height>1378</height>
+              <height>237</height>
              </rect>
             </property>
             <property name="styleSheet">
@@ -782,7 +782,7 @@
               <x>0</x>
               <y>0</y>
               <width>277</width>
-              <height>1378</height>
+              <height>170</height>
              </rect>
             </property>
             <property name="styleSheet">
@@ -924,7 +924,7 @@
             <x>0</x>
             <y>0</y>
             <width>844</width>
-            <height>1380</height>
+            <height>813</height>
            </rect>
           </property>
           <property name="styleSheet">
@@ -951,12 +951,47 @@
              <item>
               <layout class="QVBoxLayout" name="verticalLayout_8">
                <item>
-                <layout class="QHBoxLayout" name="graph_layout"/>
+                <layout class="QVBoxLayout" name="graph_layout"/>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="cond_grashof_layout">
+                 <item alignment="Qt::AlignLeft|Qt::AlignVCenter">
+                  <widget class="QLabel" name="label_14">
+                   <property name="minimumSize">
+                    <size>
+                     <width>80</width>
+                     <height>30</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>80</width>
+                     <height>30</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">border :2px solid;
+border-color: rgb(30, 34, 41);
+color: rgb(255, 255, 255);
+border-top-left-radius :8px;
+border-top-right-radius : 8px; 
+border-bottom-left-radius : 8px; 
+border-bottom-right-radius : 8px;</string>
+                   </property>
+                   <property name="text">
+                    <string>Cond. Grashof</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
                </item>
               </layout>
              </item>
              <item>
-              <layout class="QVBoxLayout" name="verticalLayout_9">
+              <layout class="QHBoxLayout" name="horizontalLayout">
                <item>
                 <layout class="QVBoxLayout" name="parameters">
                  <item>
@@ -1167,37 +1202,76 @@ border-bottom-right-radius : 8px;</string>
                   </layout>
                  </item>
                  <item>
-                  <layout class="QHBoxLayout" name="P_layout">
-                   <item alignment="Qt::AlignLeft">
-                    <widget class="QLabel" name="label_6">
-                     <property name="minimumSize">
-                      <size>
-                       <width>80</width>
-                       <height>30</height>
-                      </size>
-                     </property>
-                     <property name="maximumSize">
-                      <size>
-                       <width>80</width>
-                       <height>30</height>
-                      </size>
-                     </property>
-                     <property name="styleSheet">
-                      <string notr="true">border :2px solid;
+                  <layout class="QHBoxLayout" name="PointP_layout">
+                   <item>
+                    <layout class="QHBoxLayout" name="P_layout">
+                     <item alignment="Qt::AlignLeft|Qt::AlignVCenter">
+                      <widget class="QLabel" name="label_11">
+                       <property name="minimumSize">
+                        <size>
+                         <width>30</width>
+                         <height>30</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>30</width>
+                         <height>30</height>
+                        </size>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">border :2px solid;
 border-color: rgb(30, 34, 41);
 color: rgb(255, 255, 255);
 border-top-left-radius :8px;
 border-top-right-radius : 8px; 
 border-bottom-left-radius : 8px; 
 border-bottom-right-radius : 8px;</string>
-                     </property>
-                     <property name="text">
-                      <string>Distancia P</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignCenter</set>
-                     </property>
-                    </widget>
+                       </property>
+                       <property name="text">
+                        <string>P</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <layout class="QHBoxLayout" name="delta3_layout">
+                     <item alignment="Qt::AlignLeft|Qt::AlignVCenter">
+                      <widget class="QLabel" name="label_12">
+                       <property name="minimumSize">
+                        <size>
+                         <width>30</width>
+                         <height>30</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>30</width>
+                         <height>30</height>
+                        </size>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">border :2px solid;
+border-color: rgb(30, 34, 41);
+color: rgb(255, 255, 255);
+border-top-left-radius :8px;
+border-top-right-radius : 8px; 
+border-bottom-left-radius : 8px; 
+border-bottom-right-radius : 8px;</string>
+                       </property>
+                       <property name="text">
+                        <string>δ3</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
                    </item>
                   </layout>
                  </item>
@@ -1265,6 +1339,41 @@ border-bottom-right-radius : 8px;</string>
                        </property>
                        <property name="text">
                         <string>ω2</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <layout class="QHBoxLayout" name="aceleration_layout">
+                     <item alignment="Qt::AlignLeft|Qt::AlignVCenter">
+                      <widget class="QLabel" name="label_13">
+                       <property name="minimumSize">
+                        <size>
+                         <width>30</width>
+                         <height>30</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>30</width>
+                         <height>30</height>
+                        </size>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">border :2px solid;
+border-color: rgb(30, 34, 41);
+color: rgb(255, 255, 255);
+border-top-left-radius :8px;
+border-top-right-radius : 8px; 
+border-bottom-left-radius : 8px; 
+border-bottom-right-radius : 8px;</string>
+                       </property>
+                       <property name="text">
+                        <string>α2</string>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignCenter</set>
