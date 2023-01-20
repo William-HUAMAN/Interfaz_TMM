@@ -862,9 +862,9 @@ class SetupMainWindow:
             a_suma = eslabones[0]+eslabones[3]
             b_suma = eslabones[1]+eslabones[2]
             if a_suma<b_suma:
-                self.lbl_grashof_cond.setText(" si es un mecanismo de grasshof")
+                self.lbl_grashof_cond.setText(" si es grasshof")
             else:
-                self.lbl_grashof_cond.setText(" no es un mecanismo de grasshof")
+                self.lbl_grashof_cond.setText(" no es grasshof")
 
             theta2_values = [theta2, 0, 20, 40, 60, 80, 100, 120, 140, 160, 180]
             tabla = []
