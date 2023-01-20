@@ -280,7 +280,7 @@ class SetupMainWindow:
         )
         self.spin_text = PySpinBox(
             radius=8,
-            color=self.themes["app_color"]["white"],
+            color=self.themes["app_color"]["text_description"],
             bg_color=self.themes["app_color"]["dark_two"],
         )
         self.spin_text.setMaximumHeight(45)
@@ -290,15 +290,15 @@ class SetupMainWindow:
         self.spin_text.setMaximum(22)
 
         def change_sizeText():
+            value = self.spin_text.value()
             # load data from json file
             with open('src/core/settings.json', 'r') as file:
                 data = json.load(file)
 
             # modify the value
-            data['font']['text_size']=self.spin_text.value()
+            data['font']['text_size']=value
             with open('src/core/settings.json', 'w') as file:
                 json.dump(data, file)
-
 
         self.spin_text.valueChanged.connect(change_sizeText)
 
@@ -438,8 +438,54 @@ class SetupMainWindow:
             bg_color=self.themes["app_color"]["bg_two"],
             font_family=self.settings["font"]["family"],
             text_size=self.settings["font"]["text_size"],
-            color=self.themes["app_color"]["text_description"]
+            color=self.themes["app_color"]["white"]
         )
+        self.ui.load_pages.description_layout.addWidget(self.lbl_eslabon)
+
+        self.lbl_gruebler = PyLabel(
+            text="Los grados de libertad de mecanismos planares unidos por juntas comunes pueden ser calculados a "
+                 "partir de la ecuación de Gruebler.",
+            radius=8,
+            bg_color=self.themes["app_color"]["bg_two"],
+            font_family=self.settings["font"]["family"],
+            text_size=self.settings["font"]["text_size"],
+            color=self.themes["app_color"]["white"]
+        )
+        self.ui.load_pages.desc_gruebler_layout.addWidget(self.lbl_gruebler)
+
+        self.lbl_mecanismo4 = PyLabel(
+            text="Es un mecanismo plano compuesto por 4 sólidos rígidos conectados entre sí mediante 4 pares "
+                 "cinemáticos de revolución. Usualmente uno de los sólidos está fijo durante su movimiento.",
+            radius=8,
+            bg_color=self.themes["app_color"]["bg_two"],
+            font_family=self.settings["font"]["family"],
+            text_size=self.settings["font"]["text_size"],
+            color=self.themes["app_color"]["white"]
+        )
+        self.ui.load_pages.mecanismo4_layout.addWidget(self.lbl_mecanismo4)
+
+        self.lbl_grashof = PyLabel(
+            text="Es una relación que predice el comportamiento de rotación o rotabilidad de las inversiones de un "
+                 "mecanismo de cuatro barras basado sólo en las longitudes de los eslabones.",
+            radius=8,
+            bg_color=self.themes["app_color"]["bg_two"],
+            font_family=self.settings["font"]["family"],
+            text_size=self.settings["font"]["text_size"],
+            color=self.themes["app_color"]["white"]
+        )
+        self.ui.load_pages.desc_grashof_layout.addWidget(self.lbl_grashof)
+
+        self.lbl_grashof2 = PyLabel(
+            text="De cumplirse la condición, el eslabonamiento es de Grashof y por lo menos un eslabón será capaz de "
+                 "realizar una revolución completa con respecto al plano de bancada.",
+            radius=8,
+            bg_color=self.themes["app_color"]["bg_two"],
+            font_family=self.settings["font"]["family"],
+            text_size=self.settings["font"]["text_size"],
+            color=self.themes["app_color"]["white"]
+        )
+        self.ui.load_pages.grashof2_layout.addWidget(self.lbl_grashof2)
+
 
         self.eslabon_svg = QSvgWidget(Functions.set_svg_image("eslabon.svg"))
         self.ui.load_pages.eslabon_layout.addWidget(self.eslabon_svg)
@@ -453,9 +499,48 @@ class SetupMainWindow:
         self.mecanismo_svg = QSvgWidget(Functions.set_svg_image("mecanismo.svg"))
         self.ui.load_pages.mecanismo_layout.addWidget(self.mecanismo_svg)
 
+        # column 2
+        self.lbl_position = PyLabel(
+            text="La posición de un punto en el plano puede definirse por medio de un vector de posición. La elección "
+                 "de ejes de referencia es arbitraria y se elige de conformidad con el observador.",
+            radius=8,
+            bg_color=self.themes["app_color"]["bg_two"],
+            font_family=self.settings["font"]["family"],
+            text_size=self.settings["font"]["text_size"],
+            color=self.themes["app_color"]["white"]
+        )
+        self.ui.load_pages.pos_layout.addWidget(self.lbl_position)
+
+        self.lbl_pos_analysis = PyLabel(
+            text="El análisis de posición es uno de los pasos iniciales en la síntesis de mecanismos, donde la "
+                 "generación de movimiento y de trayectoria son unos de los problemas principales en la síntesis "
+                 "dimensional de mecanismos.\nLas ecuaciones necesarias para este procedimiento se detallan a "
+                 "continuación:",
+            radius=8,
+            bg_color=self.themes["app_color"]["bg_two"],
+            font_family=self.settings["font"]["family"],
+            text_size=self.settings["font"]["text_size"],
+            color=self.themes["app_color"]["white"]
+        )
+        self.ui.load_pages.pos_analysis_layout.addWidget(self.lbl_pos_analysis)
+
         self.ec_analisis1 = QSvgWidget(Functions.set_svg_image("ec_analisis1.svg"))
         self.ui.load_pages.Ec_pos_layout.addWidget(self.ec_analisis1)
 
+        # column 3
+        self.lbl_vel_analysis = PyLabel(
+            text="El análisis gráfico de velocidad determina la velocidad de puntos de un mecanismo en una sola "
+                 "configuración. Se debe hacer énfasis en que los resultados de este análisis corresponden a la "
+                 "posición actual del mecanismo. Conforme el mecanismo se mueve, la configuración cambia al igual que "
+                 "las velocidades.\nLas ecuaciones necesarias para este procedimiento se detallan a "
+                 "continuación:",
+            radius=8,
+            bg_color=self.themes["app_color"]["bg_two"],
+            font_family=self.settings["font"]["family"],
+            text_size=self.settings["font"]["text_size"],
+            color=self.themes["app_color"]["white"]
+        )
+        self.ui.load_pages.vel_analysis_layout.addWidget(self.lbl_vel_analysis)
         self.ec_analisis2 = QSvgWidget(Functions.set_svg_image("ec_analisis2.svg"))
         self.ui.load_pages.Ec_vel_layout.addWidget(self.ec_analisis2)
 

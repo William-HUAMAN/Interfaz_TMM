@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>864</width>
-    <height>1153</height>
+    <height>1400</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -32,7 +32,7 @@
    <item>
     <widget class="QStackedWidget" name="pages">
      <property name="currentIndex">
-      <number>1</number>
+      <number>2</number>
      </property>
      <widget class="QWidget" name="page_1">
       <property name="styleSheet">
@@ -270,13 +270,13 @@
            </property>
            <property name="font">
             <font>
-             <pointsize>18</pointsize>
+             <pointsize>20</pointsize>
              <italic>false</italic>
              <bold>false</bold>
             </font>
            </property>
            <property name="styleSheet">
-            <string notr="true">font: 18pt &quot;Segoe UI&quot;;</string>
+            <string notr="true">font: 20pt &quot;Segoe UI&quot;;</string>
            </property>
            <property name="text">
             <string>Conceptos Generales</string>
@@ -306,7 +306,7 @@
               <x>0</x>
               <y>0</y>
               <width>277</width>
-              <height>1420</height>
+              <height>1312</height>
              </rect>
             </property>
             <property name="styleSheet">
@@ -342,8 +342,14 @@
                  <height>35</height>
                 </size>
                </property>
+               <property name="font">
+                <font>
+                 <pointsize>16</pointsize>
+                 <bold>false</bold>
+                </font>
+               </property>
                <property name="styleSheet">
-                <string notr="true">font-size: 12pt</string>
+                <string notr="true">font-size: 16pt</string>
                </property>
                <property name="text">
                 <string>Eslabones y Juntas</string>
@@ -351,18 +357,7 @@
               </widget>
              </item>
              <item>
-              <widget class="QLabel" name="description_eslabon">
-               <property name="text">
-                <string>Un eslabón es un cuerpo rígido que posee por lo menos 2 nodos por los cuales se une a otros eslabones.
-Una junta es una conexión entre dos o más eslabones, la cual permite algún movimiento</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignJustify|Qt::AlignTop</set>
-               </property>
-               <property name="wordWrap">
-                <bool>true</bool>
-               </property>
-              </widget>
+              <layout class="QVBoxLayout" name="description_layout"/>
              </item>
              <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
               <widget class="QFrame" name="frame_eslabon">
@@ -413,11 +408,11 @@ Una junta es una conexión entre dos o más eslabones, la cual permite algún mo
                </property>
                <property name="font">
                 <font>
-                 <pointsize>12</pointsize>
+                 <pointsize>16</pointsize>
                 </font>
                </property>
                <property name="styleSheet">
-                <string notr="true">font-size: 12pt</string>
+                <string notr="true">font-size: 16pt</string>
                </property>
                <property name="text">
                 <string>La ecuación de Gruebler</string>
@@ -428,17 +423,7 @@ Una junta es una conexión entre dos o más eslabones, la cual permite algún mo
               </widget>
              </item>
              <item>
-              <widget class="QLabel" name="description_grubler">
-               <property name="text">
-                <string>Los grados de libertad de mecanismos planares unidos por juntas comunes pueden ser calculados a partir de la ecuación de Gruebler.</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignJustify|Qt::AlignTop</set>
-               </property>
-               <property name="wordWrap">
-                <bool>true</bool>
-               </property>
-              </widget>
+              <layout class="QVBoxLayout" name="desc_gruebler_layout"/>
              </item>
              <item alignment="Qt::AlignHCenter">
               <widget class="QFrame" name="frame_gruebler">
@@ -489,11 +474,11 @@ Una junta es una conexión entre dos o más eslabones, la cual permite algún mo
                </property>
                <property name="font">
                 <font>
-                 <pointsize>12</pointsize>
+                 <pointsize>16</pointsize>
                 </font>
                </property>
                <property name="styleSheet">
-                <string notr="true">font-size: 12pt</string>
+                <string notr="true">font-size: 16pt</string>
                </property>
                <property name="text">
                 <string>Mecanismo de cuatro barras</string>
@@ -504,17 +489,7 @@ Una junta es una conexión entre dos o más eslabones, la cual permite algún mo
               </widget>
              </item>
              <item>
-              <widget class="QLabel" name="description_4bar">
-               <property name="text">
-                <string>Es un mecanismo plano compuesto por 4 sólidos rígidos conectados entre sí mediante 4 pares cinemáticos de revolución. Usualmente uno de los sólidos está fijo durante su movimiento.</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignJustify|Qt::AlignTop</set>
-               </property>
-               <property name="wordWrap">
-                <bool>true</bool>
-               </property>
-              </widget>
+              <layout class="QVBoxLayout" name="mecanismo4_layout"/>
              </item>
              <item alignment="Qt::AlignHCenter">
               <widget class="QFrame" name="frame_mecanismo">
@@ -565,11 +540,11 @@ Una junta es una conexión entre dos o más eslabones, la cual permite algún mo
                </property>
                <property name="font">
                 <font>
-                 <pointsize>12</pointsize>
+                 <pointsize>16</pointsize>
                 </font>
                </property>
                <property name="styleSheet">
-                <string notr="true">font-size: 12pt</string>
+                <string notr="true">font-size: 16pt</string>
                </property>
                <property name="text">
                 <string>Condición de Grashof</string>
@@ -580,17 +555,7 @@ Una junta es una conexión entre dos o más eslabones, la cual permite algún mo
               </widget>
              </item>
              <item>
-              <widget class="QLabel" name="description_grashof">
-               <property name="text">
-                <string>Es una relación que predice el comportamiento de rotación o rotabilidad de las inversiones de un mecanismo de cuatro barras basado sólo en las longitudes de los eslabones.</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignJustify|Qt::AlignTop</set>
-               </property>
-               <property name="wordWrap">
-                <bool>true</bool>
-               </property>
-              </widget>
+              <layout class="QVBoxLayout" name="desc_grashof_layout"/>
              </item>
              <item alignment="Qt::AlignHCenter|Qt::AlignTop">
               <widget class="QFrame" name="frame_grashof">
@@ -626,17 +591,7 @@ Una junta es una conexión entre dos o más eslabones, la cual permite algún mo
               </widget>
              </item>
              <item>
-              <widget class="QLabel" name="description_label_2">
-               <property name="text">
-                <string>De cumplirse la condición, el eslabonamiento es de Grashof y por lo menos un eslabón será capaz de realizar una revolución completa con respecto al plano de bancada.</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignJustify|Qt::AlignTop</set>
-               </property>
-               <property name="wordWrap">
-                <bool>true</bool>
-               </property>
-              </widget>
+              <layout class="QVBoxLayout" name="grashof2_layout"/>
              </item>
             </layout>
            </widget>
@@ -668,8 +623,8 @@ Una junta es una conexión entre dos o más eslabones, la cual permite algún mo
              <rect>
               <x>0</x>
               <y>0</y>
-              <width>277</width>
-              <height>1131</height>
+              <width>299</width>
+              <height>1378</height>
              </rect>
             </property>
             <property name="styleSheet">
@@ -706,7 +661,7 @@ Una junta es una conexión entre dos o más eslabones, la cual permite algún mo
                 </size>
                </property>
                <property name="styleSheet">
-                <string notr="true">font: 18pt &quot;Segoe UI&quot;;</string>
+                <string notr="true">font: 20pt &quot;Segoe UI&quot;;</string>
                </property>
                <property name="text">
                 <string>Análisis de Posición</string>
@@ -729,11 +684,11 @@ Una junta es una conexión entre dos o más eslabones, la cual permite algún mo
                </property>
                <property name="font">
                 <font>
-                 <pointsize>12</pointsize>
+                 <pointsize>16</pointsize>
                 </font>
                </property>
                <property name="styleSheet">
-                <string notr="true">font-size: 12pt</string>
+                <string notr="true">font-size: 16pt</string>
                </property>
                <property name="text">
                 <string>Posición</string>
@@ -744,17 +699,7 @@ Una junta es una conexión entre dos o más eslabones, la cual permite algún mo
               </widget>
              </item>
              <item>
-              <widget class="QLabel" name="description_pos">
-               <property name="text">
-                <string>La posición de un punto en el plano puede definirse por medio de un vector de posición. La elección de ejes de referencia es arbitraria y se elige de conformidad con el observador.</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignJustify|Qt::AlignTop</set>
-               </property>
-               <property name="wordWrap">
-                <bool>true</bool>
-               </property>
-              </widget>
+              <layout class="QVBoxLayout" name="pos_layout"/>
              </item>
              <item>
               <widget class="QLabel" name="t_grashof_2">
@@ -772,11 +717,11 @@ Una junta es una conexión entre dos o más eslabones, la cual permite algún mo
                </property>
                <property name="font">
                 <font>
-                 <pointsize>12</pointsize>
+                 <pointsize>16</pointsize>
                 </font>
                </property>
                <property name="styleSheet">
-                <string notr="true">font-size: 12pt</string>
+                <string notr="true">font-size: 16pt</string>
                </property>
                <property name="text">
                 <string>¿Qué es el análisis de Posición?</string>
@@ -787,30 +732,7 @@ Una junta es una conexión entre dos o más eslabones, la cual permite algún mo
               </widget>
              </item>
              <item>
-              <widget class="QLabel" name="description_grashof_2">
-               <property name="text">
-                <string>El análisis de posición es uno de los pasos iniciales en la síntesis de mecanismos, donde la generación de movimiento y de trayectoria son unos de los problemas principales en la síntesis dimensional de mecanismos.</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignJustify|Qt::AlignTop</set>
-               </property>
-               <property name="wordWrap">
-                <bool>true</bool>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QLabel" name="description_label_3">
-               <property name="text">
-                <string>Las ecuaciones necesarias para este procedimiento se detallan a continuación:</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignJustify|Qt::AlignTop</set>
-               </property>
-               <property name="wordWrap">
-                <bool>true</bool>
-               </property>
-              </widget>
+              <layout class="QVBoxLayout" name="pos_analysis_layout"/>
              </item>
              <item>
               <widget class="QWidget" name="widget_2" native="true">
@@ -860,7 +782,7 @@ Una junta es una conexión entre dos o más eslabones, la cual permite algún mo
               <x>0</x>
               <y>0</y>
               <width>277</width>
-              <height>1131</height>
+              <height>1378</height>
              </rect>
             </property>
             <property name="styleSheet">
@@ -897,7 +819,7 @@ Una junta es una conexión entre dos o más eslabones, la cual permite algún mo
                 </size>
                </property>
                <property name="styleSheet">
-                <string notr="true">font: 18pt &quot;Segoe UI&quot;;</string>
+                <string notr="true">font: 20pt &quot;Segoe UI&quot;;</string>
                </property>
                <property name="text">
                 <string>Análisis de Velocidad</string>
@@ -920,11 +842,11 @@ Una junta es una conexión entre dos o más eslabones, la cual permite algún mo
                </property>
                <property name="font">
                 <font>
-                 <pointsize>12</pointsize>
+                 <pointsize>16</pointsize>
                 </font>
                </property>
                <property name="styleSheet">
-                <string notr="true">font-size: 12pt</string>
+                <string notr="true">font-size: 16pt</string>
                </property>
                <property name="text">
                 <string>Velocidad</string>
@@ -935,60 +857,7 @@ Una junta es una conexión entre dos o más eslabones, la cual permite algún mo
               </widget>
              </item>
              <item>
-              <widget class="QLabel" name="description_label_4">
-               <property name="text">
-                <string>El análisis gráfico de velocidad determina la velocidad de puntos de un mecanismo en una sola configuración. Se debe hacer énfasis en que los resultados de este análisis corresponden a la posición actual del mecanismo. Conforme el mecanismo se mueve, la configuración cambia al igual que las velocidades.</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignJustify|Qt::AlignTop</set>
-               </property>
-               <property name="wordWrap">
-                <bool>true</bool>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QLabel" name="t_4bar_2">
-               <property name="minimumSize">
-                <size>
-                 <width>0</width>
-                 <height>35</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>16777215</width>
-                 <height>35</height>
-                </size>
-               </property>
-               <property name="font">
-                <font>
-                 <pointsize>12</pointsize>
-                </font>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">font-size: 12pt</string>
-               </property>
-               <property name="text">
-                <string>Ecuaciones a utilizar</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignCenter</set>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QLabel" name="description_eslabon_2">
-               <property name="text">
-                <string>A continuación, se detallan las ecuaciones a emplear en este procedimiento.</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignJustify|Qt::AlignTop</set>
-               </property>
-               <property name="wordWrap">
-                <bool>true</bool>
-               </property>
-              </widget>
+              <layout class="QVBoxLayout" name="vel_analysis_layout"/>
              </item>
              <item>
               <widget class="QWidget" name="widget_3" native="true">
@@ -1055,7 +924,7 @@ Una junta es una conexión entre dos o más eslabones, la cual permite algún mo
             <x>0</x>
             <y>0</y>
             <width>844</width>
-            <height>1133</height>
+            <height>1380</height>
            </rect>
           </property>
           <property name="styleSheet">
@@ -1084,40 +953,11 @@ Una junta es una conexión entre dos o más eslabones, la cual permite algún mo
                <item>
                 <layout class="QHBoxLayout" name="graph_layout"/>
                </item>
-               <item>
-                <layout class="QHBoxLayout" name="play_layout"/>
-               </item>
               </layout>
              </item>
-             <item alignment="Qt::AlignRight|Qt::AlignTop">
-              <widget class="QFrame" name="frame_parameters">
-               <property name="minimumSize">
-                <size>
-                 <width>320</width>
-                 <height>410</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>320</width>
-                 <height>410</height>
-                </size>
-               </property>
-               <property name="frameShape">
-                <enum>QFrame::StyledPanel</enum>
-               </property>
-               <property name="frameShadow">
-                <enum>QFrame::Raised</enum>
-               </property>
-               <widget class="QWidget" name="layoutWidget">
-                <property name="geometry">
-                 <rect>
-                  <x>0</x>
-                  <y>0</y>
-                  <width>321</width>
-                  <height>411</height>
-                 </rect>
-                </property>
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout_9">
+               <item>
                 <layout class="QVBoxLayout" name="parameters">
                  <item>
                   <widget class="QLabel" name="title_section3_2">
@@ -1435,9 +1275,12 @@ border-bottom-right-radius : 8px;</string>
                    </item>
                   </layout>
                  </item>
+                 <item>
+                  <layout class="QVBoxLayout" name="play_layout"/>
+                 </item>
                 </layout>
-               </widget>
-              </widget>
+               </item>
+              </layout>
              </item>
             </layout>
            </item>

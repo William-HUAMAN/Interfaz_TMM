@@ -39,6 +39,7 @@ class MainWindow(QMainWindow):
         # ///////////////////////////////////////////////////////////////
         self.show()
 
+
     # LEFT MENU BTN IS CLICKED
     # Run function when btn is clicked
     # Check funtion by object name / btn_id
