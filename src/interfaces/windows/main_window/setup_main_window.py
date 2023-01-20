@@ -56,30 +56,6 @@ class SetupMainWindow:
             "is_active": False
         },
         {
-            "btn_icon": "icon_file.svg",
-            "btn_id": "btn_new_file",
-            "btn_text": "New File",
-            "btn_tooltip": "Create new file",
-            "show_top": True,
-            "is_active": False
-        },
-        {
-            "btn_icon": "icon_folder_open.svg",
-            "btn_id": "btn_open_file",
-            "btn_text": "Open File",
-            "btn_tooltip": "Open file",
-            "show_top": True,
-            "is_active": False
-        },
-        {
-            "btn_icon": "icon_save.svg",
-            "btn_id": "btn_save",
-            "btn_text": "Guardar",
-            "btn_tooltip": "Guardar proyecto",
-            "show_top": True,
-            "is_active": False
-        },
-        {
             "btn_icon": "icon_info.svg",
             "btn_id": "btn_info",
             "btn_text": "Información",
@@ -381,6 +357,7 @@ class SetupMainWindow:
                     data_dir = json.load(file)
             with open('src/core/project_properties.json', 'w') as file:
                 json.dump(data_dir, file)
+
         self.open_dir_btn = PyPushButton(
             text=" Abrir un Proyecto",
             radius=8,
@@ -798,6 +775,7 @@ class SetupMainWindow:
         # Función para realizar el análisis del mecanismo
         def calculate():
             self.ui.load_pages.graph_layout.removeWidget(self.graph)
+            self.table_positions.clear()
             global tabla
             O2x = self.line_O2x.text()
             O2y = self.line_O2y.text()
@@ -817,8 +795,22 @@ class SetupMainWindow:
                 tabla.append(data1)
                 # data_initial = [] + data
 
-            print(tabla)
+            # Escribir los datos de la tabla en el archivo JSON del proyecto
+            with open('src/core/project_properties.json', 'r') as file:
+                data_dir = json.load(file)
+                if data_dir != " ":
+                    data_dir['tabla'] = tabla
+                else:
+                    data_dir = json.load(file)
+            with open('src/core/project_properties.json', 'w') as file:
+                json.dump(data_dir, file)
+
+            # print(tabla)
             # para la primera tabla
+            #self.table_positions.clear()
+            #self.table_positions.setRowCount(12)
+            #self.table_positions.setColumnCount(13)
+
             for x in tabla:
                 row_number = self.table_positions.rowCount()
                 self.table_positions.insertRow(row_number)  # Insert row
@@ -867,6 +859,16 @@ class SetupMainWindow:
         # ///////////////////////////////////////////////////////////////
 
         # BTN 1
+        self.lbl_exportar = PyLabel(
+            text="Seleccione el formato en el que desea exportar sus datos calculados",
+            radius=8,
+            bg_color=self.themes["app_color"]["bg_two"],
+            font_family=self.settings["font"]["family"],
+            text_size=self.settings["font"]["text_size"],
+            color=self.themes["app_color"]["white"]
+        )
+        self.ui.right_column.exportar_layout.addWidget(self.lbl_exportar)
+
         self.right_btn_1 = PyPushButton(
             text="Exportar",
             radius=8,
@@ -883,24 +885,33 @@ class SetupMainWindow:
             self.ui.right_column.menu_2
         ))
 
-        # PY name file edit
-        self.name_file_edit = PyLineEdit(
-            text="",
-            place_holder_text="Place holder text",
-            radius=8,
-            border_size=2,
-            color=self.themes["app_color"]["text_foreground"],
-            selection_color=self.themes["app_color"]["white"],
-            bg_color=self.themes["app_color"]["dark_one"],
-            bg_color_active=self.themes["app_color"]["dark_three"],
-            context_color=self.themes["app_color"]["context_color"]
-        )
-        self.name_file_edit.setMinimumHeight(40)
+
 
         self.ui.right_column.btn_export_layout.addWidget(self.right_btn_1)
-        self.ui.right_column.name_layout.addWidget(self.name_file_edit)
 
         # BTN 2
+        self.lbl_return = PyLabel(
+            text="Tu archivo ha sido exportado exitosamente, para revisar el archivo ingresa en la carpeta del "
+                 "proyecto, gracias por usar PEMS, por favor deja tu comentario acerca de nuestra aplicación para "
+                 "poder seguir mejorando",
+            radius=8,
+            bg_color=self.themes["app_color"]["bg_two"],
+            font_family=self.settings["font"]["family"],
+            text_size=self.settings["font"]["text_size"],
+            color=self.themes["app_color"]["white"]
+        )
+        self.ui.right_column.return_layout.addWidget(self.lbl_return)
+
+        self.btn_comment = PyPushButton(
+            text="Comentar App",
+            radius=8,
+            color=self.themes["app_color"]["text_foreground"],
+            bg_color=self.themes["app_color"]["dark_one"],
+            bg_color_hover=self.themes["app_color"]["dark_three"],
+            bg_color_pressed=self.themes["app_color"]["dark_four"]
+        )
+        self.ui.right_column.comment_layout.addWidget(self.btn_comment)
+
         self.right_btn_2 = PyPushButton(
             text="Regresar",
             radius=8,
