@@ -924,6 +924,8 @@ class SetupMainWindow:
             self.graph.plot(x_s, y_s, pen='r', symbol='o', symbolPen='b', symbolBrush=0.2)
             self.ui.load_pages.graph_layout.addWidget(self.graph)
 
+
+
         self.analyze_button.clicked.connect(calculate)
         # Agregando los widgets
         self.ui.load_pages.cond_grashof_layout.addWidget(self.lbl_grashof_cond)
